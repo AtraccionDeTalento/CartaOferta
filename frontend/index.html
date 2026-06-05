@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Compensaciones y Presupuesto</title>
+    <meta name="description"
+        content="Sistema de gestión de compensaciones y presupuesto - Ingresos, Movimientos, Cartas Oferta">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">CP</div>
+                <div>
+                    <div class="sidebar-title">Compensaciones</div>
+                    <div class="sidebar-subtitle">y Presupuesto</div>
+                </div>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-section-title">Principal</div>
+                <div class="nav-item active" data-view="dashboard" id="nav-dashboard">
+                    <span class="icon">📊</span> Dashboard
+                </div>
+                <div class="nav-item" data-view="ingresos" id="nav-ingresos">
+                    <span class="icon">👤</span> Ingresos
+                    <span class="nav-badge" id="badge-ingresos">0</span>
+                </div>
+                <div class="nav-item" data-view="movimientos" id="nav-movimientos">
+                    <span class="icon">🔄</span> Movimientos
+                </div>
+                <div class="nav-item" data-view="cartas" id="nav-cartas">
+                    <span class="icon">📄</span> Cartas Oferta
+                </div>
+            </nav>
+
+            <nav class="nav-section">
+                <div class="nav-section-title">Configuración</div>
+                <div class="nav-item" data-view="catalogos" id="nav-catalogos">
+                    <span class="icon">⚙️</span> Catálogos
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+            <header class="topbar">
+                <h1 class="topbar-title" id="topbar-title">Dashboard</h1>
+                <div class="topbar-search">
+                    <input type="text" placeholder="Buscar colaborador, puesto, CECO..." id="global-search">
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn btn-primary" id="btn-nuevo-ingreso" onclick="openIngresoModal()">+ Nuevo
+                        Ingreso</button>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- ═══ DASHBOARD ═══ -->
+                <div class="view active" id="view-dashboard">
+                    <!-- Guía Paso a Paso -->
+                    <div class="table-container"
+                        style="margin-bottom: 24px; padding: 20px; border-left: 4px solid var(--accent); background: var(--bg-surface);">
+                        <h3
+                            style="margin-bottom: 12px; color: var(--accent); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;">
+                            💡 Guía de Operación: Flujo Colaborativo en 3 Pasos
+                        </h3>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
+                            <div
+                                style="background: var(--bg-surface-2); padding: 14px; border-radius: var(--radius); border: 1px solid var(--border);">
+                                <strong
+                                    style="color: var(--text-primary); display: block; margin-bottom: 4px; font-weight: 600;">1.
+                                    Ingreso de Datos (BP)</strong>
+                                Haz clic en <strong style="color: var(--accent);">+ Nuevo Ingreso</strong> para crear
+                                una solicitud. El sistema autocompleta el CECO y la plantilla según el rol.
+                            </div>
+                            <div
+                                style="background: var(--bg-surface-2); padding: 14px; border-radius: var(--radius); border: 1px solid var(--border);">
+                                <strong
+                                    style="color: var(--text-primary); display: block; margin-bottom: 4px; font-weight: 600;">2.
+                                    Validación y Firma (Débora)</strong>
+                                Desde el listado, revisa, edita o aprueba la solicitud. Al aprobarse, se genera y
+                                previsualiza la <strong>Carta Oferta</strong> en PDF.
+                            </div>
+                            <div
+                                style="background: var(--bg-surface-2); padding: 14px; border-radius: var(--radius); border: 1px solid var(--border);">
+                                <strong
+                                    style="color: var(--text-primary); display: block; margin-bottom: 4px; font-weight: 600;">3.
+                                    Registro ERP (Nómina)</strong>
+                                Una vez firmado por el ingresante, se marca como sincronizado para la carga de planilla
+                                en el core <strong>Adryan</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid" id="kpi-grid"></div>
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Últimos Ingresos</h3>
+                        </div>
+                        <div class="table-scroll" id="dashboard-recent"></div>
+                    </div>
+                </div>
+
+                <!-- ═══ INGRESOS ═══ -->
+                <div class="view" id="view-ingresos">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Solicitudes de Ingreso</h3>
+                            <div class="table-filters">
+                                <select id="filter-estado" onchange="loadIngresos()">
+                                    <option value="">Todos los estados</option>
+                                    <option value="BORRADOR">Borrador</option>
+                                    <option value="PENDIENTE_BP">Pendiente BP</option>
+                                    <option value="APROBADO">Aprobado</option>
+                                    <option value="CARTA_EMITIDA">Carta Emitida</option>
+                                    <option value="IMPORTADO">Importado</option>
+                                    <option value="ANULADO">Anulado</option>
+                                </select>
+                                <select id="filter-unidad" onchange="loadIngresos()">
+                                    <option value="">Todas las unidades</option>
+                                    <option value="USIL">USIL</option>
+                                    <option value="CSIR">CSIR</option>
+                                    <option value="IE">IE</option>
+                                    <option value="EPG">EPG</option>
+                                </select>
+                                <input type="text" placeholder="Buscar nombre..." id="filter-nombre"
+                                    oninput="debounceSearch()">
+                            </div>
+                        </div>
+                        <div class="table-scroll" id="ingresos-table"></div>
+                    </div>
+                </div>
+
+                <!-- ═══ MOVIMIENTOS ═══ -->
+                <div class="view" id="view-movimientos">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Cambios Organizacionales</h3>
+                            <div class="table-filters">
+                                <select id="filter-tipo-doc" onchange="loadMovimientos()">
+                                    <option value="">Todos los tipos</option>
+                                    <option value="Incremento">Incremento</option>
+                                    <option value="Promoción">Promoción</option>
+                                    <option value="Ajuste salarial">Ajuste salarial</option>
+                                    <option value="Cambio de jefe">Cambio de jefe</option>
+                                    <option value="Cambio de puesto">Cambio de puesto</option>
+                                    <option value="Carta de Nombramiento">Carta de Nombramiento</option>
+                                    <option value="Bono por funciones adicionales">Bono funciones</option>
+                                    <option value="Convenio de Transporte">Conv. Transporte</option>
+                                </select>
+                                <input type="text" placeholder="Buscar..." id="filter-mov-nombre"
+                                    oninput="debounceMovSearch()">
+                            </div>
+                        </div>
+                        <div class="table-scroll" id="movimientos-table"></div>
+                    </div>
+                </div>
+
+                <!-- ═══ CARTAS ═══ -->
+                <div class="view" id="view-cartas">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Cartas Oferta Generadas</h3>
+                        </div>
+                        <div class="table-scroll" id="cartas-table"></div>
+                    </div>
+                </div>
+
+                <!-- ═══ CATÁLOGOS ═══ -->
+                <div class="view" id="view-catalogos">
+                    <div class="tabs" id="catalogo-tabs">
+                        <div class="tab active" data-tab="puestos">Puestos</div>
+                        <div class="tab" data-tab="tipos-doc">Tipos Documento</div>
+                        <div class="tab" data-tab="unidades">Unidades</div>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3 id="catalogo-title">Catálogo de Puestos</h3>
+                            <div class="table-filters">
+                                <input type="text" placeholder="Buscar puesto..." id="filter-puesto"
+                                    oninput="loadPuestos()">
+                            </div>
+                        </div>
+                        <div class="table-scroll" id="catalogos-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Nuevo Ingreso -->
+    <div class="modal-overlay" id="modal-ingreso">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modal-ingreso-title">Nueva Solicitud de Ingreso</h2>
+                <button class="modal-close" onclick="closeIngresoModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-ingreso" onsubmit="submitIngreso(event)">
+                    <!-- Sección: Datos del Colaborador -->
+                    <div class="form-section">
+                        <h4>👤 Datos del Colaborador</h4>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Unidad de Negocio *</label>
+                            <select name="unidad" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="USIL">USIL</option>
+                                <option value="CSIR">CSIR</option>
+                                <option value="IE">IE</option>
+                                <option value="EPG">EPG</option>
+                                <option value="GEF">GEF</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de Solicitud</label>
+                            <input type="date" name="fecha_solicitud">
+                        </div>
+                        <div class="form-group full">
+                            <label>Nombres y Apellidos (respetar orden) *</label>
+                            <input type="text" name="nombres_apellidos" required
+                                placeholder="APELLIDO PATERNO MATERNO NOMBRE">
+                        </div>
+                        <div class="form-group">
+                            <label>DNI o CEX *</label>
+                            <input type="text" name="dni" required maxlength="12" placeholder="12345678">
+                        </div>
+                        <div class="form-group">
+                            <label>Género</label>
+                            <select name="genero">
+                                <option value="">Seleccionar...</option>
+                                <option value="MASCULINO">MASCULINO</option>
+                                <option value="FEMENINO">FEMENINO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Sección: Puesto -->
+                    <div class="form-section">
+                        <h4>🏢 Puesto y Organización</h4>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Modalidad</label>
+                            <select name="modalidad" onchange="updatePlantillaPreview()">
+                                <option value="FULL TIME">FULL TIME</option>
+                                <option value="PART TIME">PART TIME</option>
+                                <option value="PRESENCIAL">PRESENCIAL</option>
+                                <option value="PRACTICANTE PRE">PRACTICANTE PRE</option>
+                                <option value="PRACTICANTE PRO">PRACTICANTE PRO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>¿Puesto Nuevo?</label>
+                            <select name="puesto_nuevo">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
+                            </select>
+                        </div>
+                        <div class="form-group full" style="position:relative;">
+                            <label>Puesto (según ADRYAN) *
+                                <span class="field-hint"
+                                    title="Escribe al menos 2 letras para buscar en el catálogo oficial de 1,206 puestos de Libro2">💡</span>
+                            </label>
+                            <input type="text" name="puesto" id="input-puesto" required
+                                placeholder="Escribe para buscar en el catálogo oficial..." autocomplete="off"
+                                oninput="onPuestoInput(this)" onfocus="onPuestoInput(this)">
+                            <div id="puesto-dropdown" class="autocomplete-dropdown" style="display:none;"></div>
+                            <div id="puesto-info-badge" class="puesto-info-badge" style="display:none;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Código CR (CECO) *
+                                <span class="field-hint"
+                                    title="Se autocompleta al seleccionar el puesto del catálogo">🔄</span>
+                            </label>
+                            <input type="text" name="codigo_cr" id="input-codigo-cr" required
+                                placeholder="Se autocompletará...">
+                        </div>
+                        <div class="form-group">
+                            <label>Área / Departamento
+                                <span class="field-hint" title="Se autocompleta al seleccionar el puesto">🔄</span>
+                            </label>
+                            <input type="text" name="area" id="input-area" placeholder="Se autocompletará...">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Tentativa Ingreso *</label>
+                            <input type="date" name="fecha_tentativa_ingreso" required
+                                onchange="autoCalcFechaTermino()">
+                        </div>
+                        <div class="form-group">
+                            <label>Puesto Jefe Directo</label>
+                            <input type="text" name="puesto_jefe_directo" placeholder="COORDINADOR DE...">
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre Jefe Directo</label>
+                            <input type="text" name="nombre_jefe_directo" placeholder="APELLIDO NOMBRE">
+                        </div>
+                        <div class="form-group">
+                            <label>Unidad Org. (del puesto)</label>
+                            <input type="text" name="unidad_funcional" id="input-unidad-org"
+                                placeholder="Se autocompletará...">
+                        </div>
+                    </div>
+
+                    <!-- Sección: Compensación -->
+                    <div class="form-section">
+                        <h4>💰 Compensación y Contrato</h4>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Salario (S/.)</label>
+                            <input type="number" name="salario" step="0.01" placeholder="2500.00">
+                        </div>
+                        <div class="form-group">
+                            <label>Categoría</label>
+                            <select name="categoria">
+                                <option value="">Seleccionar...</option>
+                                <option value="ADMINISTRATIVOS">ADMINISTRATIVOS</option>
+                                <option value="ACADEMICOS">ACADEMICOS</option>
+                                <option value="OTROS ACADEMICOS">OTROS ACADEMICOS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Motivo de Contrato</label>
+                            <input type="text" name="motivo_contrato" placeholder="Administrativo">
+                        </div>
+                        <div class="form-group">
+                            <label>Tiempo de Contrato</label>
+                            <input type="text" name="tiempo_contrato" placeholder="6 meses">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Término Contrato</label>
+                            <input type="date" name="fecha_termino_contrato">
+                        </div>
+                        <div class="form-group">
+                            <label>Modalidad de Trabajo</label>
+                            <select name="modalidad_trabajo">
+                                <option value="Presencial">Presencial</option>
+                                <option value="Híbrido">Híbrido</option>
+                                <option value="Remoto">Remoto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Categoría Trabajador</label>
+                            <select name="categoria_trabajador">
+                                <option value="">Seleccionar...</option>
+                                <option value="Sujeto a Fiscalización">Sujeto a Fiscalización</option>
+                                <option value="No Sujeto a Fiscalización">No Sujeto a Fiscalización</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo Personal</label>
+                            <input type="text" name="tipo_personal" placeholder="Personal de Confianza">
+                        </div>
+                    </div>
+
+                    <!-- Sección: Tipo de Ingreso -->
+                    <div class="form-section">
+                        <h4>📋 Tipo de Ingreso</h4>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group full">
+                            <label>Tipo de Ingreso</label>
+                            <select name="tipo_ingreso" onchange="toggleReemplazo(this)">
+                                <option value="Ingreso sin Reemplazo">Ingreso sin Reemplazo</option>
+                                <option value="Reemplazo">Reemplazo</option>
+                                <option value="Ingreso por Reemplazo Licencia">Reemplazo por Licencia</option>
+                                <option value="Ingreso Temporal">Ingreso Temporal</option>
+                                <option value="Ingreso Puesto Nuevo">Ingreso Puesto Nuevo</option>
+                            </select>
+                        </div>
+                        <div id="reemplazo-fields" style="display:none;grid-column:1/-1">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Código Reemplazo (10 dígitos)</label>
+                                    <input type="text" name="codigo_reemplazo" placeholder="0000300928">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nombre Reemplazo</label>
+                                    <input type="text" name="nombre_reemplazo">
+                                </div>
+                                <div class="form-group">
+                                    <label>Cargo del Reemplazo</label>
+                                    <input type="text" name="cargo_reemplazo">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fecha de Cese o Cambio</label>
+                                    <input type="date" name="fecha_cese_reemplazo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección: Beneficios Carta -->
+                    <div class="form-section">
+                        <h4>📜 Configuración de Carta Oferta</h4>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <div class="form-row-check">
+                                <input type="checkbox" name="incluye_eps" id="chk-eps" checked
+                                    onchange="updatePlantillaPreview()">
+                                <label for="chk-eps">Incluye EPS</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row-check">
+                                <input type="checkbox" name="incluye_movilidad" id="chk-movilidad"
+                                    onchange="toggleMontoField('movilidad',this);updatePlantillaPreview();">
+                                <label for="chk-movilidad">Incluye Bono Movilidad</label>
+                            </div>
+                            <input type="number" name="monto_movilidad" placeholder="Monto diario S/."
+                                style="display:none;margin-top:4px" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row-check">
+                                <input type="checkbox" name="incluye_tarjeta_alimentos" id="chk-tarjeta"
+                                    onchange="toggleMontoField('tarjeta_alimentos',this);updatePlantillaPreview();">
+                                <label for="chk-tarjeta">Incluye Tarjeta Alimentos</label>
+                            </div>
+                            <input type="number" name="monto_tarjeta_alimentos" placeholder="Monto mensual S/."
+                                style="display:none;margin-top:4px" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row-check">
+                                <input type="checkbox" name="incluye_bono_transporte" id="chk-transporte"
+                                    onchange="toggleMontoField('bono_transporte',this);updatePlantillaPreview();">
+                                <label for="chk-transporte">Incluye Bono Transporte</label>
+                            </div>
+                            <input type="number" name="monto_bono_transporte" placeholder="Monto diario S/."
+                                style="display:none;margin-top:4px" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label>Jornada (horas)</label>
+                            <select name="jornada" onchange="updatePlantillaPreview()">
+                                <option value="48">48 horas (tiempo completo)</option>
+                                <option value="30">30 horas (practicante)</option>
+                                <option value="parcial">Tiempo parcial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Periodo de Prueba</label>
+                            <select name="periodo_prueba">
+                                <option value="03 meses">03 meses</option>
+                                <option value="06 meses">06 meses</option>
+                                <option value="01 año">01 año (alta dirección)</option>
+                            </select>
+                        </div>
+
+                        <!-- Selector Visual de Tipo de Carta Oferta -->
+                        <div class="form-group full">
+                            <div
+                                style="border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--bg-surface-2);">
+                                <div
+                                    style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                                    <div style="font-weight:600;font-size:13px;color:var(--text-primary);">📋 Tipo de
+                                        Carta Oferta</div>
+                                    <div style="display:flex;align-items:center;gap:8px;">
+                                        <span style="font-size:11px;color:var(--text-secondary);">Filtrar:</span>
+                                        <input type="text" id="filtro-carta-tipo" placeholder="Buscar tipo..."
+                                            style="padding:4px 8px;border:1px solid var(--border);border-radius:4px;font-size:11px;background:var(--bg-surface);color:var(--text-primary);width:140px;"
+                                            oninput="filtrarTiposCartaOferta(this.value)">
+                                    </div>
+                                </div>
+                                <div style="font-size:11px;color:var(--text-secondary);margin-bottom:8px;">
+                                    🤖 <strong>Detección automática activa</strong> — El sistema sugiere el tipo según
+                                    los datos ingresados. Puedes anularlo aquí.
+                                </div>
+                                <div id="carta-tipo-grid"
+                                    style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;max-height:220px;overflow-y:auto;">
+                                </div>
+                                <input type="hidden" name="plantilla_carta" id="plantilla-carta-hidden" value="CO BASE">
+                                <div class="plantilla-preview" id="plantilla-preview" style="margin-top:10px;">
+                                    <div class="label">Plantilla seleccionada</div>
+                                    <div class="value" id="plantilla-nombre">CO BASE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeIngresoModal()">Cancelar</button>
+                <button class="btn btn-primary" onclick="submitIngreso(event)">💾 Guardar Solicitud</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalle y Previsualización -->
+    <div class="modal-overlay" id="modal-detalle-preview">
+        <div class="modal" style="max-width: 900px; width: 90%;">
+            <div class="modal-header">
+                <h2 id="modal-detalle-title">Detalle de Solicitud</h2>
+                <button class="modal-close" onclick="closeDetalleModal()">&times;</button>
+            </div>
+            <div class="modal-tabs"
+                style="display: flex; border-bottom: 1px solid var(--border); background: var(--bg-surface-2); padding: 0 10px;">
+                <button class="tab-btn active" onclick="switchDetailTab('datos')" id="tab-btn-datos"
+                    style="padding: 14px 20px; background: none; border: none; border-bottom: 2px solid var(--accent); color: var(--text-primary); cursor: pointer; font-weight: 500; font-family: inherit; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">📋
+                    Datos de Solicitud</button>
+                <button class="tab-btn" onclick="switchDetailTab('preview')" id="tab-btn-preview"
+                    style="padding: 14px 20px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--text-secondary); cursor: pointer; font-weight: 500; font-family: inherit; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">👁️
+                    Previsualizar Carta Oferta</button>
+            </div>
+            <div class="modal-body"
+                style="padding: 20px; overflow-y: auto; max-height: 65vh; background: var(--bg-surface);">
+                <div id="detail-tab-datos" class="detail-tab-content">
+                    <!-- Se inyectará la tabla grid de datos -->
+                </div>
+                <div id="detail-tab-preview" class="detail-tab-content" style="display: none;">
+                    <!-- Se inyectará la previsualización de la carta -->
+                    <div class="loading-preview"
+                        style="text-align: center; padding: 40px; color: var(--text-secondary);">
+                        Cargando previsualización...
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" id="modal-detalle-footer"
+                style="display: flex; justify-content: flex-end; gap: 10px; padding: 15px 20px; border-top: 1px solid var(--border); background: var(--bg-surface-2);">
+                <!-- Botones dinámicos -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalle KPI -->
+    <div class="modal-overlay" id="modal-kpi-detalle">
+        <div class="modal" style="max-width: 950px; width: 90%;">
+            <div class="modal-header">
+                <h2 id="modal-kpi-title">Detalle de KPI</h2>
+                <button class="modal-close" onclick="closeKpiModal()">&times;</button>
+            </div>
+            <div class="modal-body"
+                style="padding: 20px; overflow-y: auto; max-height: 65vh; background: var(--bg-surface);">
+                <div id="kpi-detalle-loading" style="text-align: center; padding: 20px; color: var(--text-secondary);">
+                    Cargando detalles...</div>
+                <div class="table-scroll" id="kpi-detalle-table-container" style="display:none;">
+                    <!-- Se inyectará el listado -->
+                </div>
+            </div>
+            <div class="modal-footer"
+                style="display: flex; justify-content: flex-end; padding: 15px 20px; border-top: 1px solid var(--border); background: var(--bg-surface-2);">
+                <button class="btn btn-secondary" onclick="closeKpiModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Firebase & jsPDF Libraries -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "nombre": "DIRECCION GENERAL DEL CSIR"
+  },
+  {
+    "id": 2,
+    "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
+  },
+  {
+    "id": 3,
+    "nombre": "ESCUELA DE POSGRADO"
+  },
+  {
+    "id": 4,
+    "nombre": "VICERRECTORADO ACADEMICO"
+  },
+  {
+    "id": 5,
+    "nombre": "DIRECCION GENERAL DE SEDES DESCENTRALIZADAS"
+  },
+  {
+    "id": 6,
+    "nombre": "GERENCIA COMERCIAL"
+  },
+  {
+    "id": 7,
+    "nombre": "GERENCIA DE MODO USIL"
+  },
+  {
+    "id": 8,
+    "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
+  },
+  {
+    "id": 9,
+    "nombre": "GERENCIA DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 10,
+    "nombre": "GERENCIA DE TECNOLOGIA DE INFORMACION"
+  },
+  {
+    "id": 11,
+    "nombre": "GERENCIA GENERAL"
+  },
+  {
+    "id": 12,
+    "nombre": "PRESIDENCIA EJECUTIVA"
+  },
+  {
+    "id": 13,
+    "nombre": "RECTORADO"
+  },
+  {
+    "id": 14,
+    "nombre": "VICEPRESIDENCIA DE ASUNTOS CORPORATIVOS"
+  },
+  {
+    "id": 15,
+    "nombre": "VICEPRESIDENCIA DE COMUNICACIONES E INNOVACION DIG"
+  },
+  {
+    "id": 16,
+    "nombre": "VICEPRESIDENCIA DE FINANZAS"
+  },
+  {
+    "id": 17,
+    "nombre": "VICEPRESIDENCIA LEGAL"
+  },
+  {
+    "id": 18,
+    "nombre": "VICEPRESIDENCIA SENIOR"
+  },
+  {
+    "id": 19,
+    "nombre": "VICERRECTORADO DE INVESTIGACION"
+  }
+]

@@ -1,0 +1,23 @@
+# Python backend
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+data/hr_ops.db
+
+# Frontend
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/.env.local
+frontend-react/.env.*.local
+
+# Firebase
+.firebase/
+
+# OS
+.DS_Store
+Thumbs.db

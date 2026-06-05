@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Operations Management System | USIL</title>
+    <meta name="description" content="Gestión Colaborativa de Compensaciones y Presupuesto - Universidad San Ignacio de Loyola" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- GitHub Pages SPA: restaura la ruta guardada por 404.html -->
+    <script>
+      (function() {
+        var p = window.location.search.match(/\?p=([^&]*)/);
+        if (p) {
+          window.history.replaceState(
+            null, null,
+            window.location.pathname.split('?')[0] + decodeURIComponent(p[1])
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body class="h-full">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

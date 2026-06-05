@@ -1,0 +1,128 @@
+import { 
+  signInWithEmailAndPassword, 
+  signOut as fbSignOut, 
+  onAuthStateChanged,
+  User as FirebaseUser
+} from 'firebase/auth';
+import { auth, isFirebaseConfigured } from './firebase';
+
+export type UserRole = 'Business Partner' | 'Compensaciones' | 'Nómina' | 'Admin';
+
+export interface UserProfile {
+  uid: string;
+  email: string;
+  displayName: string;
+  role: UserRole;
+  avatar?: string;
+}
+
+// Default mock profiles for multi-user workflow demonstration
+export const MOCK_PROFILES: UserProfile[] = [
+  {
+    uid: "bp_1",
+    email: "bp@usil.edu.pe",
+    displayName: "Usuario (Business Partner)",
+    role: "Business Partner",
+    avatar: "👤"
+  },
+  {
+    uid: "debora_1",
+    email: "debora@usil.edu.pe",
+    displayName: "Débora (Compensaciones)",
+    role: "Compensaciones",
+    avatar: "👩‍💼"
+  },
+  {
+    uid: "nomina_1",
+    email: "nomina@usil.edu.pe",
+    displayName: "Nómina Operaciones",
+    role: "Nómina",
+    avatar: "📊"
+  },
+  {
+    uid: "admin_1",
+    email: "admin@usil.edu.pe",
+    displayName: "Administrador de Sistemas",
+    role: "Admin",
+    avatar: "⚙️"
+  }
+];
+
+let currentUser: UserProfile | null = null;
+const listeners = new Set<(user: UserProfile | null) => void>();
+
+const notifyListeners = () => {
+  listeners.forEach((l) => l(currentUser));
+};
+
+// Initialize Current User
+const initAuth = () => {
+  const stored = localStorage.getItem('current_user');
+  if (stored) {
+    try {
+      currentUser = JSON.parse(stored);
+    } catch {
+      currentUser = MOCK_PROFILES[1]; // Default to Débora
+    }
+  } else {
+    currentUser = MOCK_PROFILES[1]; // Default to Débora
+    localStorage.setItem('current_user', JSON.stringify(currentUser));
+  }
+  notifyListeners();
+};
+
+// Start listener
+if (!isFirebaseConfigured) {
+  setTimeout(initAuth, 100);
+} else if (auth) {
+  onAuthStateChanged(auth, async (fbUser: FirebaseUser | null) => {
+    if (fbUser) {
+      // In real production, role would come from custom claims or firestore user profiles.
+      // We read a stored role or default based on email for simplicity.
+      let role: UserRole = 'Business Partner';
+      if (fbUser.email?.includes('debora')) role = 'Compensaciones';
+      else if (fbUser.email?.includes('nomina')) role = 'Nómina';
+      else if (fbUser.email?.includes('admin')) role = 'Admin';
+      
+      currentUser = {
+        uid: fbUser.uid,
+        email: fbUser.email || '',
+        displayName: fbUser.displayName || fbUser.email?.split('@')[0].toUpperCase() || 'Usuario',
+        role
+      };
+    } else {
+      initAuth();
+      return;
+    }
+    notifyListeners();
+  });
+}
+
+export const subscribeToAuth = (callback: (user: UserProfile | null) => void): (() => void) => {
+  listeners.add(callback);
+  callback(currentUser);
+  return () => {
+    listeners.delete(callback);
+  };
+};
+
+export const getCurrentUser = (): UserProfile | null => {
+  return currentUser;
+};
+
+// Login Mock
+export const loginAsMockUser = (profile: UserProfile) => {
+  currentUser = profile;
+  localStorage.setItem('current_user', JSON.stringify(profile));
+  notifyListeners();
+};
+
+export const signOutUser = async (): Promise<void> => {
+  if (isFirebaseConfigured && auth) {
+    await fbSignOut(auth);
+  } else {
+    currentUser = null;
+    localStorage.removeItem('current_user');
+    notifyListeners();
+  }
+};

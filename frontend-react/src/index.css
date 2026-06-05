@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Paleta USIL: Azul · Celeste · Blanco · Negro ── */
+:root {
+  --usil-blue-900:  #001433;
+  --usil-blue-800:  #002559;
+  --usil-blue-700:  #003a7a;
+  --usil-blue-600:  #0055b3;
+  --usil-blue-500:  #1a6fd4;
+  --usil-blue-300:  #87bcff;
+  --usil-blue-100:  #daeaff;
+  --usil-blue-50:   #eef4ff;
+
+  --usil-sky-500:   #07abe0;
+  --usil-sky-300:   #70d7fb;
+  --usil-sky-100:   #d9f2fe;
+  --usil-sky-50:    #f0faff;
+
+  --usil-white:     #ffffff;
+  --usil-black:     #0a0a0a;
+  --usil-black-soft:#1c1c1e;
+  --usil-black-muted:#3a3a3c;
+}
+
+@layer base {
+  body {
+    @apply antialiased font-sans;
+    background-color: var(--usil-sky-50);
+    color: var(--usil-black-soft);
+  }
+}
+
+/* ── Scrollbar refinada ── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--usil-blue-300);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--usil-blue-500);
+}
+
+/* ── Animaciones ── */
+@keyframes slide-in {
+  from {
+    transform: translateY(1rem) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.2s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out forwards;
+}
+
