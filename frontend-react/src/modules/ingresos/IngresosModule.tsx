@@ -18,6 +18,7 @@ export const IngresosModule: React.FC<IngresosModuleProps> = ({ currentUser }) =
   const [solicitudes, setSolicitudes] = useState<any[]>([]);
   const [selectedRequest, setSelectedRequest] = useState<any | null>(null);
   const [viewMode, setViewMode] = useState<'LIST' | 'FORM' | 'DETAILS'>('LIST');
+  const [showPreviewModal, setShowPreviewModal] = useState(false);
 
   const createDemoRequestPayload = () => ({
     nombres_apellidos: 'POSTULANTE DEMO USIL',
@@ -308,7 +309,7 @@ export const IngresosModule: React.FC<IngresosModuleProps> = ({ currentUser }) =
       {viewMode === 'DETAILS' && selectedRequest && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Main Info and Approval Controls (Left Column) */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-12 space-y-6">
             
             {/* Timeline Stepper */}
             <WorkflowTimeline currentState={selectedRequest.estado} />
@@ -320,7 +321,16 @@ export const IngresosModule: React.FC<IngresosModuleProps> = ({ currentUser }) =
                   <User className="w-5 h-5 text-usil-blue-700" />
                   <span className="text-sm font-bold text-slate-800">Detalles de la Solicitud</span>
                 </div>
-                <Badge state={selectedRequest.estado} />
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setShowPreviewModal(true)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-usil-sky-50 text-usil-sky-700 hover:bg-usil-sky-100 rounded-lg text-xs font-bold border border-usil-sky-200 transition-colors shadow-sm"
+                  >
+                    <Eye className="w-4 h-4" />
+                    <span>Previsualizar Carta</span>
+                  </button>
+                  <Badge state={selectedRequest.estado} />
+                </div>
               </CardHeader>
               <CardContent className="p-6.5 space-y-5">
                 <div className="grid grid-cols-2 gap-4 border-b border-slate-50 pb-4">
@@ -494,15 +504,27 @@ export const IngresosModule: React.FC<IngresosModuleProps> = ({ currentUser }) =
             </Card>
 
           </div>
+        </div>
+      )}
 
-          {/* Letter PDF Live Preview (Right Column) */}
-          <div className="lg:col-span-5">
-            <PDFPreview
-              solicitud={selectedRequest}
-              onLetterGenerated={() => {
-                // Succeeded
-              }}
-            />
+      {/* PREVIEW MODAL */}
+      {showPreviewModal && selectedRequest && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 md:p-8">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl h-full max-h-[95vh] flex flex-col overflow-hidden relative animate-fade-in">
+            <div className="absolute top-4 right-4 z-[60]">
+              <button 
+                onClick={() => setShowPreviewModal(false)}
+                className="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-md text-xs font-bold transition-colors"
+              >
+                Cerrar Previsualización
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto">
+              <PDFPreview
+                solicitud={selectedRequest}
+                onLetterGenerated={() => {}}
+              />
+            </div>
           </div>
         </div>
       )}

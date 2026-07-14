@@ -42,8 +42,8 @@ export default function App() {
 
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'ingresos', label: 'Ingresos', icon: UserPlus },
     { id: 'cartas', label: 'Cartas Oferta', icon: FileBadge2 },
+    { id: 'ingresos', label: 'Ingresos', icon: UserPlus },
     { id: 'movimientos', label: 'Movimientos', icon: TrendingUp },
     { id: 'catalogos', label: 'Catálogos', icon: BookOpen },
     { id: 'organigrama', label: 'Organigrama', icon: FolderTree }

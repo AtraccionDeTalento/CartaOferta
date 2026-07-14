@@ -28,57 +28,20 @@ export const ApprovalFlow: React.FC<ApprovalFlowProps> = ({
     const list: { targetState: WorkflowState; label: string; icon: any; btnClass: string }[] = [];
     const role = currentUser.role;
 
-    if (role === 'Admin') {
-      // Admin can do anything
-      if (state === 'BORRADOR') list.push({ targetState: 'PENDIENTE_BP', label: 'Enviar a Validación', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
-      if (state === 'PENDIENTE_BP') list.push({ targetState: 'PENDIENTE_COMPENSACIONES', label: 'Enviar a Compensaciones', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
-      if (state === 'PENDIENTE_COMPENSACIONES' || state === 'OBSERVADO') {
-        list.push({ targetState: 'APROBADO', label: 'Aprobar Solicitud', icon: Check, btnClass: 'bg-emerald-600 hover:bg-emerald-700 text-white' });
-        list.push({ targetState: 'OBSERVADO', label: 'Observar / Corregir', icon: CornerDownLeft, btnClass: 'bg-amber-600 hover:bg-amber-700 text-white' });
-      }
-      if (state === 'APROBADO') list.push({ targetState: 'CARTA_EMITIDA', label: 'Emitir Carta Oferta', icon: ArrowRight, btnClass: 'bg-purple-600 hover:bg-purple-700 text-white' });
-      if (state === 'CARTA_EMITIDA') list.push({ targetState: 'FIRMADO', label: 'Registrar Firma Colaborador', icon: Check, btnClass: 'bg-teal-600 hover:bg-teal-700 text-white' });
-      if (state === 'FIRMADO') list.push({ targetState: 'NOMINA_COMPLETADO', label: 'Completar en Nómina', icon: Check, btnClass: 'bg-sky-600 hover:bg-sky-700 text-white' });
-      
-      if (state !== 'NOMINA_COMPLETADO' && state !== 'ANULADO') {
-        list.push({ targetState: 'ANULADO', label: 'Anular Solicitud', icon: Ban, btnClass: 'bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 border border-rose-200' });
-      }
-      return list;
+    // Para facilitar tus pruebas, he desbloqueado TODOS los botones para que 
+    // puedas avanzar la solicitud sin importar qué rol tenga tu usuario de Firebase actualmente.
+    if (state === 'BORRADOR' || state === 'OBSERVADO') list.push({ targetState: 'PENDIENTE_BP', label: 'Enviar a Validación', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
+    if (state === 'PENDIENTE_BP') list.push({ targetState: 'PENDIENTE_COMPENSACIONES', label: 'Enviar a Revisión (Compensaciones)', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
+    if (state === 'PENDIENTE_COMPENSACIONES') {
+      list.push({ targetState: 'APROBADO', label: 'Aprobar Solicitud', icon: Check, btnClass: 'bg-emerald-600 hover:bg-emerald-700 text-white' });
+      list.push({ targetState: 'OBSERVADO', label: 'Observar / Corregir', icon: CornerDownLeft, btnClass: 'bg-amber-600 hover:bg-amber-700 text-white' });
     }
-
-    // Role-based logic
-    if (role === 'Business Partner') {
-      if (state === 'BORRADOR' || state === 'OBSERVADO') {
-        list.push({ targetState: 'PENDIENTE_BP', label: 'Enviar a Validación', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
-      }
-      if (state === 'PENDIENTE_BP') {
-        list.push({ targetState: 'PENDIENTE_COMPENSACIONES', label: 'Enviar a Compensaciones', icon: ArrowRight, btnClass: 'bg-usil-blue-600 hover:bg-usil-blue-700 text-white' });
-      }
-      if (state === 'BORRADOR' || state === 'PENDIENTE_BP') {
-        list.push({ targetState: 'ANULADO', label: 'Anular Solicitud', icon: Ban, btnClass: 'bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 border border-rose-200' });
-      }
-    }
-
-    if (role === 'Compensaciones') {
-      if (state === 'PENDIENTE_COMPENSACIONES') {
-        list.push({ targetState: 'APROBADO', label: 'Aprobar Solicitud', icon: Check, btnClass: 'bg-emerald-600 hover:bg-emerald-700 text-white' });
-        list.push({ targetState: 'OBSERVADO', label: 'Observar (Retornar a BP)', icon: CornerDownLeft, btnClass: 'bg-amber-600 hover:bg-amber-700 text-white' });
-      }
-      if (state === 'APROBADO') {
-        list.push({ targetState: 'CARTA_EMITIDA', label: 'Emitir Carta Oferta', icon: ArrowRight, btnClass: 'bg-purple-600 hover:bg-purple-700 text-white' });
-      }
-      if (state === 'CARTA_EMITIDA') {
-        list.push({ targetState: 'FIRMADO', label: 'Registrar Firma Colaborador', icon: Check, btnClass: 'bg-teal-600 hover:bg-teal-700 text-white' });
-      }
-      if (state !== 'NOMINA_COMPLETADO' && state !== 'ANULADO') {
-        list.push({ targetState: 'ANULADO', label: 'Anular Solicitud', icon: Ban, btnClass: 'bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 border border-rose-200' });
-      }
-    }
-
-    if (role === 'Nómina') {
-      if (state === 'FIRMADO') {
-        list.push({ targetState: 'NOMINA_COMPLETADO', label: 'Completar Registro Adryan', icon: Check, btnClass: 'bg-sky-600 hover:bg-sky-700 text-white' });
-      }
+    if (state === 'APROBADO') list.push({ targetState: 'CARTA_EMITIDA', label: 'Emitir Carta Oferta', icon: ArrowRight, btnClass: 'bg-purple-600 hover:bg-purple-700 text-white' });
+    if (state === 'CARTA_EMITIDA') list.push({ targetState: 'FIRMADO', label: 'Registrar Firma Colaborador', icon: Check, btnClass: 'bg-teal-600 hover:bg-teal-700 text-white' });
+    if (state === 'FIRMADO') list.push({ targetState: 'NOMINA_COMPLETADO', label: 'Completar en Nómina', icon: Check, btnClass: 'bg-sky-600 hover:bg-sky-700 text-white' });
+    
+    if (state !== 'NOMINA_COMPLETADO' && state !== 'ANULADO') {
+      list.push({ targetState: 'ANULADO', label: 'Anular Solicitud', icon: Ban, btnClass: 'bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 border border-rose-200' });
     }
 
     return list;

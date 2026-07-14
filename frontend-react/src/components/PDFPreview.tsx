@@ -19,7 +19,7 @@ export const PDFPreview: React.FC<PDFPreviewProps> = ({ solicitud, onLetterGener
 
   const headerLogoUrl = buildAssetUrl('assets/SOLICITUD DE CARTAS OFERTA_PROYECTO_image1.png');
   const footerImageUrl = buildAssetUrl('assets/SOLICITUD DE CARTAS OFERTA_PROYECTO_image3.png');
-  const signatureImageUrl = buildAssetUrl('assets/SOLICITUD DE CARTAS OFERTA_PROYECTO_image5.png');
+  // const signatureImageUrl = buildAssetUrl('assets/SOLICITUD DE CARTAS OFERTA_PROYECTO_image5.png');
 
   useEffect(() => {
     const resolveTemplate = async () => {
@@ -176,18 +176,14 @@ export const PDFPreview: React.FC<PDFPreviewProps> = ({ solicitud, onLetterGener
       const doc = new jsPDF();
       const pageWidth = doc.internal.pageSize.getWidth();
       const pageHeight = doc.internal.pageSize.getHeight();
-      const [headerLogo, signatureImage, footerImage] = await Promise.all([
+      const [headerLogo, footerImage] = await Promise.all([
         fetchImageDataUrl(headerLogoUrl),
-        fetchImageDataUrl(signatureImageUrl),
         fetchImageDataUrl(footerImageUrl),
       ]);
 
       if (headerLogo) {
-        doc.addImage(headerLogo, 'PNG', 15, 12, 58, 10);
+        doc.addImage(headerLogo, 'PNG', 0, 0, pageWidth, 28);
       }
-      
-      doc.setDrawColor(196, 208, 226);
-      doc.line(15, 28, 195, 28);
       
       doc.setFont("helvetica", "normal");
       doc.setFontSize(9);
@@ -237,17 +233,17 @@ export const PDFPreview: React.FC<PDFPreviewProps> = ({ solicitud, onLetterGener
       doc.text("Candidato / Aceptante", 15, yPos + 10);
 
       doc.line(130, yPos, 195, yPos);
-      if (signatureImage) {
-        doc.addImage(signatureImage, 'PNG', 138, yPos - 16, 48, 14);
-      }
+      // if (signatureImage) {
+      //   doc.addImage(signatureImage, 'PNG', 138, yPos - 16, 48, 14);
+      // }
       doc.setFont("helvetica", "bold");
       doc.text("Vicepresidencia de Talento", 130, yPos + 5);
       doc.setFont("helvetica", "normal");
       doc.text("Universidad San Ignacio de Loyola", 130, yPos + 10);
 
-      if (footerImage) {
-        doc.addImage(footerImage, 'PNG', 0, pageHeight - 18, pageWidth, 18);
-      }
+      // if (footerImage) {
+      //   doc.addImage(footerImage, 'PNG', 0, pageHeight - 18, pageWidth, 18);
+      // }
 
       doc.save(`Carta_Oferta_${texts.nombre.split(' ').join('_')}.pdf`);
       
@@ -315,15 +311,15 @@ export const PDFPreview: React.FC<PDFPreviewProps> = ({ solicitud, onLetterGener
               </div>
             )}
 
-            <div className="mb-8 flex items-start justify-between border-b border-slate-200 pb-4">
+            <div className="mb-8 border-b border-slate-200 pb-4">
               <img
                 src={headerLogoUrl}
                 alt="USIL"
-                className="h-auto max-h-16 w-auto max-w-[240px] object-contain"
+                className="w-full h-auto object-contain"
               />
-              <span className="text-[10px] text-slate-400 font-mono mt-2">
+              <div className="text-right text-[10px] text-slate-400 font-mono mt-2">
                 Correlativo: {solicitud.correlativo || '2410'}
-              </span>
+              </div>
             </div>
 
             {/* Date */}
@@ -384,23 +380,20 @@ export const PDFPreview: React.FC<PDFPreviewProps> = ({ solicitud, onLetterGener
             </div>
 
             <div className="text-right">
-              <img
-                src={signatureImageUrl}
-                alt="Firma USIL"
-                className="ml-auto mb-1 h-auto max-h-16 w-auto max-w-[180px] object-contain mix-blend-multiply opacity-90"
-              />
-              <div className="border-t border-slate-300 w-44 pt-1 text-[10px] font-bold text-slate-700 ml-auto">
+              <div className="mt-12 border-t border-slate-300 w-44 pt-1 text-[10px] font-bold text-slate-700 ml-auto">
                 Vicepresidencia de Talento
               </div>
               <div className="text-[9px] text-slate-400 mt-0.5">Universidad San Ignacio de Loyola</div>
             </div>
           </div>
 
+          {/* 
           <img
             src={footerImageUrl}
             alt="Footer carta"
             className="pointer-events-none absolute bottom-0 left-0 w-full object-cover"
-          />
+          /> 
+          */}
 
         </div>
       </div>
