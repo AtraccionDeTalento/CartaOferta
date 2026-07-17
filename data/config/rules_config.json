@@ -1,0 +1,322 @@
+[
+  {
+    "plantilla": "PRACTICANTE PRE",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "modalidad",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          },
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          },
+          {
+            "field": "tipo_ingreso",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          }
+        ]
+      },
+      {
+        "any": [
+          {
+            "field": "modalidad",
+            "operator": "contains",
+            "value": "PRE"
+          },
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "PRE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "PRACTICANTE PRO",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "modalidad",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          },
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          },
+          {
+            "field": "tipo_ingreso",
+            "operator": "contains",
+            "value": "PRACTICANTE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "CO maternidad",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "tipo_ingreso",
+            "operator": "contains",
+            "value": "MATERNIDAD"
+          },
+          {
+            "field": "tipo_ingreso",
+            "operator": "contains",
+            "value": "LICENCIA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "PREPARADOR FISICO",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "PREPARADOR"
+          },
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "INSTRUCTOR"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "operador",
+    "condiciones": [
+      {
+        "field": "puesto",
+        "operator": "contains",
+        "value": "OPERADOR"
+      },
+      {
+        "field": "puesto",
+        "operator": "contains",
+        "value": "PROMOTOR"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO GEF",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "unidad",
+            "operator": "equal",
+            "value": "GEF"
+          },
+          {
+            "field": "unidad",
+            "operator": "equal",
+            "value": "IE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "CSIR",
+    "condiciones": [
+      {
+        "field": "unidad",
+        "operator": "equal",
+        "value": "CSIR"
+      }
+    ]
+  },
+  {
+    "plantilla": "PART TIME",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "modalidad",
+            "operator": "contains",
+            "value": "PART"
+          },
+          {
+            "field": "jornada",
+            "operator": "not_equal",
+            "value": "48"
+          }
+        ]
+      },
+      {
+        "field": "incluye_eps",
+        "operator": "true"
+      }
+    ]
+  },
+  {
+    "plantilla": "PART TIME (2)",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "modalidad",
+            "operator": "contains",
+            "value": "PART"
+          },
+          {
+            "field": "jornada",
+            "operator": "not_equal",
+            "value": "48"
+          }
+        ]
+      },
+      {
+        "field": "incluye_eps",
+        "operator": "false"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO Chofer",
+    "condiciones": [
+      {
+        "field": "puesto",
+        "operator": "contains",
+        "value": "CHOFER"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO+mov+teb",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "all": [
+              {
+                "field": "incluye_movilidad",
+                "operator": "true"
+              },
+              {
+                "field": "incluye_tarjeta_alimentos",
+                "operator": "true"
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "incluye_bono_transporte",
+                "operator": "true"
+              },
+              {
+                "field": "incluye_tarjeta_alimentos",
+                "operator": "true"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "CO sin eps",
+    "condiciones": [
+      {
+        "field": "incluye_eps",
+        "operator": "false"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO TP",
+    "condiciones": [
+      {
+        "field": "puesto",
+        "operator": "contains",
+        "value": "DOCENTE"
+      },
+      {
+        "field": "modalidad",
+        "operator": "contains",
+        "value": "TIEMPO PARCIAL"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO X",
+    "condiciones": [
+      {
+        "any": [
+          {
+            "field": "puesto",
+            "operator": "contains",
+            "value": "GERENTE"
+          },
+          {
+            "field": "tipo_personal",
+            "operator": "contains",
+            "value": "INDETERMINADO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "plantilla": "CO (3)",
+    "condiciones": [
+      {
+        "field": "tipo_personal",
+        "operator": "contains",
+        "value": "DIRECCION"
+      },
+      {
+        "field": "categoria_trabajador",
+        "operator": "contains",
+        "value": "NO FISCALIZABLE"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO BASE (2)",
+    "condiciones": [
+      {
+        "field": "tipo_personal",
+        "operator": "contains",
+        "value": "CONFIANZA"
+      },
+      {
+        "field": "categoria_trabajador",
+        "operator": "contains",
+        "value": "NO FISCALIZABLE"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO BASE (3)",
+    "condiciones": [
+      {
+        "field": "categoria_trabajador",
+        "operator": "contains",
+        "value": "SUJETO"
+      }
+    ]
+  },
+  {
+    "plantilla": "CO BASE",
+    "condiciones": []
+  }
+]

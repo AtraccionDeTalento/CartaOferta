@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HR Ops System</title>
+  <!-- GitHub Pages SPA redirect fix -->
+  <!-- Redirige todas las rutas 404 al index.html para que React Router funcione -->
+  <script>
+    // Guarda la ruta actual y redirige al index con el path como query string
+    const repo = '/ACO'; // nombre del repo en GitHub
+    const path = window.location.pathname.slice(repo.length);
+    const search = window.location.search;
+    const hash = window.location.hash;
+    window.location.replace(
+      repo + '/?p=' + encodeURIComponent(path + search) + hash
+    );
+  </script>
+</head>
+<body></body>
+</html>

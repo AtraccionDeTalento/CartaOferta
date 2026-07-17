@@ -1,0 +1,458 @@
+{
+  "CO BASE": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO BASE (2)": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo a tiempo parcial, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "parcial",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO BASE (3)": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO (3)": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO X": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo indeterminado con un periodo de prueba de 1 año.\nPersonal de confianza no fiscalizable.",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "1 año",
+      "incluye_tarjeta_alimentos": true,
+      "monto_tarjeta_alimentos": 800
+    }
+  },
+  "CO+mov+teb": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO TP": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Remuneración bruta por hora lectiva S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo a tiempo parcial, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "parcial",
+      "incluye_eps": false,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO GEF": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": false,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO sin eps": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": false,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "CO Chofer": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses",
+      "incluye_tarjeta_alimentos": true,
+      "monto_tarjeta_alimentos": 100
+    }
+  },
+  "CO maternidad": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Suplencia por periodo de maternidad hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de 03 meses.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "PRACTICANTE PRE": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución,",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Subvención:",
+      "contrato": "Convenio:",
+      "horario": "Horario:",
+      "beneficios": null
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "S/ {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Por {{tiempo_contrato}} hasta el {{fecha_termino_contrato}}.",
+      "horario": "El practicante tendrá una jornada formativa de treinta (30) horas semanales, la misma que será establecida de común acuerdo por USIL y el practicante, atendiendo a las necesidades formativas de este último.",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "30",
+      "incluye_eps": false,
+      "periodo_prueba": ""
+    }
+  },
+  "PRACTICANTE PRO": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Subvención:",
+      "contrato": "Convenio:",
+      "horario": "Horario:",
+      "beneficios": null
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "S/ {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Por {{tiempo_contrato}} hasta el {{fecha_termino_contrato}}.",
+      "horario": "El practicante tendrá una jornada laboral de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": false,
+      "periodo_prueba": ""
+    }
+  },
+  "CSIR": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución,",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": true,
+      "periodo_prueba": "3 meses",
+      "incluye_bono_transporte": true,
+      "monto_bono_transporte": 10
+    }
+  },
+  "PART TIME": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": "Otros Beneficios:"
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo a tiempo parcial, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": "Seguro médico EPS y Seguro Oncológico en caso de afiliarse, cubierto al 100% en plan Base para usted y su familia (Cónyuge e hijos menores de 18 años)."
+    },
+    "config_defecto": {
+      "jornada": "parcial",
+      "incluye_eps": true,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "PART TIME (2)": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": null
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo a tiempo parcial, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "parcial",
+      "incluye_eps": false,
+      "periodo_prueba": "03 meses"
+    }
+  },
+  "operador": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario de Trabajo:",
+      "beneficios": null
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de 02 meses.",
+      "horario": "El trabajador tendrá una jornada de trabajo de cuarenta y ocho (48) horas semanales, la cual se cumplirá dentro del horario de trabajo que señale el Empleador.\nModalidad {{modalidad_trabajo}}",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "48",
+      "incluye_eps": false,
+      "periodo_prueba": "02 meses"
+    }
+  },
+  "PREPARADOR FISICO": {
+    "intro": "Nos es grato presentarle nuestra propuesta formal de empleo para integrarte a nuestra Institución, bajo los siguientes términos generales:",
+    "cierre": "Si está de acuerdo con los términos de la presente oferta, favor de firmarla en señal de conformidad. Esta propuesta tiene validez por cinco días laborables.",
+    "labels": {
+      "cargo": "Cargo:",
+      "dependencia": "Dependencia:",
+      "compensacion": "Compensación:",
+      "contrato": "Contrato:",
+      "horario": "Horario:",
+      "beneficios": null
+    },
+    "templates": {
+      "cargo": "{{puesto}}",
+      "dependencia": "{{codigo_cr}}",
+      "compensacion": "Sueldo base bruto mensual de S/. {{salario}} ({{salario_letras}} con 00/100 soles)",
+      "contrato": "Plazo fijo hasta el {{fecha_termino_contrato}}.\nCon un periodo de prueba de {{periodo_prueba}}.\nPersonal {{tipo_personal}} {{categoria_trabajador}}",
+      "horario": "El trabajador tendrá una jornada de trabajo a tiempo parcial, la cual se cumplirá dentro del horario de trabajo que señale el Empleador. Modalidad Presencial",
+      "beneficios": null
+    },
+    "config_defecto": {
+      "jornada": "parcial",
+      "incluye_eps": false,
+      "periodo_prueba": "03 meses"
+    }
+  }
+}

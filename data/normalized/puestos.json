@@ -1,0 +1,2450 @@
+[
+  {
+    "id": 1,
+    "nombre": "DIRECTOR DE SECUNDARIA - IB"
+  },
+  {
+    "id": 2,
+    "nombre": "DIRECTOR GENERAL DEL CSIR"
+  },
+  {
+    "id": 3,
+    "nombre": "ASISTENTE ADMINISTRATIVO"
+  },
+  {
+    "id": 4,
+    "nombre": "GERENTE ADMINISTRATIVO"
+  },
+  {
+    "id": 5,
+    "nombre": "EJECUTIVO DE ADMISION"
+  },
+  {
+    "id": 6,
+    "nombre": "JEFE DE ADMISION"
+  },
+  {
+    "id": 7,
+    "nombre": "REPRESENTANTE COMERCIAL"
+  },
+  {
+    "id": 8,
+    "nombre": "JEFE DE CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 9,
+    "nombre": "TESORERO"
+  },
+  {
+    "id": 10,
+    "nombre": "ASISTENTE AUDIOVISUAL"
+  },
+  {
+    "id": 11,
+    "nombre": "ASISTENTE DE CANALES DIGITALES"
+  },
+  {
+    "id": 12,
+    "nombre": "BRAND PROMOTION SPECIALIST"
+  },
+  {
+    "id": 13,
+    "nombre": "CONTENT MARKETING COORDINATOR"
+  },
+  {
+    "id": 14,
+    "nombre": "CREADOR DE CONTENIDO AUDIOVISUAL"
+  },
+  {
+    "id": 15,
+    "nombre": "DISEÑADOR GRAFICO - CSIR"
+  },
+  {
+    "id": 16,
+    "nombre": "JEFE DE MARKETING"
+  },
+  {
+    "id": 17,
+    "nombre": "PRACTICANTE"
+  },
+  {
+    "id": 18,
+    "nombre": "ASESOR"
+  },
+  {
+    "id": 19,
+    "nombre": "ASISTENTE"
+  },
+  {
+    "id": 20,
+    "nombre": "AUXILIAR DE EDUCACION"
+  },
+  {
+    "id": 21,
+    "nombre": "COORDINADOR ACADEMICO DE INICIAL"
+  },
+  {
+    "id": 22,
+    "nombre": "DOCENTE"
+  },
+  {
+    "id": 23,
+    "nombre": "DOCENTE DE TALLER"
+  },
+  {
+    "id": 24,
+    "nombre": "COORDINADOR DE DEPORTES (E)"
+  },
+  {
+    "id": 25,
+    "nombre": "PROFESOR DEPORTES"
+  },
+  {
+    "id": 26,
+    "nombre": "SALVAVIDAS"
+  },
+  {
+    "id": 27,
+    "nombre": "ESPECIALISTA DE SOPORTE PARA EL APRENDIZAJE"
+  },
+  {
+    "id": 28,
+    "nombre": "JEFE DE PSICOLOGIA Y SAEI"
+  },
+  {
+    "id": 29,
+    "nombre": "PSICOLOGO"
+  },
+  {
+    "id": 30,
+    "nombre": "RESPONSABLE DE SOPORTE PARA EL APRENDIZAJE"
+  },
+  {
+    "id": 31,
+    "nombre": "BIBLIOTECOLOGO"
+  },
+  {
+    "id": 32,
+    "nombre": "COORDINADOR ACADEMICO DE PRIMARIA"
+  },
+  {
+    "id": 33,
+    "nombre": "COORDINADOR DE ACTIVIDADES PYP Y DOCENTE DOF"
+  },
+  {
+    "id": 34,
+    "nombre": "DIRECTOR DE PRIMARIA PYP"
+  },
+  {
+    "id": 35,
+    "nombre": "DOCENTE DOF"
+  },
+  {
+    "id": 36,
+    "nombre": "ASISTENTE ADMINISTRATIVO - IB"
+  },
+  {
+    "id": 37,
+    "nombre": "COORDINADOR ACADEMICO DE SECUNDARIA"
+  },
+  {
+    "id": 38,
+    "nombre": "COORDINADOR DE SERVICIOS Y CERT. INTERNACIONALES"
+  },
+  {
+    "id": 39,
+    "nombre": "DOCENTE DE DOE Y ACTIVIDADES"
+  },
+  {
+    "id": 40,
+    "nombre": "ANALISTA DE REGISTROS ACADEMICOS"
+  },
+  {
+    "id": 41,
+    "nombre": "ASISTENTE DE SECRETARIA ACADEMICA"
+  },
+  {
+    "id": 42,
+    "nombre": "JEFE DE SECRETARIA ACADEMICA"
+  },
+  {
+    "id": 43,
+    "nombre": "ASISTENTE DE LABORATORIO STEAM"
+  },
+  {
+    "id": 44,
+    "nombre": "COORDINADOR"
+  },
+  {
+    "id": 45,
+    "nombre": "COORDINADOR DE ACTIVIDADES EXTRACURRICULARES"
+  },
+  {
+    "id": 46,
+    "nombre": "COORDINADOR DE TECNOLOGIA"
+  },
+  {
+    "id": 47,
+    "nombre": "ADMINISTRADOR DE SEDE"
+  },
+  {
+    "id": 48,
+    "nombre": "ASISTENTE OPERATIVO"
+  },
+  {
+    "id": 49,
+    "nombre": "AUXILIAR DE SERVICIOS GENERALES"
+  },
+  {
+    "id": 50,
+    "nombre": "ADMINISTRADOR DE LOCAL"
+  },
+  {
+    "id": 51,
+    "nombre": "ASISTENTE DE SERVICIOS GENERALES"
+  },
+  {
+    "id": 52,
+    "nombre": "AUXILIAR DE PUBLICACIONES"
+  },
+  {
+    "id": 53,
+    "nombre": "COORDINADOR ADMINISTRATIVO"
+  },
+  {
+    "id": 54,
+    "nombre": "SUPERVISOR DE MANTENIMIENTO"
+  },
+  {
+    "id": 55,
+    "nombre": "TECNICO ELECTRICISTA"
+  },
+  {
+    "id": 56,
+    "nombre": "CHOFER PROFESIONAL"
+  },
+  {
+    "id": 57,
+    "nombre": "AUXILIAR DE CONTROL INTERNO"
+  },
+  {
+    "id": 58,
+    "nombre": "COORDINADOR DE SEGURIDAD FISICA"
+  },
+  {
+    "id": 59,
+    "nombre": "OPERADOR DE CENTRO DE CONTROL"
+  },
+  {
+    "id": 60,
+    "nombre": "SUPERVISOR DE SEGURIDAD FISICA"
+  },
+  {
+    "id": 61,
+    "nombre": "SEGURIDAD PERSONAL Y PREVENCION DE RIESGOS"
+  },
+  {
+    "id": 62,
+    "nombre": "DIRECTOR COMERCIAL DE LA ESCUELA DE POSGRADO"
+  },
+  {
+    "id": 63,
+    "nombre": "ESPECIALISTA DE GESTION Y PROCESOS"
+  },
+  {
+    "id": 64,
+    "nombre": "GERENTE DE LA ESCUELA DE POSGRADO"
+  },
+  {
+    "id": 65,
+    "nombre": "JEFE DE LABORATORIO"
+  },
+  {
+    "id": 66,
+    "nombre": "VICERRECTOR DE POSGRADO (INTERINO)"
+  },
+  {
+    "id": 67,
+    "nombre": "ASISTENTE ACADEMICO DE SUSTENTACIONES EPG"
+  },
+  {
+    "id": 68,
+    "nombre": "COORDINADOR DE EXPERIENCIA AL ALUMNO"
+  },
+  {
+    "id": 69,
+    "nombre": "COORDINADOR DE GRADOS Y SUSTENTACIONES EPG (E)"
+  },
+  {
+    "id": 70,
+    "nombre": "DIRECTOR ACADEMICO EPG (E)"
+  },
+  {
+    "id": 71,
+    "nombre": "DOCENTE INHOUSE"
+  },
+  {
+    "id": 72,
+    "nombre": "DOCENTE INVESTIGADOR"
+  },
+  {
+    "id": 73,
+    "nombre": "DOCENTE TIEMPO COMPLETO"
+  },
+  {
+    "id": 74,
+    "nombre": "JEFE ACADEMICO DE EDUCACION"
+  },
+  {
+    "id": 75,
+    "nombre": "JEFE ACADEMICO DE GESTION PUBLICA Y DERECHO"
+  },
+  {
+    "id": 76,
+    "nombre": "MONITOR ACADEMICO EPG"
+  },
+  {
+    "id": 77,
+    "nombre": "COORDINADOR DE MAESTRIAS"
+  },
+  {
+    "id": 78,
+    "nombre": "COORDINADOR ADMINISTRATIVO - ALTA DIRECCION Y DIPLOMADOS"
+  },
+  {
+    "id": 79,
+    "nombre": "COORDINADOR DE CALIDAD ACADEMICA Y DE SERVICIO"
+  },
+  {
+    "id": 80,
+    "nombre": "JEFE ACADEMICO DE EDUCACION EJECUTIVA"
+  },
+  {
+    "id": 81,
+    "nombre": "ANALISTA DE PROYECTOS EDUCATIVOS"
+  },
+  {
+    "id": 82,
+    "nombre": "ASESOR COMERCIAL"
+  },
+  {
+    "id": 83,
+    "nombre": "ASISTENTE DE VENTAS"
+  },
+  {
+    "id": 84,
+    "nombre": "COORDINADOR DE GESTION EDUCATIVA"
+  },
+  {
+    "id": 85,
+    "nombre": "COORDINADOR DE PLATAFORMA"
+  },
+  {
+    "id": 86,
+    "nombre": "EJECUTIVO DE CUENTAS"
+  },
+  {
+    "id": 87,
+    "nombre": "JEFE DE VENTAS INSTITUCIONALES E INHOUSE"
+  },
+  {
+    "id": 88,
+    "nombre": "SUPERVISOR ACADEMICO INHOUSE"
+  },
+  {
+    "id": 89,
+    "nombre": "REPRESENTANTE DE ADMISION"
+  },
+  {
+    "id": 90,
+    "nombre": "ASESOR DE ADMISION - CONTACT CENTER EPG"
+  },
+  {
+    "id": 91,
+    "nombre": "COORDINADOR DE ADMISION EPG"
+  },
+  {
+    "id": 92,
+    "nombre": "EJECUTIVO DE CUENTAS (E)"
+  },
+  {
+    "id": 93,
+    "nombre": "SUPERVISOR DE VENTAS EPG"
+  },
+  {
+    "id": 94,
+    "nombre": "ASISTENTE DE ATENCION AL ALUMNO"
+  },
+  {
+    "id": 95,
+    "nombre": "JEFE DE SERVICIOS AL ALUMNO Y RETENCION"
+  },
+  {
+    "id": 96,
+    "nombre": "GESTOR DE OPERACIONES COMERCIALES"
+  },
+  {
+    "id": 97,
+    "nombre": "JEFE DE VENTAS EPG"
+  },
+  {
+    "id": 98,
+    "nombre": "ANALISTA JUNIOR DE MARKETING"
+  },
+  {
+    "id": 99,
+    "nombre": "COORDINADOR DE CONTENIDOS"
+  },
+  {
+    "id": 100,
+    "nombre": "COORDINADOR DIGITAL Y DE PERFORMANCE"
+  },
+  {
+    "id": 101,
+    "nombre": "SUBGERENTE DE MARKETING"
+  },
+  {
+    "id": 102,
+    "nombre": "DIRECTOR DE CARRERA"
+  },
+  {
+    "id": 103,
+    "nombre": "GERENTE DEL INSTITUTO DE EMPRENDEDORES"
+  },
+  {
+    "id": 104,
+    "nombre": "ANALISTA ACADEMICO Y CUMPLIMIENTO REGULATORIO"
+  },
+  {
+    "id": 105,
+    "nombre": "ASISTENTE ACADEMICA"
+  },
+  {
+    "id": 106,
+    "nombre": "COORDINADOR DE OPERACIONES ACADEMICAS IE"
+  },
+  {
+    "id": 107,
+    "nombre": "COORDINADOR SENIOR DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "id": 108,
+    "nombre": "JEFE ACADEMICO"
+  },
+  {
+    "id": 109,
+    "nombre": "COORDINADOR JUNIOR DE TUTORIA"
+  },
+  {
+    "id": 110,
+    "nombre": "TUTOR"
+  },
+  {
+    "id": 111,
+    "nombre": "COORDINADOR DE CALIDAD ACADEMICA"
+  },
+  {
+    "id": 112,
+    "nombre": "JEFE REGIONAL SUR"
+  },
+  {
+    "id": 113,
+    "nombre": "SUPERVISOR DE ADMISION - CONTACT CENTER USIL"
+  },
+  {
+    "id": 114,
+    "nombre": "ASESOR DE ADMISION - CONTACT CENTER IE"
+  },
+  {
+    "id": 115,
+    "nombre": "ASESOR DE ADMISION - IE"
+  },
+  {
+    "id": 116,
+    "nombre": "SUPERVISOR DE ADMISION - IE"
+  },
+  {
+    "id": 117,
+    "nombre": "ANALISTA DE MARKETING"
+  },
+  {
+    "id": 118,
+    "nombre": "COORDINADOR DE MARKETING Y VENTAS"
+  },
+  {
+    "id": 119,
+    "nombre": "DISEÑADOR"
+  },
+  {
+    "id": 120,
+    "nombre": "EJECUTIVO INHOUSE - IE"
+  },
+  {
+    "id": 121,
+    "nombre": "PROMOTOR DE RELACION CON COLEGIOS"
+  },
+  {
+    "id": 122,
+    "nombre": "SUPERVISOR DE MARKETING Y VENTAS INSTITUCIONALES (E)"
+  },
+  {
+    "id": 123,
+    "nombre": "ASISTENTE DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "id": 124,
+    "nombre": "ANALISTA DE PLANEAMIENTO COMERCIAL"
+  },
+  {
+    "id": 125,
+    "nombre": "GERENTE COMERCIAL"
+  },
+  {
+    "id": 126,
+    "nombre": "JEFE DE PROYECTOS ESPECIALES (E)"
+  },
+  {
+    "id": 127,
+    "nombre": "GESTOR DE PROYECTO"
+  },
+  {
+    "id": 128,
+    "nombre": "ANALISTA DE MARKETING PGEX"
+  },
+  {
+    "id": 129,
+    "nombre": "COORDINADOR DE MARKETING PGEX"
+  },
+  {
+    "id": 130,
+    "nombre": "EJECUTIVO EMPRESAS PGEX"
+  },
+  {
+    "id": 131,
+    "nombre": "ANALISTA DE DATA SENIOR"
+  },
+  {
+    "id": 132,
+    "nombre": "ANALISTA DE MARKETING CRM"
+  },
+  {
+    "id": 133,
+    "nombre": "ANALISTA DE PUBLICIDAD"
+  },
+  {
+    "id": 134,
+    "nombre": "ASISTENTE DE MARKETING"
+  },
+  {
+    "id": 135,
+    "nombre": "COORDINADOR DE INVESTIGACION DE MERCADOS"
+  },
+  {
+    "id": 136,
+    "nombre": "COORDINADOR DE MARKETING"
+  },
+  {
+    "id": 137,
+    "nombre": "COORDINADOR DE MARKETING DIGITAL"
+  },
+  {
+    "id": 138,
+    "nombre": "DIGITAL MEDIA PLANNER SENIOR"
+  },
+  {
+    "id": 139,
+    "nombre": "GERENTE DE MARKETING PREGRADO"
+  },
+  {
+    "id": 140,
+    "nombre": "JEFE DE MARKETING Y VENTAS"
+  },
+  {
+    "id": 141,
+    "nombre": "JEFE DE MARKETING Y VENTAS INTERNACIONALES"
+  },
+  {
+    "id": 142,
+    "nombre": "JEFE DE PRODUCTO"
+  },
+  {
+    "id": 143,
+    "nombre": "SUBGERENTE DE MARKETING Y VENTAS INTERNACIONAL"
+  },
+  {
+    "id": 144,
+    "nombre": "SUBGERENTE DE MARKETING Y VENTAS PGEX E IE"
+  },
+  {
+    "id": 145,
+    "nombre": "COORDINADOR DE RELACIONES EDUCATIVAS"
+  },
+  {
+    "id": 146,
+    "nombre": "GERENTE DE RELACIONES EDUCATIVAS"
+  },
+  {
+    "id": 147,
+    "nombre": "PROMOTOR DE RELACIONES EDUCATIVAS"
+  },
+  {
+    "id": 148,
+    "nombre": "PROMOTOR DE RELACIONES EMPRESARIALES"
+  },
+  {
+    "id": 149,
+    "nombre": "PROMOTOR JUNIOR DE RELACIONES EDUCATIVAS"
+  },
+  {
+    "id": 150,
+    "nombre": "ASESOR DE ADMISION - CONTACT CENTER USIL"
+  },
+  {
+    "id": 151,
+    "nombre": "ASESOR DE ADMISION - USIL"
+  },
+  {
+    "id": 152,
+    "nombre": "ASESOR DE ADMISION SENIOR - CONTACT CENTER USIL"
+  },
+  {
+    "id": 153,
+    "nombre": "COORDINADOR DE VENTAS EDUCACION CONTINUA"
+  },
+  {
+    "id": 154,
+    "nombre": "COORDINADOR DE CAPACITACION Y CONTROL DE CALIDAD"
+  },
+  {
+    "id": 155,
+    "nombre": "MONITOR DE CALIDAD"
+  },
+  {
+    "id": 156,
+    "nombre": "ASESOR DE ADMISION - GRADO AMERICANO"
+  },
+  {
+    "id": 157,
+    "nombre": "SUPERVISOR DE ADMISION - DOBLE GRADO"
+  },
+  {
+    "id": 158,
+    "nombre": "ASESOR COMERCIAL - EDUCACION CONTINUA"
+  },
+  {
+    "id": 159,
+    "nombre": "JEFE DE CONTACT CENTER"
+  },
+  {
+    "id": 160,
+    "nombre": "JEFE DE SOPORTE OPERATIVO COMERCIAL BACK OFFICE"
+  },
+  {
+    "id": 161,
+    "nombre": "EJECUTIVO COMERCIAL"
+  },
+  {
+    "id": 162,
+    "nombre": "GESTOR DE SOPORTE OPERATIVO COMERCIAL"
+  },
+  {
+    "id": 163,
+    "nombre": "SUPERVISOR DE ADMISION - USIL"
+  },
+  {
+    "id": 164,
+    "nombre": "JEFE DE MARKETING Y VENTAS IE"
+  },
+  {
+    "id": 165,
+    "nombre": "ANALISTA DE CONTROL DE GESTION"
+  },
+  {
+    "id": 166,
+    "nombre": "ANALISTA DE CRM Y PLANEAMIENTO COMERCIAL"
+  },
+  {
+    "id": 167,
+    "nombre": "ANALISTA DE INTELIGENCIA COMERCIAL"
+  },
+  {
+    "id": 168,
+    "nombre": "ANALISTA SENIOR DE BUSINESS ANALYTICS"
+  },
+  {
+    "id": 169,
+    "nombre": "COORDINADOR DE INTELIGENCIA COMERCIAL"
+  },
+  {
+    "id": 170,
+    "nombre": "GESTOR DE INTELIGENCIA COMERCIAL"
+  },
+  {
+    "id": 171,
+    "nombre": "JEFE DE PLANEAMIENTO COMERCIAL"
+  },
+  {
+    "id": 172,
+    "nombre": "JEFE DE PROCESOS COMERCIALES"
+  },
+  {
+    "id": 173,
+    "nombre": "SUBGERENTE DE VENTAS Y ADMISION"
+  },
+  {
+    "id": 174,
+    "nombre": "ANALISTA ADMINISTRATIVO"
+  },
+  {
+    "id": 175,
+    "nombre": "COORDINADOR DE SERVICIOS GENERALES (E)"
+  },
+  {
+    "id": 176,
+    "nombre": "GERENTE DE ADMINISTRACION Y SEGURIDAD"
+  },
+  {
+    "id": 177,
+    "nombre": "JEFE ADMINISTRATIVO USIL (E)"
+  },
+  {
+    "id": 178,
+    "nombre": "JEFE DE RELACIONES COMUNITARIAS"
+  },
+  {
+    "id": 179,
+    "nombre": "JEFE DE SERVICIOS GENERALES Y TRANSPORTE"
+  },
+  {
+    "id": 180,
+    "nombre": "PLANIFICADOR DE MANTENIMIENTO"
+  },
+  {
+    "id": 181,
+    "nombre": "INGENIERO DE MANTENIMIENTO"
+  },
+  {
+    "id": 182,
+    "nombre": "ADMINISTRADOR ALTERNO"
+  },
+  {
+    "id": 183,
+    "nombre": "ADMINISTRADOR DE SEDE ALTERNO"
+  },
+  {
+    "id": 184,
+    "nombre": "ASISTENTE DE HELP SERVICE"
+  },
+  {
+    "id": 185,
+    "nombre": "ASISTENTE DE MANTENIMIENTO"
+  },
+  {
+    "id": 186,
+    "nombre": "ASISTENTE DE MESA DE PARTES"
+  },
+  {
+    "id": 187,
+    "nombre": "AUXILIAR DE LIMPIEZA"
+  },
+  {
+    "id": 188,
+    "nombre": "CONSERJE"
+  },
+  {
+    "id": 189,
+    "nombre": "COORDINADOR ADMINISTRATIVO SEDES DESCENTRALIZADAS"
+  },
+  {
+    "id": 190,
+    "nombre": "ASISTENTE DE PUBLICACIONES"
+  },
+  {
+    "id": 191,
+    "nombre": "ENCARGADO DE PUBLICACIONES"
+  },
+  {
+    "id": 192,
+    "nombre": "CHOFER"
+  },
+  {
+    "id": 193,
+    "nombre": "CHOFER EJECUTIVO"
+  },
+  {
+    "id": 194,
+    "nombre": "CHOFER EJECUTIVO (E)"
+  },
+  {
+    "id": 195,
+    "nombre": "COORDINADOR DE TRANSPORTES"
+  },
+  {
+    "id": 196,
+    "nombre": "ARQUITECTO DE INTERIORES"
+  },
+  {
+    "id": 197,
+    "nombre": "COORDINADOR DE INSTALACIONES"
+  },
+  {
+    "id": 198,
+    "nombre": "ESCOLTA"
+  },
+  {
+    "id": 199,
+    "nombre": "COORDINADOR DE SEGURIDAD ELECTRONICA Y PROTECCION CONTRA INCENDIOS"
+  },
+  {
+    "id": 200,
+    "nombre": "COORDINADOR DE SEGURIDAD PERSONAL"
+  },
+  {
+    "id": 201,
+    "nombre": "RECEPCIONISTA"
+  },
+  {
+    "id": 202,
+    "nombre": "TECNICO DE SEGURIDAD ELECTRONICA"
+  },
+  {
+    "id": 203,
+    "nombre": "COORDINADOR DE PREVENCION DE RIESGOS LABORALES Y GESTION DE EMERGENCIAS"
+  },
+  {
+    "id": 204,
+    "nombre": "COORDINADOR DE SEGURIDAD DE EDIFICACIONES"
+  },
+  {
+    "id": 205,
+    "nombre": "JEFE DE SEGURIDAD"
+  },
+  {
+    "id": 206,
+    "nombre": "PREVENCIONISTA DE RIESGOS DE SEGURIDAD DE CONTRATISTAS"
+  },
+  {
+    "id": 207,
+    "nombre": "ANALISTA JUNIOR DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "id": 208,
+    "nombre": "COORDINADOR DE OPERACIONES ACADEMICAS (E)"
+  },
+  {
+    "id": 209,
+    "nombre": "GERENTE DE MODO USIL"
+  },
+  {
+    "id": 210,
+    "nombre": "JEFE DE ARTE Y CULTURA"
+  },
+  {
+    "id": 211,
+    "nombre": "JEFE DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "id": 212,
+    "nombre": "COORDINADOR DE ATENCION AL ALUMNO"
+  },
+  {
+    "id": 213,
+    "nombre": "JEFE DE ATENCION AL ALUMNO"
+  },
+  {
+    "id": 214,
+    "nombre": "OPERADOR DE ATENCION AL ALUMNO"
+  },
+  {
+    "id": 215,
+    "nombre": "ASESOR DE BIENESTAR Y MONITOREO ACADEMICO"
+  },
+  {
+    "id": 216,
+    "nombre": "COORDINADOR DE BIENESTAR ESTUDIANTIL"
+  },
+  {
+    "id": 217,
+    "nombre": "COORDINADOR DE PSICOLOGIA"
+  },
+  {
+    "id": 218,
+    "nombre": "COORDINADOR DE TUTORIA"
+  },
+  {
+    "id": 219,
+    "nombre": "COORDINADOR GENERAL DE ACTIVIDADES Y DE ALIMENTACION SALUDABLE"
+  },
+  {
+    "id": 220,
+    "nombre": "JEFE DE BIENESTAR UNIVERSITARIO"
+  },
+  {
+    "id": 221,
+    "nombre": "NUTRICIONISTA"
+  },
+  {
+    "id": 222,
+    "nombre": "TRABAJADORA SOCIAL"
+  },
+  {
+    "id": 223,
+    "nombre": "AUXILIAR DE CAPELLANIA"
+  },
+  {
+    "id": 224,
+    "nombre": "CAPELLAN"
+  },
+  {
+    "id": 225,
+    "nombre": "COORDINADOR DE CAPELLANIA"
+  },
+  {
+    "id": 226,
+    "nombre": "AUXILIAR OPERATIVO DE DEPORTE"
+  },
+  {
+    "id": 227,
+    "nombre": "COORDINADOR DE DEPORTES"
+  },
+  {
+    "id": 228,
+    "nombre": "ENTRENADOR"
+  },
+  {
+    "id": 229,
+    "nombre": "INSTRUCTOR DE GIMNASIO"
+  },
+  {
+    "id": 230,
+    "nombre": "JEFE DE ACTIVIDAD FISICA Y DEPORTE"
+  },
+  {
+    "id": 231,
+    "nombre": "PREPARADOR FISICO"
+  },
+  {
+    "id": 232,
+    "nombre": "ASESOR DE FIDELIZACION Y RETENCION"
+  },
+  {
+    "id": 233,
+    "nombre": "COORDINADOR DE ANALITICA EN RETENCION"
+  },
+  {
+    "id": 234,
+    "nombre": "OPERADOR DE ATENCION AL CLIENTE"
+  },
+  {
+    "id": 235,
+    "nombre": "SUPERVISOR DE FIDELIZACION Y RETENCION (E)"
+  },
+  {
+    "id": 236,
+    "nombre": "ASISTENTE DE ALMACEN - LIBRERIA"
+  },
+  {
+    "id": 237,
+    "nombre": "ASISTENTE DE LIBRERIA"
+  },
+  {
+    "id": 238,
+    "nombre": "ASISTENTE TECNICO - COMPUTO"
+  },
+  {
+    "id": 239,
+    "nombre": "AUXILIAR DE BIBLIOTECA"
+  },
+  {
+    "id": 240,
+    "nombre": "CAJERO BOOKSTORE"
+  },
+  {
+    "id": 241,
+    "nombre": "COORDINADOR DE GESTION DEL CONOCIMIENTO"
+  },
+  {
+    "id": 242,
+    "nombre": "JEFE DE BIBLIOTECA"
+  },
+  {
+    "id": 243,
+    "nombre": "JEFE DE BIBLIOTECA (E)"
+  },
+  {
+    "id": 244,
+    "nombre": "ASISTENTE DE REGISTROS ACADEMICOS"
+  },
+  {
+    "id": 245,
+    "nombre": "ANALISTA JUNIOR DE PLANIFICACION Y PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 246,
+    "nombre": "ANALISTA JUNIOR DE PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 247,
+    "nombre": "ANALISTA SENIOR DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "id": 248,
+    "nombre": "ASISTENTE DE PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 249,
+    "nombre": "COORDINADOR DE PLANIFICACION Y PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 250,
+    "nombre": "COORDINADOR DE PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 251,
+    "nombre": "JEFE DE PLANIFICACION Y PROGRAMACION ACADEMICA"
+  },
+  {
+    "id": 252,
+    "nombre": "ANALISTA DE GRADOS Y TITULOS"
+  },
+  {
+    "id": 253,
+    "nombre": "ASISTENTE DE SERVICIOS ACADEMICOS"
+  },
+  {
+    "id": 254,
+    "nombre": "ASISTENTE GRADOS Y TITULOS"
+  },
+  {
+    "id": 255,
+    "nombre": "COORDINADOR DE SERVICIOS ACADEMICOS"
+  },
+  {
+    "id": 256,
+    "nombre": "COORDINADOR JUNIOR DE OPERACIONES ACADEMICAS IE (E)"
+  },
+  {
+    "id": 257,
+    "nombre": "JEFE DE SERVICIOS ACADEMICOS"
+  },
+  {
+    "id": 258,
+    "nombre": "ANALISTA DE EXPERIENCIA ACADEMICA"
+  },
+  {
+    "id": 259,
+    "nombre": "ANALISTA SENIOR DE BUSINESS ANALYTICS Y RETENCION"
+  },
+  {
+    "id": 260,
+    "nombre": "JEFE DE ESTRATEGIA COMERCIAL, ANALYTICS Y CRM"
+  },
+  {
+    "id": 261,
+    "nombre": "PROJECT MANAGER"
+  },
+  {
+    "id": 262,
+    "nombre": "SUBGERENTE DE EXPERIENCIA ACADEMICA"
+  },
+  {
+    "id": 263,
+    "nombre": "ASISTENTE EJECUTIVO"
+  },
+  {
+    "id": 264,
+    "nombre": "DESARROLLADOR DE CONTENIDO CURRICULAR"
+  },
+  {
+    "id": 265,
+    "nombre": "GERENTE DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 266,
+    "nombre": "ANALISTA DE ATRACCION DEL TALENTO"
+  },
+  {
+    "id": 267,
+    "nombre": "ASISTENTE DE ATRACCION DEL TALENTO"
+  },
+  {
+    "id": 268,
+    "nombre": "JEFE DE ATRACCION DEL TALENTO"
+  },
+  {
+    "id": 269,
+    "nombre": "ASISTENTE DE GESTION DEL TALENTO"
+  },
+  {
+    "id": 270,
+    "nombre": "COORDINADOR DE APRENDIZAJE Y DESARROLLO"
+  },
+  {
+    "id": 271,
+    "nombre": "JEFE DE GESTION DEL TALENTO"
+  },
+  {
+    "id": 272,
+    "nombre": "AUXILIAR DE BIENESTAR SOCIAL"
+  },
+  {
+    "id": 273,
+    "nombre": "ASISTENTE DE CLIMA Y CULTURA"
+  },
+  {
+    "id": 274,
+    "nombre": "ANALISTA SENIOR DE SEGURIDAD Y SALUD OCUPACIONAL"
+  },
+  {
+    "id": 275,
+    "nombre": "COORDINADOR DE TOPICOS"
+  },
+  {
+    "id": 276,
+    "nombre": "ENFERMERA"
+  },
+  {
+    "id": 277,
+    "nombre": "JEFE DE SALUD OCUPACIONAL"
+  },
+  {
+    "id": 278,
+    "nombre": "MEDICO ASISTENCIAL"
+  },
+  {
+    "id": 279,
+    "nombre": "TECNICA EN ENFERMERIA"
+  },
+  {
+    "id": 280,
+    "nombre": "ASISTENTE DE ACREDITACION Y LICENCIAMIENTO"
+  },
+  {
+    "id": 281,
+    "nombre": "COORDINADOR DE ACREDITACION Y LICENCIAMIENTO"
+  },
+  {
+    "id": 282,
+    "nombre": "ANALISTA DE COMPENSACIONES"
+  },
+  {
+    "id": 283,
+    "nombre": "ASISTENTE DE METRICAS Y PRESUPUESTO"
+  },
+  {
+    "id": 284,
+    "nombre": "ESPECIALISTA DE METRICAS Y PRESUPUESTO"
+  },
+  {
+    "id": 285,
+    "nombre": "JEFE DE COMPENSACIONES Y PRESUPUESTO"
+  },
+  {
+    "id": 286,
+    "nombre": "ANALISTA DE REMUNERACIONES"
+  },
+  {
+    "id": 287,
+    "nombre": "ASISTENTE DE ADMINISTRACION DE PERSONAL"
+  },
+  {
+    "id": 288,
+    "nombre": "ASISTENTE DE REMUNERACIONES"
+  },
+  {
+    "id": 289,
+    "nombre": "COORDINADOR DE ADMINISTRACION DE PERSONAL"
+  },
+  {
+    "id": 290,
+    "nombre": "COORDINADOR DE REMUNERACIONES"
+  },
+  {
+    "id": 291,
+    "nombre": "JEFE DE REMUNERACIONES Y ADMIN DE PERSONAL"
+  },
+  {
+    "id": 292,
+    "nombre": "SUBGERENTE DE GESTION HUMANA"
+  },
+  {
+    "id": 293,
+    "nombre": "BUSINESS PARTNER"
+  },
+  {
+    "id": 294,
+    "nombre": "SUBGERENTE DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 295,
+    "nombre": "GERENTE DE PROYECTOS TI"
+  },
+  {
+    "id": 296,
+    "nombre": "ANALISTA SEO"
+  },
+  {
+    "id": 297,
+    "nombre": "ASISTENTE DE MAQUETACION Y SOPORTE"
+  },
+  {
+    "id": 298,
+    "nombre": "CONTENT UX/SEO"
+  },
+  {
+    "id": 299,
+    "nombre": "DESARROLLADOR WEB"
+  },
+  {
+    "id": 300,
+    "nombre": "DISEÑADOR UX/UI"
+  },
+  {
+    "id": 301,
+    "nombre": "DISEÑADOR WEB"
+  },
+  {
+    "id": 302,
+    "nombre": "FULL STACK DEVELOPER"
+  },
+  {
+    "id": 303,
+    "nombre": "JEFE DE NEGOCIOS DIGITALES"
+  },
+  {
+    "id": 304,
+    "nombre": "ANALISTA DE SISTEMAS"
+  },
+  {
+    "id": 305,
+    "nombre": "ANALISTA JUNIOR DE SISTEMAS"
+  },
+  {
+    "id": 306,
+    "nombre": "ESPECIALISTA DE DESARROLLO TI"
+  },
+  {
+    "id": 307,
+    "nombre": "JEFE DE PROYECTOS"
+  },
+  {
+    "id": 308,
+    "nombre": "ANALISTA DE PROCESOS"
+  },
+  {
+    "id": 309,
+    "nombre": "ARQUITECTO DE SOFTWARE SENIOR"
+  },
+  {
+    "id": 310,
+    "nombre": "GESTOR DE PRESUPUESTO"
+  },
+  {
+    "id": 311,
+    "nombre": "JEFE DE PROCESOS"
+  },
+  {
+    "id": 312,
+    "nombre": "SUBGERENTE DE SEGURIDAD TI"
+  },
+  {
+    "id": 313,
+    "nombre": "ANALISTA SAP S4HANA"
+  },
+  {
+    "id": 314,
+    "nombre": "ANALISTA SENIOR SAP CO - SAP"
+  },
+  {
+    "id": 315,
+    "nombre": "PROJECT MANAGER ERP"
+  },
+  {
+    "id": 316,
+    "nombre": "JEFE DE PROYECTOS CUSTOMER EXPERIENCE"
+  },
+  {
+    "id": 317,
+    "nombre": "PROGRAMADOR FULL STACK"
+  },
+  {
+    "id": 318,
+    "nombre": "DATA ARCHITECT"
+  },
+  {
+    "id": 319,
+    "nombre": "DATA ENGINEER"
+  },
+  {
+    "id": 320,
+    "nombre": "JEFE DATA STRATEGIST"
+  },
+  {
+    "id": 321,
+    "nombre": "ASISTENTE DE GESTION DE SERVICIO TI-SIR"
+  },
+  {
+    "id": 322,
+    "nombre": "ASISTENTE DE GESTION DE SERVICIO TI-USIL"
+  },
+  {
+    "id": 323,
+    "nombre": "ASISTENTE DE SERVICE DESK"
+  },
+  {
+    "id": 324,
+    "nombre": "COORDINADOR DE SERVICIOS ACADEMICOS TI"
+  },
+  {
+    "id": 325,
+    "nombre": "COORDINADOR DE SERVICIOS AUDIOVISUALES"
+  },
+  {
+    "id": 326,
+    "nombre": "GESTOR DE INVENTARIOS TECNOLOGICOS"
+  },
+  {
+    "id": 327,
+    "nombre": "RESPONSABLE DE GESTION DE SERVICIOS TI"
+  },
+  {
+    "id": 328,
+    "nombre": "SUPERVISOR DE GESTION DE SERVICIOS TI"
+  },
+  {
+    "id": 329,
+    "nombre": "ADMINISTRADOR BASE DE DATOS"
+  },
+  {
+    "id": 330,
+    "nombre": "ANALISTA DE REDES Y COMUNICACIONES"
+  },
+  {
+    "id": 331,
+    "nombre": "COORDINADOR DE PLATAFORMA TECNOLOGICA"
+  },
+  {
+    "id": 332,
+    "nombre": "COORDINADOR DE REDES Y COMUNICACIONES"
+  },
+  {
+    "id": 333,
+    "nombre": "INGENIERO DE PLATAFORMA CLOUD"
+  },
+  {
+    "id": 334,
+    "nombre": "JEFE DE SERVICIOS TI"
+  },
+  {
+    "id": 335,
+    "nombre": "SUBGERENTE DE OPERACIONES TI"
+  },
+  {
+    "id": 336,
+    "nombre": "TECNICO DE REDES Y COMUNICACIONES"
+  },
+  {
+    "id": 337,
+    "nombre": "ANALISTA DE SEGURIDAD DE LA INFORMACION"
+  },
+  {
+    "id": 338,
+    "nombre": "ASISTENTE DE SEGURIDAD DE LA INFORMACION"
+  },
+  {
+    "id": 339,
+    "nombre": "GERENTE GENERAL"
+  },
+  {
+    "id": 340,
+    "nombre": "AUDITOR DE CONTROL INTERNO"
+  },
+  {
+    "id": 341,
+    "nombre": "AUDITOR DE CUMPLIMIENTO"
+  },
+  {
+    "id": 342,
+    "nombre": "AUDITOR INTERNO"
+  },
+  {
+    "id": 343,
+    "nombre": "JEFE NORMATIVO"
+  },
+  {
+    "id": 344,
+    "nombre": "ASISTENTE ADMINISTRATIVO - DIRECCION GENERAL"
+  },
+  {
+    "id": 345,
+    "nombre": "ASISTENTE EJECUTIVO - DIRECCION GENERAL"
+  },
+  {
+    "id": 346,
+    "nombre": "COORDINADOR EJECUTIVO"
+  },
+  {
+    "id": 347,
+    "nombre": "FUNDADOR Y PRESIDENTE DE DIRECTORIO"
+  },
+  {
+    "id": 348,
+    "nombre": "PRESIDENTE EJECUTIVO - DOCENTE"
+  },
+  {
+    "id": 349,
+    "nombre": "RECTOR"
+  },
+  {
+    "id": 350,
+    "nombre": "DIRECTOR DE SOSTENIBILIDAD"
+  },
+  {
+    "id": 351,
+    "nombre": "COORDINADOR DE GESTION AMBIENTAL"
+  },
+  {
+    "id": 352,
+    "nombre": "ASISTENTE DE PROGRAMAS Y PROYECTOS"
+  },
+  {
+    "id": 353,
+    "nombre": "COORDINADOR DE PROGRAMAS Y PROYECTOS"
+  },
+  {
+    "id": 354,
+    "nombre": "JEFE DE PROG. Y PROYECTOS RESPONSABILIDAD SOCIAL"
+  },
+  {
+    "id": 355,
+    "nombre": "ANALISTA DE EXPERIENCIA DE EMPLEABILIDAD"
+  },
+  {
+    "id": 356,
+    "nombre": "ANALISTA DE INTELIGENCIA EDUCATIVA"
+  },
+  {
+    "id": 357,
+    "nombre": "ASISTENTE DE EMPLEABILIDAD"
+  },
+  {
+    "id": 358,
+    "nombre": "COORDINADOR DE INNOVACION EDUCATIVA"
+  },
+  {
+    "id": 359,
+    "nombre": "COORDINADOR DE SERVICIOS DE EMPLEABILIDAD"
+  },
+  {
+    "id": 360,
+    "nombre": "ESPECIALISTA DE EMPLEABILIDAD"
+  },
+  {
+    "id": 361,
+    "nombre": "GERENTE DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
+  },
+  {
+    "id": 362,
+    "nombre": "JEFE DE EXPERIENCIA EN EMPLEABILIDAD"
+  },
+  {
+    "id": 363,
+    "nombre": "JEFE DE GRADOS Y TITULOS"
+  },
+  {
+    "id": 364,
+    "nombre": "ABOGADO"
+  },
+  {
+    "id": 365,
+    "nombre": "SECRETARIO GENERAL"
+  },
+  {
+    "id": 366,
+    "nombre": "COORDINADOR DE GESTION DE EMPRENDIMIENTO"
+  },
+  {
+    "id": 367,
+    "nombre": "ANALISTA DE PROYECTOS DE INNOVACION"
+  },
+  {
+    "id": 368,
+    "nombre": "ANALISTA JUNIOR DE ESTRATEGIAS DE CONTENIDOS AUDIOVISUALES"
+  },
+  {
+    "id": 369,
+    "nombre": "JEFE DE PROYECTOS DE EMPRENDIMIENTO"
+  },
+  {
+    "id": 370,
+    "nombre": "VICEPRESIDENTE DE EMPRENDIMIENTO"
+  },
+  {
+    "id": 371,
+    "nombre": "ASISTENTE DE MOVILIDAD INTERNACIONAL"
+  },
+  {
+    "id": 372,
+    "nombre": "DIRECTOR DE RELACIONES INTERNACIONALES"
+  },
+  {
+    "id": 373,
+    "nombre": "PRODUCT MANAGER"
+  },
+  {
+    "id": 374,
+    "nombre": "ASESOR GRADO AMERICANO"
+  },
+  {
+    "id": 375,
+    "nombre": "ASESOR JUNIOR DE ADMISION - GRADO AMERICANO"
+  },
+  {
+    "id": 376,
+    "nombre": "COORDINADOR ADMINISTRATIVO (E)"
+  },
+  {
+    "id": 377,
+    "nombre": "SUBDIRECTOR DE GRADO AMERICANO"
+  },
+  {
+    "id": 378,
+    "nombre": "COORDINADOR ACADEMICO"
+  },
+  {
+    "id": 379,
+    "nombre": "JEFE DE PROYECTOS INTERNACIONALES (E)"
+  },
+  {
+    "id": 380,
+    "nombre": "VICEPRESIDENTE DE INTERNACIONALIZACION"
+  },
+  {
+    "id": 381,
+    "nombre": "CONSULTOR COMERCIAL"
+  },
+  {
+    "id": 382,
+    "nombre": "VICEPRESIDENTE DE ASUNTOS CORPORATIVOS"
+  },
+  {
+    "id": 383,
+    "nombre": "ASISTENTE DE RELACIONAMIENTO EMPRESARIAL"
+  },
+  {
+    "id": 384,
+    "nombre": "COORDINADOR DE ASUNTOS CORPORATIVOS Y DESCENTRALIZ"
+  },
+  {
+    "id": 385,
+    "nombre": "DIRECTOR DE CENTRO MEDIA TRAINING"
+  },
+  {
+    "id": 386,
+    "nombre": "ESPECIALISTA AUDIOVISUAL"
+  },
+  {
+    "id": 387,
+    "nombre": "VICEPRESIDENTE DE COMUNICACION E INNOVACION"
+  },
+  {
+    "id": 388,
+    "nombre": "ASISTENTE DE PROYECTOS Y GESTION TECNOLOGICA"
+  },
+  {
+    "id": 389,
+    "nombre": "JEFE DE TECNOLOGIA E INNOVACION HIFLEX"
+  },
+  {
+    "id": 390,
+    "nombre": "ANALISTA DE PRENSA"
+  },
+  {
+    "id": 391,
+    "nombre": "ASISTENTE DE PRENSA"
+  },
+  {
+    "id": 392,
+    "nombre": "JEFE DE PRENSA Y ANALISIS DE MEDIOS"
+  },
+  {
+    "id": 393,
+    "nombre": "COORDINADOR CREATIVO"
+  },
+  {
+    "id": 394,
+    "nombre": "DISEÑADOR GRAFICO"
+  },
+  {
+    "id": 395,
+    "nombre": "ANALISTA DE EVENTOS"
+  },
+  {
+    "id": 396,
+    "nombre": "ANALISTA DE EVENTOS (E)"
+  },
+  {
+    "id": 397,
+    "nombre": "COORDINADOR DE EVENTOS"
+  },
+  {
+    "id": 398,
+    "nombre": "JEFE DE EVENTOS Y PROTOCOLO"
+  },
+  {
+    "id": 399,
+    "nombre": "ASISTENTE DE CAMARA"
+  },
+  {
+    "id": 400,
+    "nombre": "ASISTENTE DE PRODUCCION Y CONTENIDO"
+  },
+  {
+    "id": 401,
+    "nombre": "CAMAROGRAFO"
+  },
+  {
+    "id": 402,
+    "nombre": "COORDINADOR DE FOTOGRAFIA"
+  },
+  {
+    "id": 403,
+    "nombre": "EDITOR DE VIDEO DIGITAL"
+  },
+  {
+    "id": 404,
+    "nombre": "FOTOGRAFO"
+  },
+  {
+    "id": 405,
+    "nombre": "REALIZADOR AUDIOVISUAL"
+  },
+  {
+    "id": 406,
+    "nombre": "ANALISTA JUNIOR DE PRODUCCION Y EVENTOS"
+  },
+  {
+    "id": 407,
+    "nombre": "COORDINADOR DE CONTENIDOS PARA REDES SOCIALES"
+  },
+  {
+    "id": 408,
+    "nombre": "EDITOR POSTPRODUCTOR"
+  },
+  {
+    "id": 409,
+    "nombre": "EDITOR"
+  },
+  {
+    "id": 410,
+    "nombre": "ANALISTA DE COMUNICACION CORPORATIVA"
+  },
+  {
+    "id": 411,
+    "nombre": "ASISTENTE DE SERVICIOS AUDIOVISUALES"
+  },
+  {
+    "id": 412,
+    "nombre": "SUPERVISOR DE SERVICIOS AUDIOVISUALES"
+  },
+  {
+    "id": 413,
+    "nombre": "JEFE DE PRODUCTO DIGITAL"
+  },
+  {
+    "id": 414,
+    "nombre": "ANALISTA JUNIOR DE EDUCACION CONTINUA Y ANALISIS DIGITAL"
+  },
+  {
+    "id": 415,
+    "nombre": "COMMUNITY MANAGER"
+  },
+  {
+    "id": 416,
+    "nombre": "CONTENT CREATOR"
+  },
+  {
+    "id": 417,
+    "nombre": "COORDINADOR DE BRANDING Y CONTENIDOS"
+  },
+  {
+    "id": 418,
+    "nombre": "CREATIVO CONCEPTUAL"
+  },
+  {
+    "id": 419,
+    "nombre": "DIRECTOR CREATIVO"
+  },
+  {
+    "id": 420,
+    "nombre": "DISEÑADOR FILMMAKER"
+  },
+  {
+    "id": 421,
+    "nombre": "DISEÑADOR GRAFICO SENIOR"
+  },
+  {
+    "id": 422,
+    "nombre": "EDITOR MULTIMEDIA"
+  },
+  {
+    "id": 423,
+    "nombre": "ESPECIALISTA DE CONTENIDO"
+  },
+  {
+    "id": 424,
+    "nombre": "ESPECIALISTA FILMMAKER"
+  },
+  {
+    "id": 425,
+    "nombre": "REDACTOR"
+  },
+  {
+    "id": 426,
+    "nombre": "REDACTOR CREATIVO"
+  },
+  {
+    "id": 427,
+    "nombre": "REDACTOR SENIOR"
+  },
+  {
+    "id": 428,
+    "nombre": "SUBGERENTE DE COMUNICACION CORPORATIVA"
+  },
+  {
+    "id": 429,
+    "nombre": "SUPERVISOR DE CUENTAS"
+  },
+  {
+    "id": 430,
+    "nombre": "COORDINADOR DE COMUNICACIONES"
+  },
+  {
+    "id": 431,
+    "nombre": "SUBGERENTE DE COMUNICACIONES"
+  },
+  {
+    "id": 432,
+    "nombre": "ANALISTA DE BUSINESS INTELLIGENCE"
+  },
+  {
+    "id": 433,
+    "nombre": "ANALISTA DE SERVICIOS - BENEFICIOS ESTUDIANTILES"
+  },
+  {
+    "id": 434,
+    "nombre": "AUXILIAR DE SERVICIOS - BENEFICIOS ESTUDIANTILES"
+  },
+  {
+    "id": 435,
+    "nombre": "SUPERVISOR CORPORATIVO DE SERVICIOS - BENEFICIOS ESTUDIANTILES"
+  },
+  {
+    "id": 436,
+    "nombre": "ANALISTA JUNIOR DE FACTURACION, CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 437,
+    "nombre": "ANALISTA SENIOR DE FACTURACION, CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 438,
+    "nombre": "ASISTENTE DE CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 439,
+    "nombre": "ASISTENTE DE FACTURACION"
+  },
+  {
+    "id": 440,
+    "nombre": "ASISTENTE DE FRONT DESK"
+  },
+  {
+    "id": 441,
+    "nombre": "COORDINADOR DE CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 442,
+    "nombre": "COORDINADOR SENIOR CORPORATIVO DE COBRANZAS"
+  },
+  {
+    "id": 443,
+    "nombre": "COORDINADOR SENIOR CORPORATIVO DE FACTURACION"
+  },
+  {
+    "id": 444,
+    "nombre": "ANALISTA DE OPERACIONES"
+  },
+  {
+    "id": 445,
+    "nombre": "ANALISTA JUNIOR DE OPERACIONES"
+  },
+  {
+    "id": 446,
+    "nombre": "ASISTENTE DE LA SUBGERENCIA DE FINANZAS"
+  },
+  {
+    "id": 447,
+    "nombre": "COORDINADOR DE PROYECTOS ESPECIALES"
+  },
+  {
+    "id": 448,
+    "nombre": "GERENTE CORPORATIVO DE FACTURACION, CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 449,
+    "nombre": "SUBGERENTE DE FACTURACION CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 450,
+    "nombre": "BUSINESS PARTNER SR DE ANALISIS Y PLAN FINANCIERO"
+  },
+  {
+    "id": 451,
+    "nombre": "ANALISTA DE REPORTING FINANCIERO"
+  },
+  {
+    "id": 452,
+    "nombre": "ANALISTA SENIOR DE CONTROL DE GESTION"
+  },
+  {
+    "id": 453,
+    "nombre": "SUBGERENTE DE CONTROL DE GESTION Y REPORTING"
+  },
+  {
+    "id": 454,
+    "nombre": "SUBGERENTE DE PLANEAMIENTO FINANCIERO"
+  },
+  {
+    "id": 455,
+    "nombre": "GERENTE DE PLANEAMIENTO FINANCIERO"
+  },
+  {
+    "id": 456,
+    "nombre": "ANALISTA DE TESORERIA"
+  },
+  {
+    "id": 457,
+    "nombre": "ASISTENTE DE CONCILIACION"
+  },
+  {
+    "id": 458,
+    "nombre": "ASISTENTE DE TESORERIA"
+  },
+  {
+    "id": 459,
+    "nombre": "CAJERO"
+  },
+  {
+    "id": 460,
+    "nombre": "COORDINADOR DE TESORERIA"
+  },
+  {
+    "id": 461,
+    "nombre": "SUBGERENTE CORPORATIVO DE TESORERIA"
+  },
+  {
+    "id": 462,
+    "nombre": "SUPERVISOR DE PAGOS"
+  },
+  {
+    "id": 463,
+    "nombre": "ASISTENTE DE CONTROL PATRIMONIAL"
+  },
+  {
+    "id": 464,
+    "nombre": "ANALISTA CONTABLE"
+  },
+  {
+    "id": 465,
+    "nombre": "ANALISTA CONTABLE SENIOR"
+  },
+  {
+    "id": 466,
+    "nombre": "COORDINADOR DE IMPUESTOS"
+  },
+  {
+    "id": 467,
+    "nombre": "ANALISTA DE CONTABILIDAD"
+  },
+  {
+    "id": 468,
+    "nombre": "ASISTENTE DE CONTABILIDAD"
+  },
+  {
+    "id": 469,
+    "nombre": "ASISTENTE DE IMPUESTOS"
+  },
+  {
+    "id": 470,
+    "nombre": "AUXILIAR CONTABLE"
+  },
+  {
+    "id": 471,
+    "nombre": "CONTADOR GENERAL CORPORATIVO"
+  },
+  {
+    "id": 472,
+    "nombre": "COORDINADOR CONTABLE"
+  },
+  {
+    "id": 473,
+    "nombre": "COORDINADOR DE CONTABILIDAD"
+  },
+  {
+    "id": 474,
+    "nombre": "COORDINADOR DE CONTABILIDAD CONSOLIDADOS"
+  },
+  {
+    "id": 475,
+    "nombre": "ESPECIALISTA CONTABLE"
+  },
+  {
+    "id": 476,
+    "nombre": "ALMACENERO"
+  },
+  {
+    "id": 477,
+    "nombre": "ASISTENTE DE ALMACEN"
+  },
+  {
+    "id": 478,
+    "nombre": "SUBGERENTE DE LOGISTICA"
+  },
+  {
+    "id": 479,
+    "nombre": "COMPRADOR"
+  },
+  {
+    "id": 480,
+    "nombre": "COMPRADOR SENIOR"
+  },
+  {
+    "id": 481,
+    "nombre": "PLANNER DE COMPRAS"
+  },
+  {
+    "id": 482,
+    "nombre": "SUPERVISOR DE COMPRAS"
+  },
+  {
+    "id": 483,
+    "nombre": "SUPERVISOR DE COMPRAS OTEC"
+  },
+  {
+    "id": 484,
+    "nombre": "ANALISTA DE CONTRATOS"
+  },
+  {
+    "id": 485,
+    "nombre": "SUPERVISOR DE ALMACEN"
+  },
+  {
+    "id": 486,
+    "nombre": "GERENTE LEGAL Y DE OPERACIONES INTERNACIONALES"
+  },
+  {
+    "id": 487,
+    "nombre": "SUBGERENTE LEGAL CORPORATIVO"
+  },
+  {
+    "id": 488,
+    "nombre": "ANALISTA DE ACREDITACION"
+  },
+  {
+    "id": 489,
+    "nombre": "ANALISTA DE ACREDITACION BILINGUE"
+  },
+  {
+    "id": 490,
+    "nombre": "ASESOR CORPORATIVO DE ACREDITACION"
+  },
+  {
+    "id": 491,
+    "nombre": "ASISTENTE DE PLANEAMIENTO ESTRATEGICO Y RANKING"
+  },
+  {
+    "id": 492,
+    "nombre": "COORDINADOR DE ACREDITACION"
+  },
+  {
+    "id": 493,
+    "nombre": "DIRECTOR GENERAL DE ACREDITACION"
+  },
+  {
+    "id": 494,
+    "nombre": "ABOGADO DE ASUNTOS TRIBUTARIOS"
+  },
+  {
+    "id": 495,
+    "nombre": "SUBGERENTE DE ASUNTOS TRIBUTARIOS"
+  },
+  {
+    "id": 496,
+    "nombre": "ABOGADO SENIOR"
+  },
+  {
+    "id": 497,
+    "nombre": "SUBGERENTE DE CONVENIOS Y CONTRATOS"
+  },
+  {
+    "id": 498,
+    "nombre": "ABOGADO DE ASUNTOS DE PROP. INTL CONS Y EDU"
+  },
+  {
+    "id": 499,
+    "nombre": "ABOGADO PROCESAL"
+  },
+  {
+    "id": 500,
+    "nombre": "JEFE ASUNTOS PROP INTELECTUAL CONSUMIDOR Y EDUC"
+  },
+  {
+    "id": 501,
+    "nombre": "JEFE DE ASUNTOS PROCESALES"
+  },
+  {
+    "id": 502,
+    "nombre": "ANALISTA DE LICENCIAMIENTO"
+  },
+  {
+    "id": 503,
+    "nombre": "JEFE DE DOCENCIA Y APRENDIZAJE"
+  },
+  {
+    "id": 504,
+    "nombre": "JEFE DE INFRAESTRUCTURA"
+  },
+  {
+    "id": 505,
+    "nombre": "VICEPRESIDENTE SENIOR"
+  },
+  {
+    "id": 506,
+    "nombre": "GERENTE DE EDUCACION VIRTUAL Y TECNOLOGIA EDUCATIVA"
+  },
+  {
+    "id": 507,
+    "nombre": "ANALISTA DE SOPORTE TECNICO PARA EDUCACION VIRTUAL"
+  },
+  {
+    "id": 508,
+    "nombre": "ANIMADOR 3D"
+  },
+  {
+    "id": 509,
+    "nombre": "COORDINADOR DE DISEÑO DE EDUCACION VIRTUAL"
+  },
+  {
+    "id": 510,
+    "nombre": "COORDINADOR DE GESTION Y SOPORTE PARA EDUCACION VIRTUAL"
+  },
+  {
+    "id": 511,
+    "nombre": "DISEÑADOR INSTRUCCIONAL"
+  },
+  {
+    "id": 512,
+    "nombre": "DISEÑADOR MULTIMEDIA"
+  },
+  {
+    "id": 513,
+    "nombre": "EDITOR AUDIOVISUAL"
+  },
+  {
+    "id": 514,
+    "nombre": "SUBDIRECTOR DE DISEÑO INSTRUCCIONAL Y DESARROLLO DE CONTENIDOS"
+  },
+  {
+    "id": 515,
+    "nombre": "COORDINADOR DE TECNOLOGIA EDUCATIVA"
+  },
+  {
+    "id": 516,
+    "nombre": "E-ASISTENTE"
+  },
+  {
+    "id": 517,
+    "nombre": "MONITOR DE APRENDIZAJE EN LINEA"
+  },
+  {
+    "id": 518,
+    "nombre": "SUBDIRECTOR DE TECNOLOGIA EDUCATIVA"
+  },
+  {
+    "id": 519,
+    "nombre": "ASISTENTE DE EDUCACION CONTINUA"
+  },
+  {
+    "id": 520,
+    "nombre": "COORDINADOR DE EDUCACION CONTINUA"
+  },
+  {
+    "id": 521,
+    "nombre": "COORDINADOR DE PROYECTOS ESTUDIANTILES"
+  },
+  {
+    "id": 522,
+    "nombre": "COORDINADOR DE PROYECTOS VRA"
+  },
+  {
+    "id": 523,
+    "nombre": "VICERRECTOR ACADEMICO INTERINO"
+  },
+  {
+    "id": 524,
+    "nombre": "DIRECTOR DE CENTER FOR GLOBAL EDUCATION"
+  },
+  {
+    "id": 525,
+    "nombre": "ASISTENTE DE EXAMENES INTERNACIONALES"
+  },
+  {
+    "id": 526,
+    "nombre": "COORDINADOR ACADEMICO INSTITUTO CHINO"
+  },
+  {
+    "id": 527,
+    "nombre": "COORDINADOR DE EXAMENES INTERNACIONALES"
+  },
+  {
+    "id": 528,
+    "nombre": "DIRECTOR DE CENTER FOR LANGUAGE STUDIES"
+  },
+  {
+    "id": 529,
+    "nombre": "DIRECTOR DE CENTER FOR LANGUAGE STUDIES (E)"
+  },
+  {
+    "id": 530,
+    "nombre": "DOCENTE DE IDIOMAS"
+  },
+  {
+    "id": 531,
+    "nombre": "TRADUCTOR"
+  },
+  {
+    "id": 532,
+    "nombre": "COORDINADOR ACADEMICO DE CALIDAD ACADEMICA, DOCENTE Y CURRICULAR"
+  },
+  {
+    "id": 533,
+    "nombre": "DIRECTOR DE CALIDAD ACADEMICA DOCENTE Y CURRICULAR"
+  },
+  {
+    "id": 534,
+    "nombre": "ANALISTA DE FORMACION Y ACTUALIZACION DOCENTE"
+  },
+  {
+    "id": 535,
+    "nombre": "ASISTENTE DE DESARROLLO Y DESEMPEÑO"
+  },
+  {
+    "id": 536,
+    "nombre": "COORDINADOR DE EVALUACION Y DESARROLLO DOCENTE"
+  },
+  {
+    "id": 537,
+    "nombre": "JEFE DE FORMACION Y ACTUALIZACION DOCENTE"
+  },
+  {
+    "id": 538,
+    "nombre": "SUBDIRECTOR DE DESARROLLO Y DESMPEÑO DOCENTE"
+  },
+  {
+    "id": 539,
+    "nombre": "ANALISTA DE ALINEACION CURRICULAR Y EVALUACION"
+  },
+  {
+    "id": 540,
+    "nombre": "ANALISTA DE GESTION CURRICULAR"
+  },
+  {
+    "id": 541,
+    "nombre": "ANALISTA DE GESTION DE DATOS"
+  },
+  {
+    "id": 542,
+    "nombre": "COORDINADOR DE EXPERIENCIA DE APRENDIZAJE Y EVALUACION"
+  },
+  {
+    "id": 543,
+    "nombre": "COORDINADOR DE GESTION CURRICULAR"
+  },
+  {
+    "id": 544,
+    "nombre": "SUBDIRECTOR DE GESTION CURRICULAR Y MEJORA DE PROGRAMAS ACADEMICOS"
+  },
+  {
+    "id": 545,
+    "nombre": "COORDINADOR DE MONITOREO Y MEJORA CONTINUA"
+  },
+  {
+    "id": 546,
+    "nombre": "SUBDIRECTOR DE GESTION DE CALIDAD ACADEMICA"
+  },
+  {
+    "id": 547,
+    "nombre": "COORDINADOR ACADEMICO DE CURSOS GENERALES"
+  },
+  {
+    "id": 548,
+    "nombre": "DIRECTOR DE ESTUDIOS GENERALES"
+  },
+  {
+    "id": 549,
+    "nombre": "ASISTENTE DE EDICION"
+  },
+  {
+    "id": 550,
+    "nombre": "DIAGRAMADOR"
+  },
+  {
+    "id": 551,
+    "nombre": "DIRECTOR DEL FONDO EDITORIAL"
+  },
+  {
+    "id": 552,
+    "nombre": "DIRECTOR DE PREGRADO EJECUTIVO"
+  },
+  {
+    "id": 553,
+    "nombre": "ASISTENTE DE COCINA INSTRUCTOR"
+  },
+  {
+    "id": 554,
+    "nombre": "COORDINADOR DE PROYECTOS GASTRONOMICOS (E)"
+  },
+  {
+    "id": 555,
+    "nombre": "DIRECTOR DE CARRERA (E)"
+  },
+  {
+    "id": 556,
+    "nombre": "DECANO"
+  },
+  {
+    "id": 557,
+    "nombre": "JEFE DE OPERACIONES"
+  },
+  {
+    "id": 558,
+    "nombre": "MAITRE"
+  },
+  {
+    "id": 559,
+    "nombre": "SECRETARIA"
+  },
+  {
+    "id": 560,
+    "nombre": "SUPERVISOR DE SANIDAD E HIGIENE DE ALIMENTOS"
+  },
+  {
+    "id": 561,
+    "nombre": "DECANO (INTERINO)"
+  },
+  {
+    "id": 562,
+    "nombre": "DIRECTOR ACADEMICO DE CARRERA"
+  },
+  {
+    "id": 563,
+    "nombre": "DIRECTOR ESTRATEGICO DE CARRERA"
+  },
+  {
+    "id": 564,
+    "nombre": "DECANO (E)"
+  },
+  {
+    "id": 565,
+    "nombre": "JEFE DE LABORATORIO BIOMECANICA DEL DEPORTE"
+  },
+  {
+    "id": 566,
+    "nombre": "JEFE DE LABORATORIO DE FISIOLOGIA DEL DEPORTE"
+  },
+  {
+    "id": 567,
+    "nombre": "COORDINADOR ACADEMICO DE APRENDIZAJE PRE CLINICO"
+  },
+  {
+    "id": 568,
+    "nombre": "COORDINADOR ACADEMICO DE CENTRO DE SIMULACION"
+  },
+  {
+    "id": 569,
+    "nombre": "COORDINADOR ACADEMICO DE CLINICAS Y PREVENTIVAS"
+  },
+  {
+    "id": 570,
+    "nombre": "ESPECIALISTA DE LABORATORIO DE ANATOMIA"
+  },
+  {
+    "id": 571,
+    "nombre": "SUBDIRECTOR ACADEMICO DE CARRERA"
+  },
+  {
+    "id": 572,
+    "nombre": "TECNICO DE LABORATORIO"
+  },
+  {
+    "id": 573,
+    "nombre": "TECNICO DE SIMULACION"
+  },
+  {
+    "id": 574,
+    "nombre": "TUTOR CLINICO"
+  },
+  {
+    "id": 575,
+    "nombre": "ASISTENTE DE CAMPOS CLINICOS Y CONVENIOS"
+  },
+  {
+    "id": 576,
+    "nombre": "COORDINADOR ADMINISTRATIVO DE FACULTAD"
+  },
+  {
+    "id": 577,
+    "nombre": "COORDINADOR DE CONVENIOS (E)"
+  },
+  {
+    "id": 578,
+    "nombre": "COORDINADOR DE PROGRAMA ACADEMICO"
+  },
+  {
+    "id": 579,
+    "nombre": "SUBGERENTE DE ADMINISTRACION DE LA FAC. CCSS"
+  },
+  {
+    "id": 580,
+    "nombre": "CAMAROGRAFO Y TECNICO AUDIOVISUAL"
+  },
+  {
+    "id": 581,
+    "nombre": "COORDINADOR ACADEMICO (E)"
+  },
+  {
+    "id": 582,
+    "nombre": "COORDINADOR TECNICO"
+  },
+  {
+    "id": 583,
+    "nombre": "DIRECTOR DE CONTENIDOS AUDIOVISUALES"
+  },
+  {
+    "id": 584,
+    "nombre": "EDITOR TV"
+  },
+  {
+    "id": 585,
+    "nombre": "PROGRAMADOR RADIAL"
+  },
+  {
+    "id": 586,
+    "nombre": "SUPERVISOR TECNICO"
+  },
+  {
+    "id": 587,
+    "nombre": "DIRECTOR DE CARRERA (I)"
+  },
+  {
+    "id": 588,
+    "nombre": "ASISTENTE DE LABORATORIO"
+  },
+  {
+    "id": 589,
+    "nombre": "ANALISTA ADMINISTRATIVO DE PLANTA AGROINDUSTRIAL (E)"
+  },
+  {
+    "id": 590,
+    "nombre": "JEFE DE PLANTA"
+  },
+  {
+    "id": 591,
+    "nombre": "COORDINADOR DE PROYECTOS DE INVEST. DESARR. INNOV."
+  },
+  {
+    "id": 592,
+    "nombre": "DIRECTOR DE DEPARTAMENTO ACADEMICO"
+  },
+  {
+    "id": 593,
+    "nombre": "AUXILIAR DE LABORATORIO"
+  },
+  {
+    "id": 594,
+    "nombre": "VICERRECTOR DE INVESTIGACION"
+  },
+  {
+    "id": 595,
+    "nombre": "ANALISTA DE INNOVACION Y TEC. COSMETICA"
+  },
+  {
+    "id": 596,
+    "nombre": "ANALISTA DE LABORATORIO"
+  },
+  {
+    "id": 597,
+    "nombre": "ESPECIALISTA EN FORMULACIONES COSMETICAS"
+  },
+  {
+    "id": 598,
+    "nombre": "JEFE CITIC (E)"
+  },
+  {
+    "id": 599,
+    "nombre": "ANALISTA DE DATOS DE INVESTIGACION"
+  },
+  {
+    "id": 600,
+    "nombre": "ANALISTA DE TRANSFERENCIA TECNOLOGICA Y PROPIEDAD INTELECTUAL"
+  },
+  {
+    "id": 601,
+    "nombre": "ANALISTA DE TRAZABILIDAD DE PUBLICACIONES"
+  },
+  {
+    "id": 602,
+    "nombre": "ASISTENTE DE INVESTIGACION"
+  },
+  {
+    "id": 603,
+    "nombre": "DIRECTOR DE GESTION DE LA INVESTIGACION"
+  },
+  {
+    "id": 604,
+    "nombre": "DIRECTOR DE INVESTIGACION ACADEMICA"
+  },
+  {
+    "id": 605,
+    "nombre": "INVESTIGADOR"
+  },
+  {
+    "id": 606,
+    "nombre": "JEFE DE PRODUCCION CIENTIFICA Y CAPACITACION"
+  },
+  {
+    "id": 607,
+    "nombre": "JEFE DE PROYECTOS DE INVESTIGACION Y CONVENIOS"
+  },
+  {
+    "id": 608,
+    "nombre": "JEFE DE CENTRO DE INVESTIGACION CIMA Y CIICM"
+  },
+  {
+    "id": 609,
+    "nombre": "JEFE DE CENTRO DE INVESTIGACION CIQA"
+  },
+  {
+    "id": 610,
+    "nombre": "JEFE DE GESTION DE OPERACIONES Y SERVICIOS"
+  },
+  {
+    "id": 611,
+    "nombre": "TECNICO DE LABORATORIO CIMA"
+  },
+  {
+    "id": 612,
+    "nombre": "TECNICO DE LABORATORIO CIQA"
+  }
+]

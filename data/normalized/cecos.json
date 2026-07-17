@@ -1,0 +1,1170 @@
+[
+  {
+    "codigo": "C11112P001",
+    "descripcion": "SECUNDARIA INDIRECTO CSIR"
+  },
+  {
+    "codigo": "C11110P001",
+    "descripcion": "SIR ACADÉMICO"
+  },
+  {
+    "codigo": "S11400A015",
+    "descripcion": "CSIR ADMINISTRATIVO SAN BORJA"
+  },
+  {
+    "codigo": "S11500M025",
+    "descripcion": "CSIR COMERCIAL"
+  },
+  {
+    "codigo": "S12600A009",
+    "descripcion": "CSIR CRED Y COBRANZ-TESORERÍA"
+  },
+  {
+    "codigo": "C11211D001",
+    "descripcion": "COLORING DREAMS SURCO"
+  },
+  {
+    "codigo": "S11400A019",
+    "descripcion": "COLORING DREAMS SURCO ADM"
+  },
+  {
+    "codigo": "C11211P001",
+    "descripcion": "COLORING DREAMS SURCO INDIRECT"
+  },
+  {
+    "codigo": "C11112D001",
+    "descripcion": "CSIR SECUNDARIA"
+  },
+  {
+    "codigo": "C11111D001",
+    "descripcion": "CSIR PRIMARIA"
+  },
+  {
+    "codigo": "C11114P001",
+    "descripcion": "CURSO NATACIÓN CSIR INDIRECTO"
+  },
+  {
+    "codigo": "C11110P002",
+    "descripcion": "CSIR ORIENTACIÓN EDUCAC DOE"
+  },
+  {
+    "codigo": "C11111P001",
+    "descripcion": "PRIMARIA INDIRECTO CSIR"
+  },
+  {
+    "codigo": "C11110P003",
+    "descripcion": "CSIR SECRETARÍA Y REGIST ACAD"
+  },
+  {
+    "codigo": "C11115D001",
+    "descripcion": "CURSOS CSIR - SAN BORJA"
+  },
+  {
+    "codigo": "S11400A023",
+    "descripcion": "HUACHIPA"
+  },
+  {
+    "codigo": "S12600C055",
+    "descripcion": "SERVICIOS GENERALES"
+  },
+  {
+    "codigo": "S11400A015, S12600C053",
+    "descripcion": "CSIR ADMINISTRATIVO SAN BORJA, TRANSPORTES"
+  },
+  {
+    "codigo": "S12600C062",
+    "descripcion": "SUBGERENCIA DE SEGURIDAD"
+  },
+  {
+    "codigo": "S11500M014",
+    "descripcion": "MKT EVENTOS BRANDING EPG"
+  },
+  {
+    "codigo": "U41114D002",
+    "descripcion": "MAESTRÍA C EMPRESARIALES SP"
+  },
+  {
+    "codigo": "U41115D002",
+    "descripcion": "MAESTRÍA EN MKT Y DIR COMERCI"
+  },
+  {
+    "codigo": "U41118D001",
+    "descripcion": "MAESTR.ADM.NEGOC-EXECUT.MBA SP"
+  },
+  {
+    "codigo": "U41120D001",
+    "descripcion": "MAESTRÍA EN DERECHO EMPRESARIAL"
+  },
+  {
+    "codigo": "U41211D002",
+    "descripcion": "DOCTORADO EN ADMINISTRACION SP"
+  },
+  {
+    "codigo": "U41212D001",
+    "descripcion": "DOCTORADO EN EDUCACIÓN"
+  },
+  {
+    "codigo": "U41213D001",
+    "descripcion": "DOCTORADO EN DERECHO"
+  },
+  {
+    "codigo": "U41311D001",
+    "descripcion": "EPG EXECUTIVE EDUCATION LIMA"
+  },
+  {
+    "codigo": "U41319D001",
+    "descripcion": "EPG EDUC EJECUTIVA FAC SALUD"
+  },
+  {
+    "codigo": "U41411D001",
+    "descripcion": "EPG INHOUSE LIMA"
+  },
+  {
+    "codigo": "S11400A001",
+    "descripcion": "EPG DECANATO"
+  },
+  {
+    "codigo": "U41110P001, U41210P001",
+    "descripcion": "DIRECCIÓN DE MAESTRÍAS, DIRECCIÓN DE DOCTORADOS"
+  },
+  {
+    "codigo": "U41210P001, U41110P001",
+    "descripcion": "DIRECCIÓN DE DOCTORADOS, DIRECCIÓN DE MAESTRÍAS"
+  },
+  {
+    "codigo": "U41110P001",
+    "descripcion": "DIRECCIÓN DE MAESTRÍAS"
+  },
+  {
+    "codigo": "U41510P001",
+    "descripcion": "DIRECCIÓN MCE-PDGS"
+  },
+  {
+    "codigo": "U41611D002, U41611D003, U41611D004, U41611D004",
+    "descripcion": "SEG ESP TERAPIA FISICA Y REHABIL DEPORTE, SEG ESP NUTRICIÓN ONCOLÓGICA, SEG ESP EMERGENCIAS Y CUIDADOS CRITICOS, SEG ESP EMERGENCIAS Y CUIDADOS CRITICOS"
+  },
+  {
+    "codigo": "U41110P001, U41611D006, U41210P001",
+    "descripcion": "DIRECCIÓN DE MAESTRÍAS, SEGUNDA ESPECIALIDAD DE DERECHO, DIRECCIÓN DE DOCTORADOS"
+  },
+  {
+    "codigo": "U41210P002, U41110P001",
+    "descripcion": "DOCTORADO EN EDUCACIÓN ACD IND, DIRECCIÓN DE MAESTRÍAS"
+  },
+  {
+    "codigo": "U11611D001",
+    "descripcion": "CARRERA DE DERECHO"
+  },
+  {
+    "codigo": "U41000P004",
+    "descripcion": "EPG DIRECCIÓN ACADÉMICA"
+  },
+  {
+    "codigo": "U41111D001",
+    "descripcion": "EXECUTIVE MBA"
+  },
+  {
+    "codigo": "U41112D001",
+    "descripcion": "MAESTRÍA EN EDUCACIÓN"
+  },
+  {
+    "codigo": "U41112D002",
+    "descripcion": "MAESTRÍA EN EDU SEMIPRESENCIAL"
+  },
+  {
+    "codigo": "U41117D002",
+    "descripcion": "MAESTRIA EN GESTION PUBLICA SP"
+  },
+  {
+    "codigo": "U41119D001",
+    "descripcion": "MAESTRIA EN NUTRICION"
+  },
+  {
+    "codigo": "U41214D001",
+    "descripcion": "DOCTORADO EN NUTRICION"
+  },
+  {
+    "codigo": "U41611D001",
+    "descripcion": "PROG SEG. ESP. GESTION ESCOLAR"
+  },
+  {
+    "codigo": "S12100A001",
+    "descripcion": "DIREC DE PROYECTOS EDUCATIVOS"
+  },
+  {
+    "codigo": "U41210P001",
+    "descripcion": "DIRECCIÓN DE DOCTORADOS"
+  },
+  {
+    "codigo": "U41000P008",
+    "descripcion": "DIR PROG EXTENSIÓN"
+  },
+  {
+    "codigo": "U11510P001, O21111D001",
+    "descripcion": "FAC HOTELERIA-TURISMO-GASTR, DI LA MOLINA"
+  },
+  {
+    "codigo": "U41711D001, S12100A001, S11400A002",
+    "descripcion": "PROYECTO REPUB. DOMINICANA, DIREC DE PROYECTOS EDUCATIVOS, MAESTRÍA EN EDUCACIÓN ADM"
+  },
+  {
+    "codigo": "S11400A005",
+    "descripcion": "EPG PERSONAL VTA PROG DE EDUC"
+  },
+  {
+    "codigo": "S11400A002",
+    "descripcion": "MAESTRÍA EN EDUCACIÓN ADM"
+  },
+  {
+    "codigo": "S11400A021",
+    "descripcion": "DOCTORADO EN EDUCACIÓN ADM"
+  },
+  {
+    "codigo": "S11400A004",
+    "descripcion": "EPG PERSONAL ADM PROG DE EDUC"
+  },
+  {
+    "codigo": "U41210P002, S11400A002, U41711D001",
+    "descripcion": "DOCTORADO EN EDUCACIÓN ACD IND, MAESTRÍA EN EDUCACIÓN ADM, PROYECTO REPUB. DOMINICANA"
+  },
+  {
+    "codigo": "U41212D001, U41112D002",
+    "descripcion": "DOCTORADO EN EDUCACIÓN, MAESTRÍA EN EDU SEMIPRESENCIAL"
+  },
+  {
+    "codigo": "U41112D001, U41112D002",
+    "descripcion": "MAESTRÍA EN EDUCACIÓN, MAESTRÍA EN EDU SEMIPRESENCIAL"
+  },
+  {
+    "codigo": "U41112D001, U41112D002, U41212D001",
+    "descripcion": "MAESTRÍA EN EDUCACIÓN, MAESTRÍA EN EDU SEMIPRESENCIAL, DOCTORADO EN EDUCACIÓN"
+  },
+  {
+    "codigo": "U41611D002, U41611D003, U41611D004, U41611D005",
+    "descripcion": "SEG ESP TERAPIA FISICA Y REHABIL DEPORTE, SEG ESP NUTRICIÓN ONCOLÓGICA, SEG ESP EMERGENCIAS Y CUIDADOS CRITICOS, SEG ESP PSICOLOGÍA Y GEST EST TAL HUMANO"
+  },
+  {
+    "codigo": "U41410P001",
+    "descripcion": "DIRECCIÓN PROGRAMAS INHOUSE"
+  },
+  {
+    "codigo": "S11500M032",
+    "descripcion": "MKT EPG MAEST Y DOCTORADOS"
+  },
+  {
+    "codigo": "S11500M034",
+    "descripcion": "MKT EPG EXECUT EDUCATION CORP"
+  },
+  {
+    "codigo": "S11500M001",
+    "descripcion": "SERVICIOS AL ALUMNO Y RETENCIÓN EPG"
+  },
+  {
+    "codigo": "S11500M029, S11500M032, S11500M034",
+    "descripcion": "EPG MKT PRGMAS INHOUSE, MKT EPG MAEST Y DOCTORADOS, MKT EPG EXECUT EDUCATION CORP"
+  },
+  {
+    "codigo": "S11500M032, S11500M034",
+    "descripcion": "MKT EPG MAEST Y DOCTORADOS, MKT EPG EXECUT EDUCATION CORP"
+  },
+  {
+    "codigo": "S11500M034, S11500M032",
+    "descripcion": "MKT EPG EXECUT EDUCATION CORP, MKT EPG MAEST Y DOCTORADOS"
+  },
+  {
+    "codigo": "S11500M032, S11500M034, S11500M029",
+    "descripcion": "MKT EPG MAEST Y DOCTORADOS, MKT EPG EXECUT EDUCATION CORP, EPG MKT PRGMAS INHOUSE"
+  },
+  {
+    "codigo": "U11113D001",
+    "descripcion": "CARRERA DE ECONOMÍA"
+  },
+  {
+    "codigo": "U11114D001",
+    "descripcion": "CARRERA MARKETING"
+  },
+  {
+    "codigo": "U41321D001",
+    "descripcion": "EPG PROYECTO MOQUEGUA"
+  },
+  {
+    "codigo": "I11110P001",
+    "descripcion": "INSTITUTO DE EMPRENDEDORES LN"
+  },
+  {
+    "codigo": "I11512D001",
+    "descripcion": "INHOUSE IELN"
+  },
+  {
+    "codigo": "I11310P001",
+    "descripcion": "LOCAL AREQUIPA IE"
+  },
+  {
+    "codigo": "S11500M007",
+    "descripcion": "TELEGESTIÓN CORPORATIVO"
+  },
+  {
+    "codigo": "S11500M008",
+    "descripcion": "TELEGESTIÓN INST DE EMPREND"
+  },
+  {
+    "codigo": "S11500M040",
+    "descripcion": "MKT INSTITUTO DE EMPREND CORP"
+  },
+  {
+    "codigo": "S11100V015",
+    "descripcion": "GERENCIA DE OPERACIONES ACADEMICAS"
+  },
+  {
+    "codigo": "S13000M009",
+    "descripcion": "MKT RELACIONES EDUCATIVAS"
+  },
+  {
+    "codigo": "S13000M001",
+    "descripcion": "VICEPRESIDENCIA COMERCIAL"
+  },
+  {
+    "codigo": "S11500M058",
+    "descripcion": "MKT USIL FACULTADES"
+  },
+  {
+    "codigo": "S11500M022",
+    "descripcion": "MKT CPEL CORPORATIVO"
+  },
+  {
+    "codigo": "S12400C002",
+    "descripcion": "OPERACIONES INTERNACIONALES SIU"
+  },
+  {
+    "codigo": "S11500M002",
+    "descripcion": "CANALES DE ATENCIÓN"
+  },
+  {
+    "codigo": "S11500M003",
+    "descripcion": "SERVICIOS AL ALUMNO"
+  },
+  {
+    "codigo": "S11500M004",
+    "descripcion": "ADMISIÓN LM"
+  },
+  {
+    "codigo": "S11500M095",
+    "descripcion": "MKT EDUCACIÓN CONTINUA"
+  },
+  {
+    "codigo": "S13000M003",
+    "descripcion": "MKT RETENCIÓN ALUMNOS"
+  },
+  {
+    "codigo": "S12600C038",
+    "descripcion": "GERENCIA DE OPERACIONES"
+  },
+  {
+    "codigo": "S12600C058",
+    "descripcion": "RELACIONES COMUNITARIAS"
+  },
+  {
+    "codigo": "S12100C001",
+    "descripcion": "DIRECCIÓN GENERAL"
+  },
+  {
+    "codigo": "S12600C052",
+    "descripcion": "PUBLICACIONES"
+  },
+  {
+    "codigo": "S12600C053",
+    "descripcion": "TRANSPORTES"
+  },
+  {
+    "codigo": "S12600C059",
+    "descripcion": "INFRAESTRUCTURA"
+  },
+  {
+    "codigo": "S12600C054",
+    "descripcion": "GESTION DEL RIESGO-DEF CIVIL"
+  },
+  {
+    "codigo": "S12700V011",
+    "descripcion": "SUBGERENCIA DE MODO USIL"
+  },
+  {
+    "codigo": "S12700C002",
+    "descripcion": "ACT FÍSICA PARA LA SALUD ARTE Y CULTURA"
+  },
+  {
+    "codigo": "S12700A001",
+    "descripcion": "BIENESTAR ESTUDIANTIL"
+  },
+  {
+    "codigo": "S12700V002",
+    "descripcion": "DEPARTAMENTO DE PSICOLOGÍA"
+  },
+  {
+    "codigo": "U11110P001",
+    "descripcion": "FAC DE CIENCIAS EMPRESARIALES"
+  },
+  {
+    "codigo": "U11610P001",
+    "descripcion": "FACULTAD DE DERECHO"
+  },
+  {
+    "codigo": "S12700C001",
+    "descripcion": "ALIMENTACIÓN SALUDABLE"
+  },
+  {
+    "codigo": "U11210P001",
+    "descripcion": "FACULTAD DE INGENIERIA E INTELIGENCIA ARTIFICIAL"
+  },
+  {
+    "codigo": "U11310P001",
+    "descripcion": "FACULTAD D ARTES Y HUMANIDADES"
+  },
+  {
+    "codigo": "U11710P001",
+    "descripcion": "FACULTAD DE CS DE LA SALUD"
+  },
+  {
+    "codigo": "U31110P001",
+    "descripcion": "CPEL DIRECCIÓN CORPORATIVO"
+  },
+  {
+    "codigo": "S12700V001",
+    "descripcion": "CAPELLANÍA"
+  },
+  {
+    "codigo": "S11100V012",
+    "descripcion": "ACTIVIDADES DEPORTIVAS ATENAS"
+  },
+  {
+    "codigo": "U11713D001",
+    "descripcion": "CARR CS ACTIV FIS Y DEL DEP"
+  },
+  {
+    "codigo": "U11713P001",
+    "descripcion": "CS ACTIV FIS Y DEL DEP IND"
+  },
+  {
+    "codigo": "S12700V014",
+    "descripcion": "SUBGERENCIA DE EXPERIENCIA ACADEMICA"
+  },
+  {
+    "codigo": "U81111D001",
+    "descripcion": "BOOKSTORE"
+  },
+  {
+    "codigo": "S11100V006",
+    "descripcion": "BIBLIOTECA"
+  },
+  {
+    "codigo": "U41000P003",
+    "descripcion": "EPG CENTRO DOCUM E INFORMACIÓN"
+  },
+  {
+    "codigo": "S11100V020",
+    "descripcion": "REGISTROS ACADÉMICOS"
+  },
+  {
+    "codigo": "S11500M064",
+    "descripcion": "IMPLEMENTC FORIS Y PLANIF ACAD"
+  },
+  {
+    "codigo": "S12200C001",
+    "descripcion": "GERENCIA GENERAL"
+  },
+  {
+    "codigo": "S12700C004",
+    "descripcion": "TALENTO Y CULTURA"
+  },
+  {
+    "codigo": "S12700C011",
+    "descripcion": "ATRACCIÓN DEL TALENTO T&AMP;C"
+  },
+  {
+    "codigo": "S12700C013",
+    "descripcion": "GESTIÓN DEL TALENTO T&AMP;C"
+  },
+  {
+    "codigo": "S12700C008",
+    "descripcion": "BIENESTAR SOCIAL TALEN Y CULTU"
+  },
+  {
+    "codigo": "S12700C010",
+    "descripcion": "SALUD Y SEGURIDAD OCUPACIONAL"
+  },
+  {
+    "codigo": "S12700C005",
+    "descripcion": "SUBGERENCIA DE GESTIÓN HUMANA"
+  },
+  {
+    "codigo": "S12700C006",
+    "descripcion": "SUB GER TALENTO Y CULTURA ADM"
+  },
+  {
+    "codigo": "S12700C009",
+    "descripcion": "SUBGER TALENTO Y CULTURA ACAD"
+  },
+  {
+    "codigo": "S13100C002",
+    "descripcion": "GERENCIA DE OPERACIONES TI"
+  },
+  {
+    "codigo": "S13100C064",
+    "descripcion": "GERENCIA DE NEGOCIOS DIGITALES"
+  },
+  {
+    "codigo": "S13100C062",
+    "descripcion": "DESARROLLO DE TI"
+  },
+  {
+    "codigo": "S13100C061",
+    "descripcion": "SUBGERENCIA DE SEGURIDAD TI"
+  },
+  {
+    "codigo": "S13100C008",
+    "descripcion": "NUEVO ERP USIL - OPTI"
+  },
+  {
+    "codigo": "S13100C043",
+    "descripcion": "EXPERIENCIA DIGITAL EXD TI"
+  },
+  {
+    "codigo": "S13100C059",
+    "descripcion": "INTELIGENCIA DE NEGOCIOS TI"
+  },
+  {
+    "codigo": "S13100C024",
+    "descripcion": "SERVICIOS DE TI"
+  },
+  {
+    "codigo": "S13100C001",
+    "descripcion": "INFRAESTRUCTURA Y REDES TI"
+  },
+  {
+    "codigo": "S12900C001, S11100V002",
+    "descripcion": "VICEPRESIDENCIA LEGAL, SECRETARÍA GENERAL"
+  },
+  {
+    "codigo": "S13300C005",
+    "descripcion": "AUDITORIA INTERNA"
+  },
+  {
+    "codigo": "S12800M001",
+    "descripcion": "COMUNICACIÓN INTERNA-ALUMNOS"
+  },
+  {
+    "codigo": "S11200V001",
+    "descripcion": "RECTORADO"
+  },
+  {
+    "codigo": "S12000V001",
+    "descripcion": "SOSTENIBILIDAD"
+  },
+  {
+    "codigo": "S12700V013",
+    "descripcion": "GERENCIA DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
+  },
+  {
+    "codigo": "S11100V002",
+    "descripcion": "SECRETARÍA GENERAL"
+  },
+  {
+    "codigo": "S11700C002",
+    "descripcion": "VICEPRESID DE EMPRENDIMIENTO"
+  },
+  {
+    "codigo": "S11700V001",
+    "descripcion": "USIL VENTURES"
+  },
+  {
+    "codigo": "U11116D001",
+    "descripcion": "CARRERA ADM Y EMPRENDIMIENTO"
+  },
+  {
+    "codigo": "S11800V002",
+    "descripcion": "DIREC RELAC INTERNAC - DRI"
+  },
+  {
+    "codigo": "S11800V002, U71114D001, U71113D001, U71117D001, U71112D001, U71115D001, U71111D001",
+    "descripcion": "DIREC RELAC INTERNAC - DRI, DISNEY PROGRAM, MISIONES VPI, INTERCAMBIOS ACADÉMICOS, SEMESTRE LIMA, FACULTY LED, TALLER GLOBAL LEADERSHIP SKILL"
+  },
+  {
+    "codigo": "U71119D001, S11800V002, U71114D001, U71111D001, U71117D001, U71112D001, U71115D001, U71113D001",
+    "descripcion": "DIREC RELAC INTERNAC - SIU, DIREC RELAC INTERNAC - DRI, DISNEY PROGRAM, TALLER GLOBAL LEADERSHIP SKILL, INTERCAMBIOS ACADÉMICOS, SEMESTRE LIMA, FACULTY LED, MISIONES VPI"
+  },
+  {
+    "codigo": "U71115D001",
+    "descripcion": "FACULTY LED"
+  },
+  {
+    "codigo": "S11800M002",
+    "descripcion": "MKT VIC INTERNACIONAL"
+  },
+  {
+    "codigo": "U71119D001",
+    "descripcion": "DIREC RELAC INTERNAC - SIU"
+  },
+  {
+    "codigo": "U71114D001, U71111D001, S11800V002",
+    "descripcion": "DISNEY PROGRAM, TALLER GLOBAL LEADERSHIP SKILL, DIREC RELAC INTERNAC - DRI"
+  },
+  {
+    "codigo": "U71117D001, U71113D001, S11800V002",
+    "descripcion": "INTERCAMBIOS ACADÉMICOS, MISIONES VPI, DIREC RELAC INTERNAC - DRI"
+  },
+  {
+    "codigo": "S11100V001",
+    "descripcion": "PROGRAMA DOBLE GRADO"
+  },
+  {
+    "codigo": "U21110P001",
+    "descripcion": "CGE ADMINISTRATIVO"
+  },
+  {
+    "codigo": "S13400C001",
+    "descripcion": "VICEPRESIDENCIA DE INTERNACIONALIZACIÓN"
+  },
+  {
+    "codigo": "S12200C002",
+    "descripcion": "GERENCIA ASUNTOS CORP Y DESCEN"
+  },
+  {
+    "codigo": "S12800C003",
+    "descripcion": "DIR GNRL DE IMG CORP Y MED DIG"
+  },
+  {
+    "codigo": "S12800C007",
+    "descripcion": "INNOVACIÓN-HIFLEX"
+  },
+  {
+    "codigo": "S12800C006",
+    "descripcion": "PRENSA Y MEDIOS"
+  },
+  {
+    "codigo": "S12800C004",
+    "descripcion": "PRODUCCIÓN AUDIOVISUAL"
+  },
+  {
+    "codigo": "S12800M003",
+    "descripcion": "GERENCIA DE MARCA Y PERFORMANCE"
+  },
+  {
+    "codigo": "S13000M010",
+    "descripcion": "MKT BRANDING USIL"
+  },
+  {
+    "codigo": "S12800M005",
+    "descripcion": "AGENCIA IN HOUSE"
+  },
+  {
+    "codigo": "S11500M096",
+    "descripcion": "EPG CREATIVOS"
+  },
+  {
+    "codigo": "S12600C036",
+    "descripcion": "VP ADMINISTRACIÓN Y FINANZAS"
+  },
+  {
+    "codigo": "S12600C041",
+    "descripcion": "SERV BENEFICIOS ESTUDIANTILES"
+  },
+  {
+    "codigo": "S12600A006",
+    "descripcion": "CRÉDITOS Y COBRANZAS LM"
+  },
+  {
+    "codigo": "S12600A003",
+    "descripcion": "CRÉDITOS Y COBRANZAS LN"
+  },
+  {
+    "codigo": "S12600A004",
+    "descripcion": "CRÉDITOS Y COBRANZAS MG"
+  },
+  {
+    "codigo": "S12600C040",
+    "descripcion": "SUBGERENCIA DE FINANZAS"
+  },
+  {
+    "codigo": "S12600C042",
+    "descripcion": "GERENCIA DE PLANEAMIENTO FINANCIERO"
+  },
+  {
+    "codigo": "S12600C048",
+    "descripcion": "REPORTING"
+  },
+  {
+    "codigo": "S12600C048, S12600C049",
+    "descripcion": "REPORTING, CONTROL DE GESTION"
+  },
+  {
+    "codigo": "S12600C049",
+    "descripcion": "CONTROL DE GESTION"
+  },
+  {
+    "codigo": "S12600C039",
+    "descripcion": "TESORERÍA"
+  },
+  {
+    "codigo": "S12600A005",
+    "descripcion": "CAJA"
+  },
+  {
+    "codigo": "S12600C035",
+    "descripcion": "CONTROL PATRIMONIAL"
+  },
+  {
+    "codigo": "S12600C050",
+    "descripcion": "SUBGERENCIA DE CONTABILIDAD"
+  },
+  {
+    "codigo": "S12600C046",
+    "descripcion": "LOGÍSTICA Y COMPRAS"
+  },
+  {
+    "codigo": "S12900C001",
+    "descripcion": "VICEPRESIDENCIA LEGAL"
+  },
+  {
+    "codigo": "S11300V001",
+    "descripcion": "DIREC GENERAL DE ACREDITACIÓN"
+  },
+  {
+    "codigo": "S11300V002",
+    "descripcion": "DIREC GRAL DE LICENCIAMIENTO"
+  },
+  {
+    "codigo": "S13000M001, S13100C002",
+    "descripcion": "VICEPRESIDENCIA COMERCIAL, GERENCIA DE OPERACIONES TI"
+  },
+  {
+    "codigo": "S11100V037",
+    "descripcion": "SUBDIRECCION DE DISEÑO INSTRUCCIONAL Y DESARROLLO DE CONTENIDOS"
+  },
+  {
+    "codigo": "S11100V010",
+    "descripcion": "DIR ACAD UNID EDUC DISTANC"
+  },
+  {
+    "codigo": "S13100V005",
+    "descripcion": "EDUCACIÓN VIRTUAL CORPORATIVO"
+  },
+  {
+    "codigo": "S11100V009",
+    "descripcion": "VICERRECTORADO ACADÉMICO"
+  },
+  {
+    "codigo": "U11812D001, U11226D001, U11314D001, U11413D001, U11518D001, U11615D001, U11725D001, U11916D001, U51117D001, U11120D001",
+    "descripcion": "CURSOS EDUC CONTINUA FAC ARQ, CURSOS EDUC CONTINUA FAC ING, CURSOS EDUC CONTINUA FAC ART Y HUM, CURSOS EDUC CONTINUA FAC COM, CURSOS EDUC CONTINUA FHTG, CURSOS EDUC CONTINUA FAC DER, CURSOS EDUC CONTINUA FAC CS SALUD, CURSOS EDUC CONTINUA FAC EDUC, CURSOS EDUC CONTINUA CLS, CURSOS EDUC CONTINUA FAC CCEE"
+  },
+  {
+    "codigo": "U11226D001, U11314D001, U11413D001, U11518D001, U11615D001, U11725D001, U11812D001, U11916D001, U51117D001, U11120D001",
+    "descripcion": "CURSOS EDUC CONTINUA FAC ING, CURSOS EDUC CONTINUA FAC ART Y HUM, CURSOS EDUC CONTINUA FAC COM, CURSOS EDUC CONTINUA FHTG, CURSOS EDUC CONTINUA FAC DER, CURSOS EDUC CONTINUA FAC CS SALUD, CURSOS EDUC CONTINUA FAC ARQ, CURSOS EDUC CONTINUA FAC EDUC, CURSOS EDUC CONTINUA CLS, CURSOS EDUC CONTINUA FAC CCEE"
+  },
+  {
+    "codigo": "UV1116D001",
+    "descripcion": "PROGRAMAS Y PROYECT. EDUC - VRA"
+  },
+  {
+    "codigo": "S11100V011",
+    "descripcion": "DEPARTAMENTO DE IDIOMAS"
+  },
+  {
+    "codigo": "S11100V011, U51117D001, U51112D001",
+    "descripcion": "DEPARTAMENTO DE IDIOMAS, CURSOS EDUC CONTINUA CLS, CURSOS LIBRES INGLÉS LM"
+  },
+  {
+    "codigo": "U51113D001, S11100V011",
+    "descripcion": "USIL CAMBRIDGE ESOL, DEPARTAMENTO DE IDIOMAS"
+  },
+  {
+    "codigo": "S11100V011, U51117D001",
+    "descripcion": "DEPARTAMENTO DE IDIOMAS, CURSOS EDUC CONTINUA CLS"
+  },
+  {
+    "codigo": "S11100V011, U51112D001, U51113D001",
+    "descripcion": "DEPARTAMENTO DE IDIOMAS, CURSOS LIBRES INGLÉS LM, USIL CAMBRIDGE ESOL"
+  },
+  {
+    "codigo": "S11100V008",
+    "descripcion": "BILINGUAL PROGRAMS"
+  },
+  {
+    "codigo": "S11100V004",
+    "descripcion": "DIRECCION DE FORM POR COMPETEN"
+  },
+  {
+    "codigo": "S11100V027",
+    "descripcion": "DIRECCION DE ESTUDIOS GENERALES"
+  },
+  {
+    "codigo": "S11100V019, U91111D001",
+    "descripcion": "FONDO EDITORIAL USIL, FONDO EDITORIAL-VENTA D LIBROS"
+  },
+  {
+    "codigo": "S11100V019",
+    "descripcion": "FONDO EDITORIAL USIL"
+  },
+  {
+    "codigo": "U31110P004",
+    "descripcion": "ADM DE EMPR CPEL LOCALES IND"
+  },
+  {
+    "codigo": "U31311D001",
+    "descripcion": "CARRERA DE ADMINISTRACIÓN CLN"
+  },
+  {
+    "codigo": "U11111D001",
+    "descripcion": "CARRERA ADMINISTRACIÓN"
+  },
+  {
+    "codigo": "U31110P005",
+    "descripcion": "MARKETING CPEL LOCALES IND"
+  },
+  {
+    "codigo": "U31410P001",
+    "descripcion": "CPEL MAGDALENA INDIRECTO"
+  },
+  {
+    "codigo": "U31110P002",
+    "descripcion": "CPEL LA MOLINA INDIRECTO"
+  },
+  {
+    "codigo": "U11213D001",
+    "descripcion": "CARR ING INDUSTRIAL Y COMERC"
+  },
+  {
+    "codigo": "U31110P010",
+    "descripcion": "ING INDUSTR CPEL LOCALES IND"
+  },
+  {
+    "codigo": "U11217D001",
+    "descripcion": "CARRERA ING EMPRESARIAL"
+  },
+  {
+    "codigo": "U11511P001",
+    "descripcion": "CARRERA ADM TURISMO INDIRECTO"
+  },
+  {
+    "codigo": "U11511D001",
+    "descripcion": "CARRERA ADMIN TURISMO"
+  },
+  {
+    "codigo": "U11514D001",
+    "descripcion": "CARRERA DE ARTE CULINARIO"
+  },
+  {
+    "codigo": "U11512P001",
+    "descripcion": "CARRERA GASTRONOMÍA INDIRECTO"
+  },
+  {
+    "codigo": "U11512D001",
+    "descripcion": "CARRERA GASTRON Y GEST RESTAUR"
+  },
+  {
+    "codigo": "U11513D001",
+    "descripcion": "CARRERA HOTELERA"
+  },
+  {
+    "codigo": "U11510P001",
+    "descripcion": "FAC HOTELERIA-TURISMO-GASTR"
+  },
+  {
+    "codigo": "U11510P001, U11513P001",
+    "descripcion": "FAC HOTELERIA-TURISMO-GASTR, CARRERA HOTELERÍA INDIRECTO"
+  },
+  {
+    "codigo": "U11514D001, U11510P001",
+    "descripcion": "CARRERA DE ARTE CULINARIO, FAC HOTELERIA-TURISMO-GASTR"
+  },
+  {
+    "codigo": "U61113D001",
+    "descripcion": "PROGRAMA INSTITUT PAUL BOCUSE"
+  },
+  {
+    "codigo": "U11518D001",
+    "descripcion": "CURSOS EDUC CONTINUA FHTG"
+  },
+  {
+    "codigo": "U11811P001",
+    "descripcion": "CARRERA ARQUITECTURA INDIRECTO"
+  },
+  {
+    "codigo": "U11811D001",
+    "descripcion": "CARR ARQUIT URB Y TERR"
+  },
+  {
+    "codigo": "U11810P001",
+    "descripcion": "FAC ARQUITECTURA URBA TERRITO"
+  },
+  {
+    "codigo": "U11312P001",
+    "descripcion": "CARRERA ARTE Y DISELO INDIRECT"
+  },
+  {
+    "codigo": "U11312D001",
+    "descripcion": "CARRERA DE ARTE Y DIS EMPRES"
+  },
+  {
+    "codigo": "U11311P001",
+    "descripcion": "CARRERA MÚSICA INDIRECTO"
+  },
+  {
+    "codigo": "U11311D001",
+    "descripcion": "CARRERA DE MÚSICA"
+  },
+  {
+    "codigo": "S11100V003",
+    "descripcion": "GESTIÓN DE RANKINGS"
+  },
+  {
+    "codigo": "U11711D001",
+    "descripcion": "CARRERA ADMINISTRAC DE SALUD"
+  },
+  {
+    "codigo": "U11723D001",
+    "descripcion": "CARR. ENFERMERÍA"
+  },
+  {
+    "codigo": "U11712P001",
+    "descripcion": "CARRERA DE MEDICINA HUMANA IND"
+  },
+  {
+    "codigo": "U11712D001",
+    "descripcion": "CARRERA DE MEDICINA HUMANA"
+  },
+  {
+    "codigo": "U11714P001",
+    "descripcion": "CARRERA NUTRICIÓN INDIRECTO"
+  },
+  {
+    "codigo": "U11714D001",
+    "descripcion": "CARRERA DE NUTRICIÓN"
+  },
+  {
+    "codigo": "U11715D001",
+    "descripcion": "CARRERA PSICOLOGÍA EMPRES"
+  },
+  {
+    "codigo": "U11715P001",
+    "descripcion": "CARRERA PSICOLOGÍA EMP INDIR"
+  },
+  {
+    "codigo": "U11724D001",
+    "descripcion": "CARR TEC MED EN TER FÍS Y REHABILITACIÓN"
+  },
+  {
+    "codigo": "U11111P001",
+    "descripcion": "CARRERA ADMINISTRACIÓN INDIREC"
+  },
+  {
+    "codigo": "U31110P004, U11111P001, U11117P001",
+    "descripcion": "ADM DE EMPR CPEL LOCALES IND, CARRERA ADMINISTRACIÓN INDIREC, CARRERA GEST AMB Y DES IND"
+  },
+  {
+    "codigo": "U11117P001, U31110P004, U11111P001",
+    "descripcion": "CARRERA GEST AMB Y DES IND, ADM DE EMPR CPEL LOCALES IND, CARRERA ADMINISTRACIÓN INDIREC"
+  },
+  {
+    "codigo": "U11116P001, U31110P008, U31110P007, U11112P001",
+    "descripcion": "CARRERA ADM Y EMPREND INDIRE, ADM Y FINAN CPEL LOCALES IND, CONTABILIDAD CPEL LOCALES IND, CARRERA ADM Y FINANZ CORP IND"
+  },
+  {
+    "codigo": "U11116P001",
+    "descripcion": "CARRERA ADM Y EMPREND INDIRE"
+  },
+  {
+    "codigo": "U11112P001",
+    "descripcion": "CARRERA ADM Y FINANZ CORP IND"
+  },
+  {
+    "codigo": "U11121D001",
+    "descripcion": "CARRERA DE DIGITAL BUSINESS MANAGEMENT"
+  },
+  {
+    "codigo": "U11113P001",
+    "descripcion": "CARRERA ECONOMÍA INDIRECTO"
+  },
+  {
+    "codigo": "U11117D001",
+    "descripcion": "CARRERA GEST AMBIENTAL Y DES"
+  },
+  {
+    "codigo": "U11117P001",
+    "descripcion": "CARRERA GEST AMB Y DES IND"
+  },
+  {
+    "codigo": "U11114P001",
+    "descripcion": "CARRERA MARKETING INDIRECTO"
+  },
+  {
+    "codigo": "U11115P001",
+    "descripcion": "CARRERA NEG INTERNAC INDIREC"
+  },
+  {
+    "codigo": "U11115D001",
+    "descripcion": "CARRERA INTERNATIONAL BUSINESS"
+  },
+  {
+    "codigo": "U11612D001",
+    "descripcion": "CARRERA DE RELACIONES INTERNAC"
+  },
+  {
+    "codigo": "U11120D001",
+    "descripcion": "CURSOS EDUC CONTINUA FAC CCEE"
+  },
+  {
+    "codigo": "U11117P001, U11114P001, U11115P001",
+    "descripcion": "CARRERA GEST AMB Y DES IND, CARRERA MARKETING INDIRECTO, CARRERA NEG INTERNAC INDIREC"
+  },
+  {
+    "codigo": "U11411P001",
+    "descripcion": "CARRERA DE COMUNICACÓN INDIREC"
+  },
+  {
+    "codigo": "U11411D001",
+    "descripcion": "CARRERA DE COMUNICACIÓN"
+  },
+  {
+    "codigo": "U31110P003, U11411P001",
+    "descripcion": "COMUNICACIÓN CPEL LOCALES IND, CARRERA DE COMUNICACÓN INDIREC"
+  },
+  {
+    "codigo": "U11410P001",
+    "descripcion": "FACULTAD DE COMUNICACIÓN"
+  },
+  {
+    "codigo": "U11612P001",
+    "descripcion": "CARRERA RELAC INTERNAC INDIR"
+  },
+  {
+    "codigo": "U11611P001",
+    "descripcion": "CARRERA DERECHO INDIRECTO"
+  },
+  {
+    "codigo": "U11911D001",
+    "descripcion": "CARRERA DE EDUCACIÓN INICIAL"
+  },
+  {
+    "codigo": "U11910P001",
+    "descripcion": "FACULTAD DE EDUCACIÓN"
+  },
+  {
+    "codigo": "U11913D001",
+    "descripcion": "CARR SECUNDARIA-ESPEC INGLES"
+  },
+  {
+    "codigo": "U11910P001, U41000P010, S11400A002, U41711D001, U41210P002, U41611D001",
+    "descripcion": "FACULTAD DE EDUCACIÓN, MAESTRÍA EN EDUCACIÓN ACAD IND, MAESTRÍA EN EDUCACIÓN ADM, PROYECTO REPUB. DOMINICANA, DOCTORADO EN EDUCACIÓN ACD IND, PROG SEG. ESP. GESTION ESCOLAR"
+  },
+  {
+    "codigo": "U11912D001",
+    "descripcion": "CARRERA EDUCACIÓN PRIMARIA"
+  },
+  {
+    "codigo": "U11221D001",
+    "descripcion": "CARRERA CS DE DATOS"
+  },
+  {
+    "codigo": "U11215D001",
+    "descripcion": "CARRERA INGENIER. DEL SOFTWARE"
+  },
+  {
+    "codigo": "U11226D001",
+    "descripcion": "CURSOS EDUC CONTINUA FAC ING"
+  },
+  {
+    "codigo": "U11220P001",
+    "descripcion": "CARRERA ING AMBIENTAL INDIREC"
+  },
+  {
+    "codigo": "U11220D001",
+    "descripcion": "CARRERA ING AMBIENTAL"
+  },
+  {
+    "codigo": "U11211D001",
+    "descripcion": "CARR ING AGROINDUSTRIAL"
+  },
+  {
+    "codigo": "U11216P001",
+    "descripcion": "CARRERA ING CIVIL INDIRECTO"
+  },
+  {
+    "codigo": "U11216D001",
+    "descripcion": "CARRERA INGENIRÍA CIVIL"
+  },
+  {
+    "codigo": "U11210P003",
+    "descripcion": "LAB SUELOS Y PAVIMENTO C7B1"
+  },
+  {
+    "codigo": "U11210P004",
+    "descripcion": "LAB. FÍSICA I C1C301"
+  },
+  {
+    "codigo": "U11214P001",
+    "descripcion": "CARRERA ING MECATRÓNICA INDIR"
+  },
+  {
+    "codigo": "U11218P001",
+    "descripcion": "CARRERA ING INDUS ALIM INDIRE"
+  },
+  {
+    "codigo": "U11214D001",
+    "descripcion": "CARRERA INGENIERÍA MECATRÓNICA"
+  },
+  {
+    "codigo": "U11211D001, U11220D001",
+    "descripcion": "CARR ING AGROINDUSTRIAL, CARRERA ING AMBIENTAL"
+  },
+  {
+    "codigo": "U11211P001, U11218P001",
+    "descripcion": "CARRERA ING AGROIND INDIRECT, CARRERA ING INDUS ALIM INDIRE"
+  },
+  {
+    "codigo": "U11218P001, U11211P001",
+    "descripcion": "CARRERA ING INDUS ALIM INDIRE, CARRERA ING AGROIND INDIRECT"
+  },
+  {
+    "codigo": "U11210P002",
+    "descripcion": "LAB PLANTA ING AGROIND C7A104"
+  },
+  {
+    "codigo": "U11229D001",
+    "descripcion": "CARRERA DE INGENIERIA BIOMEDICA"
+  },
+  {
+    "codigo": "U11212P001",
+    "descripcion": "CARRERA ING INFORMÁTICA INDIR"
+  },
+  {
+    "codigo": "U11228D001",
+    "descripcion": "CARRERA DE INGENIERÍA EN CIBERSEGURIDAD"
+  },
+  {
+    "codigo": "U11212D001",
+    "descripcion": "CARR ING EN SIST D INFORMAC"
+  },
+  {
+    "codigo": "U11217P001",
+    "descripcion": "CARRERA ING EMPRES INDIRECTO"
+  },
+  {
+    "codigo": "S11900V006",
+    "descripcion": "VICERRECTORADO D INVESTIGACIÓN"
+  },
+  {
+    "codigo": "S11900V014",
+    "descripcion": "IYD - COSMÉTICOS"
+  },
+  {
+    "codigo": "S11900V007",
+    "descripcion": "INST CS D LOS ALIMENT Y NUTRIC"
+  },
+  {
+    "codigo": "S11900V016",
+    "descripcion": "COORD DE PUBLICACIONES - VRI"
+  },
+  {
+    "codigo": "S11900V007, UV1115D001",
+    "descripcion": "INST CS D LOS ALIMENT Y NUTRIC, VENTAS DE SERVICIOS ICAN-VRI"
+  }
+]
