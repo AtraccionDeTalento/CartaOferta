@@ -14,7 +14,9 @@ const GEMINI_API_KEYS = Array.from(new Set([
   ...envKeysList,
 ]));
 
-const MODEL = 'gemini-2.0-flash';
+// gemini-2.0-flash quedó sin cuota gratuita (limit: 0) — usar el alias "latest" evita que
+// vuelva a pasar cuando Google retire el modelo fijo que estemos usando.
+const MODEL = 'gemini-flash-latest';
 
 export const isGeminiConfigured = GEMINI_API_KEYS.length > 0;
 
