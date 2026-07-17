@@ -83,8 +83,12 @@ export default function App() {
         
         {/* USIL Corporate Brand Header */}
         <div className="p-6 border-b border-usil-blue-800/40 flex items-center gap-3 bg-gradient-to-r from-usil-blue-900 to-usil-blue-800">
-          <div className="bg-white rounded-lg px-2 py-1.5 shrink-0 shadow-md">
-            <img src={`${import.meta.env.BASE_URL}logo-usil.png`} alt="USIL" className="h-6 w-auto" />
+          <div className="bg-white rounded-lg w-10 h-10 shrink-0 shadow-md overflow-hidden">
+            <img
+              src={`${import.meta.env.BASE_URL}logo-usil.png`}
+              alt="USIL"
+              className="w-full h-full object-cover object-right scale-150"
+            />
           </div>
           <div>
             <h1 className="font-extrabold text-sm tracking-wide leading-none text-white">HR OPERATIONS</h1>
@@ -148,8 +152,12 @@ export default function App() {
           <aside className="w-64 bg-usil-blue-900 text-white flex flex-col h-full animate-slide-in shadow-2xl border-r border-usil-blue-800/40">
             <div className="p-5 border-b border-usil-blue-800/40 flex items-center justify-between bg-gradient-to-r from-usil-blue-900 to-usil-blue-800">
               <div className="flex items-center gap-2.5">
-                <div className="bg-white rounded-lg px-2 py-1 shrink-0">
-                  <img src={`${import.meta.env.BASE_URL}logo-usil.png`} alt="USIL" className="h-5 w-auto" />
+                <div className="bg-white rounded-lg w-9 h-9 shrink-0 overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo-usil.png`}
+                    alt="USIL"
+                    className="w-full h-full object-cover object-right scale-150"
+                  />
                 </div>
                 <h1 className="font-extrabold text-xs tracking-wider text-white">HR OPS SYSTEM</h1>
               </div>
