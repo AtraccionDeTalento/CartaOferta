@@ -15,7 +15,9 @@ import {
   Unidad,
   Puesto
 } from '../services/catalogos';
-import { AlertCircle, FileUp, Link2, Save, Sparkles } from 'lucide-react';
+import { AlertCircle, FileUp, Link2, Save, Sparkles, Loader2, CheckCircle2 } from 'lucide-react';
+import { extractCandidateData, isGeminiConfigured } from '../services/gemini';
+import { extractTextFromPdf, fileToBase64 } from '../services/pdfText';
 
 interface DynamicFormProps {
   initialData?: any;
@@ -85,6 +87,10 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
   const [archivosReferencia, setArchivosReferencia] = useState<Array<{ nombre: string; tipo: string; tamanoKb: number }>>(
     Array.isArray(initialData?.archivos_referencia) ? initialData.archivos_referencia : []
   );
+  // Archivos reales solo en memoria del navegador — se usan para leer texto/imagen y luego se descartan.
+  const [archivosFiles, setArchivosFiles] = useState<File[]>([]);
+  const [iaState, setIaState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [iaMessage, setIaMessage] = useState('');
 
   // Validation errors
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -135,13 +141,75 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
   };
 
   const handleReferenceFilesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []).map((file) => ({
-      nombre: file.name,
-      tipo: file.type || 'application/octet-stream',
-      tamanoKb: Math.round(file.size / 1024),
-    }));
+    const files = Array.from(event.target.files || []);
+    setArchivosFiles(files);
+    setArchivosReferencia(
+      files.map((file) => ({
+        nombre: file.name,
+        tipo: file.type || 'application/octet-stream',
+        tamanoKb: Math.round(file.size / 1024),
+      }))
+    );
+    setIaState('idle');
+    setIaMessage('');
+  };
 
-    setArchivosReferencia(files);
+  const handleOrganizarConIA = async () => {
+    if (!resumenCandidato.trim() && archivosFiles.length === 0) {
+      setIaState('error');
+      setIaMessage('Pega un resumen o adjunta al menos un archivo (CV en PDF, texto o imagen) para que la IA tenga algo que leer.');
+      return;
+    }
+
+    setIaState('loading');
+    setIaMessage('');
+
+    try {
+      let combinedText = resumenCandidato.trim();
+      const imagenes: Array<{ data: string; mimeType: string }> = [];
+      const omitidos: string[] = [];
+
+      for (const file of archivosFiles) {
+        if (file.type === 'application/pdf') {
+          const text = await extractTextFromPdf(file);
+          combinedText += `\n\n--- Contenido de ${file.name} ---\n${text}`;
+        } else if (file.type.startsWith('image/')) {
+          const base64 = await fileToBase64(file);
+          imagenes.push({ data: base64, mimeType: file.type });
+        } else if (file.type === 'text/plain') {
+          combinedText += `\n\n--- Contenido de ${file.name} ---\n${await file.text()}`;
+        } else {
+          omitidos.push(file.name);
+        }
+      }
+
+      const extracted = await extractCandidateData({ texto: combinedText, imagenes });
+
+      if (extracted.nombres_apellidos) setNombres(extracted.nombres_apellidos);
+      if (extracted.dni) setDni(extracted.dni);
+      if (extracted.salario) setSalario(extracted.salario);
+      if (extracted.modalidad) setModalidad(extracted.modalidad);
+      if (extracted.tiempo_contrato) setTiempoContrato(extracted.tiempo_contrato);
+      if (extracted.nombre_jefe_directo) setNombreJefe(extracted.nombre_jefe_directo);
+      if (extracted.fecha_tentativa_ingreso) setFechaTentativa(extracted.fecha_tentativa_ingreso);
+      if (extracted.puesto_sugerido || extracted.observaciones) {
+        const nota = [
+          extracted.puesto_sugerido ? `Puesto sugerido por IA: ${extracted.puesto_sugerido}` : '',
+          extracted.observaciones || '',
+        ].filter(Boolean).join('. ');
+        if (nota) setResumenCandidato((prev: string) => (prev ? `${prev}\n\n${nota}` : nota));
+      }
+
+      setIaState('success');
+      setIaMessage(
+        omitidos.length > 0
+          ? `Datos organizados. No se pudieron leer estos archivos (formato no soportado): ${omitidos.join(', ')}.`
+          : 'Datos organizados. Revisa los campos autocompletados antes de guardar.'
+      );
+    } catch (err: any) {
+      setIaState('error');
+      setIaMessage(err?.message || 'No se pudo procesar con IA.');
+    }
   };
 
   // 1. Initial Load of Sucursales
@@ -472,12 +540,50 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
               </div>
             )}
 
+            {isGeminiConfigured ? (
+              <button
+                type="button"
+                onClick={handleOrganizarConIA}
+                disabled={iaState === 'loading'}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-usil-blue-600 to-usil-sky-500 px-4 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:opacity-90 active:scale-[0.99] disabled:opacity-70"
+              >
+                {iaState === 'loading' ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span>Organizando con IA...</span>
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="h-4 w-4" />
+                    <span>Organizar con IA</span>
+                  </>
+                )}
+              </button>
+            ) : (
+              <p className="text-[11px] font-medium text-slate-400 italic">
+                Auto-organización con IA no disponible en este entorno (falta configurar la key de Gemini).
+              </p>
+            )}
+
+            {iaState === 'success' && (
+              <div className="flex items-start gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3.5 py-2.5 text-xs font-medium text-emerald-700">
+                <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" />
+                <span>{iaMessage}</span>
+              </div>
+            )}
+            {iaState === 'error' && (
+              <div className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 px-3.5 py-2.5 text-xs font-medium text-red-700">
+                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+                <span>{iaMessage}</span>
+              </div>
+            )}
+
             <button
               type="button"
               onClick={handleQuickDraftSubmit}
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-usil-blue-700 px-4 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-usil-blue-800 active:scale-[0.99]"
             >
-              <Sparkles className="h-4 w-4" />
+              <Save className="h-4 w-4" />
               <span>Guardar borrador rapido con briefing</span>
             </button>
           </div>

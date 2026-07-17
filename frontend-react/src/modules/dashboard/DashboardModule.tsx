@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '../../components/ui/Card';
-import { 
-  Users, 
-  FileText, 
-  CheckCircle, 
-  FileClock, 
-  TrendingUp, 
-  Settings, 
-  ShieldAlert 
+import {
+  Users,
+  FileText,
+  CheckCircle,
+  FileClock,
+  TrendingUp,
+  Settings,
+  HelpCircle,
+  X
 } from 'lucide-react';
 import { subscribeToCollection } from '../../services/firestore';
-import { MOCK_PROFILES, UserProfile, loginAsMockUser } from '../../services/auth';
+import { UserProfile } from '../../services/auth';
 
 interface DashboardModuleProps {
   currentUser: UserProfile | null;
@@ -18,6 +19,7 @@ interface DashboardModuleProps {
 }
 
 export const DashboardModule: React.FC<DashboardModuleProps> = ({ currentUser, onNavigate }) => {
+  const [showGuide, setShowGuide] = useState(false);
   const [stats, setStats] = useState({
     totalIngresos: 0,
     ingresosPendientes: 0,
@@ -66,9 +68,18 @@ export const DashboardModule: React.FC<DashboardModuleProps> = ({ currentUser, o
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-usil-blue-800 to-usil-blue-600 text-white rounded-2xl p-7 shadow-lg relative overflow-hidden">
         <div className="relative z-10 max-w-xl">
-          <h1 className="text-2xl font-bold font-sans">
-            ¡Hola, {currentUser?.displayName || 'Usuario'}!
-          </h1>
+          <div className="flex items-center justify-between gap-4">
+            <h1 className="text-2xl font-bold font-sans">
+              ¡Hola, {currentUser?.displayName || 'Usuario'}!
+            </h1>
+            <button
+              onClick={() => setShowGuide(true)}
+              className="flex items-center gap-1.5 text-[11px] font-bold bg-white/10 hover:bg-white/20 border border-white/20 px-3 py-1.5 rounded-lg transition-colors shrink-0"
+            >
+              <HelpCircle className="w-3.5 h-3.5" />
+              ¿Cómo funciona?
+            </button>
+          </div>
           <p className="text-sm text-usil-blue-100 mt-2 font-medium">
             Le damos la bienvenida al HR Operations Management System. Aquí puede gestionar solicitudes de ingreso, emitir cartas de oferta salarial validadas y registrar los movimientos de personal.
           </p>
@@ -78,95 +89,45 @@ export const DashboardModule: React.FC<DashboardModuleProps> = ({ currentUser, o
         </div>
       </div>
 
-      {/* Guía Visual Rápida del Flujo de Trabajo (Poka-Yoke & Intuitive Helper) */}
-      <div className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
-        <h3 className="text-xs font-extrabold text-slate-500 uppercase tracking-widest mb-4">
-          Guía de Operación: Flujo Colaborativo en 3 Pasos
-        </h3>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-          
-          {/* Paso 1 */}
-          <div className="flex gap-4.5 p-4.5 bg-slate-50 rounded-xl border border-slate-100/60 relative">
-            <div className="w-10 h-10 rounded-full bg-usil-blue-100 text-usil-blue-700 font-extrabold flex items-center justify-center text-sm shrink-0 shadow-inner">
-              1
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">Business Partner (BP)</h4>
-              <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-medium">
-                Registra la solicitud del candidato. El formulario autocompleta el **CECO** dependiente y aplica las reglas salariales.
-              </p>
-              <span className="inline-block mt-2.5 text-[10px] font-bold text-usil-blue-600 bg-usil-blue-50 px-2 py-0.5 rounded border border-usil-blue-100">
-                Paso Inicial
-              </span>
-            </div>
-          </div>
-
-          {/* Paso 2 */}
-          <div className="flex gap-4.5 p-4.5 bg-emerald-50/20 rounded-xl border border-emerald-100/40 relative">
-            <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-extrabold flex items-center justify-center text-sm shrink-0 shadow-inner">
-              2
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">Compensaciones (Débora)</h4>
-              <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-medium">
-                Revisa y aprueba la solicitud. Al aprobarse, el sistema genera la **Carta Oferta** en PDF usando la plantilla automática.
-              </p>
-              <span className="inline-block mt-2.5 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
-                Genera la Carta
-              </span>
-            </div>
-          </div>
-
-          {/* Paso 3 */}
-          <div className="flex gap-4.5 p-4.5 bg-purple-50/20 rounded-xl border border-purple-100/40 relative">
-            <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-extrabold flex items-center justify-center text-sm shrink-0 shadow-inner">
-              3
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">Operaciones / Nómina</h4>
-              <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-medium">
-                Registra la firma del candidato aceptante y marca el cambio organizativo como sincronizado en el core **Adryan**.
-              </p>
-              <span className="inline-block mt-2.5 text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-100">
-                Cierre y Carga ERP
-              </span>
+      {/* Guía de Operación (modal, bajo demanda) */}
+      {showGuide && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 relative">
+            <button
+              onClick={() => setShowGuide(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <h3 className="text-sm font-extrabold text-slate-800 uppercase tracking-widest mb-4">
+              Flujo Colaborativo en 3 Pasos
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100/60">
+                <div className="w-8 h-8 rounded-full bg-usil-blue-100 text-usil-blue-700 font-extrabold flex items-center justify-center text-xs shrink-0">1</div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-800 uppercase">Business Partner</h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Registra la solicitud del candidato con CECO y reglas salariales aplicadas.</p>
+                </div>
+              </div>
+              <div className="flex gap-3 p-4 bg-emerald-50/20 rounded-xl border border-emerald-100/40">
+                <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 font-extrabold flex items-center justify-center text-xs shrink-0">2</div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-800 uppercase">Compensaciones</h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Aprueba y genera la Carta Oferta en PDF automáticamente.</p>
+                </div>
+              </div>
+              <div className="flex gap-3 p-4 bg-purple-50/20 rounded-xl border border-purple-100/40">
+                <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-700 font-extrabold flex items-center justify-center text-xs shrink-0">3</div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-800 uppercase">Nómina</h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Registra la firma y sincroniza el cambio con el core Adryan.</p>
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
-      </div>
-
-      {/* Quick Switch Panel for Demo Mode */}
-      <div className="bg-amber-50/50 border border-amber-200/60 rounded-xl p-5 shadow-sm">
-        <div className="flex items-center gap-2.5 mb-3 text-amber-800">
-          <ShieldAlert className="w-5 h-5 shrink-0" />
-          <h3 className="text-sm font-semibold uppercase tracking-wider">
-            Consola Multi-Rol (Entorno Cloud Colaborativo)
-          </h3>
-        </div>
-        <p className="text-xs text-amber-700 mb-4 leading-relaxed font-medium">
-          El flujo de aprobación de compensaciones cambia dinámicamente según el rol. Use este simulador para cambiar de usuario y ver cómo varían los accesos del formulario y panel de aprobación:
-        </p>
-        <div className="flex flex-wrap items-center gap-3">
-          {MOCK_PROFILES.map((profile) => {
-            const isSelected = currentUser?.uid === profile.uid;
-            return (
-              <button
-                key={profile.uid}
-                onClick={() => loginAsMockUser(profile)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-200 shadow-sm border active:scale-[0.98]
-                  ${isSelected
-                    ? 'bg-amber-600 border-amber-600 text-white font-extrabold ring-4 ring-amber-100'
-                    : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
-                  }`}
-              >
-                <span className="text-sm">{profile.avatar}</span>
-                <span>{profile.displayName}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
+      )}
 
       {/* KPI Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">

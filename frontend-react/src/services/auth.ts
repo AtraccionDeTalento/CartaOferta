@@ -48,6 +48,18 @@ export const MOCK_PROFILES: UserProfile[] = [
   }
 ];
 
+// Demo passwords per role (mock auth — no real backend credential store yet)
+export const ROLE_PASSWORDS: Record<string, string> = {
+  bp_1: 'bp2026',
+  debora_1: 'comp2026',
+  nomina_1: 'nomina2026',
+  admin_1: 'admin2026'
+};
+
+export const verifyRolePassword = (profile: UserProfile, password: string): boolean => {
+  return ROLE_PASSWORDS[profile.uid] === password;
+};
+
 let currentUser: UserProfile | null = null;
 const listeners = new Set<(user: UserProfile | null) => void>();
 
@@ -55,18 +67,17 @@ const notifyListeners = () => {
   listeners.forEach((l) => l(currentUser));
 };
 
-// Initialize Current User
+// Initialize Current User (restores an existing session only — does not auto-login)
 const initAuth = () => {
   const stored = localStorage.getItem('current_user');
   if (stored) {
     try {
       currentUser = JSON.parse(stored);
     } catch {
-      currentUser = MOCK_PROFILES[1]; // Default to Débora
+      currentUser = null;
     }
   } else {
-    currentUser = MOCK_PROFILES[1]; // Default to Débora
-    localStorage.setItem('current_user', JSON.stringify(currentUser));
+    currentUser = null;
   }
   notifyListeners();
 };
@@ -118,11 +129,10 @@ export const loginAsMockUser = (profile: UserProfile) => {
 };
 
 export const signOutUser = async (): Promise<void> => {
+  currentUser = null;
+  localStorage.removeItem('current_user');
   if (isFirebaseConfigured && auth) {
     await fbSignOut(auth);
-  } else {
-    currentUser = null;
-    localStorage.removeItem('current_user');
-    notifyListeners();
   }
+  notifyListeners();
 };

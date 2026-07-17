@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { getCurrentUser, UserProfile, subscribeToAuth } from './services/auth';
+import { UserProfile, subscribeToAuth, signOutUser } from './services/auth';
 import { isFirebaseConfigured } from './services/firebase';
+import { LoginModule } from './modules/auth/LoginModule';
 import { DashboardModule } from './modules/dashboard/DashboardModule';
 import { IngresosModule } from './modules/ingresos/IngresosModule';
 import { MovimientosModule } from './modules/movimientos/MovimientosModule';
@@ -70,6 +71,10 @@ export default function App() {
 
   const activeItem = menuItems.find(item => item.id === activeModule);
 
+  if (!currentUser) {
+    return <LoginModule />;
+  }
+
   return (
     <div className="flex h-screen bg-slate-50 overflow-hidden font-sans">
       
@@ -78,8 +83,8 @@ export default function App() {
         
         {/* USIL Corporate Brand Header */}
         <div className="p-6 border-b border-usil-blue-800/40 flex items-center gap-3 bg-gradient-to-r from-usil-blue-900 to-usil-blue-800">
-          <div className="w-8 h-8 rounded-lg bg-usil-sky-500 flex items-center justify-center font-black text-white shadow-md text-sm">
-            US
+          <div className="bg-white rounded-lg px-2 py-1.5 shrink-0 shadow-md">
+            <img src={`${import.meta.env.BASE_URL}logo-usil.png`} alt="USIL" className="h-6 w-auto" />
           </div>
           <div>
             <h1 className="font-extrabold text-sm tracking-wide leading-none text-white">HR OPERATIONS</h1>
@@ -125,6 +130,13 @@ export default function App() {
                 {currentUser?.role || 'Invitado'}
               </span>
             </div>
+            <button
+              onClick={() => signOutUser()}
+              title="Cerrar sesión"
+              className="p-1.5 rounded-lg text-usil-blue-300 hover:text-white hover:bg-usil-blue-800/50 transition-colors shrink-0"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
@@ -136,8 +148,8 @@ export default function App() {
           <aside className="w-64 bg-usil-blue-900 text-white flex flex-col h-full animate-slide-in shadow-2xl border-r border-usil-blue-800/40">
             <div className="p-5 border-b border-usil-blue-800/40 flex items-center justify-between bg-gradient-to-r from-usil-blue-900 to-usil-blue-800">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-usil-sky-500 flex items-center justify-center font-black text-white text-sm">
-                  US
+                <div className="bg-white rounded-lg px-2 py-1 shrink-0">
+                  <img src={`${import.meta.env.BASE_URL}logo-usil.png`} alt="USIL" className="h-5 w-auto" />
                 </div>
                 <h1 className="font-extrabold text-xs tracking-wider text-white">HR OPS SYSTEM</h1>
               </div>

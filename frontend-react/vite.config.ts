@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // GitHub Pages debe usar exactamente el nombre del repositorio.
-const REPO_NAME = 'hr-ops-system';
+const REPO_NAME = 'CartaOferta';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,6 +21,13 @@ export default defineConfig({
     emptyOutDir: true,
     assetsDir: 'assets',
     sourcemap: false,
+    // pdfjs-dist usa top-level await; requiere un target moderno
+    target: 'esnext',
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext',
+    },
   },
   server: {
     port: 5173,

@@ -39,8 +39,10 @@ if os.path.exists(FRONTEND_DIR):
     
     if os.path.exists(assets_path):
         app.mount("/assets", StaticFiles(directory=assets_path), name="assets")
+        app.mount("/CartaOferta/assets", StaticFiles(directory=assets_path), name="pages_assets")
     if os.path.exists(data_path):
         app.mount("/data", StaticFiles(directory=data_path), name="data")
+        app.mount("/CartaOferta/data", StaticFiles(directory=data_path), name="pages_data")
         
     # Compatibilidad heredada
     if os.path.exists(os.path.join(FRONTEND_DIR, "css")):
@@ -52,6 +54,12 @@ if os.path.exists(FRONTEND_DIR):
 @app.get("/")
 async def serve_index():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+
+
+@app.get("/logo-usil.png")
+@app.get("/CartaOferta/logo-usil.png")
+async def serve_logo():
+    return FileResponse(os.path.join(FRONTEND_DIR, "logo-usil.png"))
 
 
 @app.on_event("startup")
