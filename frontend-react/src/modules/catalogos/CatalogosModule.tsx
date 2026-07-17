@@ -83,7 +83,7 @@ export const CatalogosModule: React.FC = () => {
       </div>
 
       {/* Tabs list */}
-      <div className="flex flex-wrap items-center border-b border-slate-200 gap-1">
+      <div className="flex flex-wrap items-center border-b border-slate-200 gap-2">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.key;
           return (
@@ -93,9 +93,9 @@ export const CatalogosModule: React.FC = () => {
                 setActiveTab(tab.key);
                 setSearchTerm('');
               }}
-              className={`px-4.5 py-3 text-xs font-bold transition-all border-b-2 outline-none
-                ${isActive 
-                  ? 'border-usil-blue-600 text-usil-blue-700 font-extrabold' 
+              className={`px-5 py-3 mx-0.5 text-xs font-bold whitespace-nowrap transition-all border-b-2 outline-none
+                ${isActive
+                  ? 'border-usil-blue-600 text-usil-blue-700 font-extrabold'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'}`}
             >
               {tab.label}
