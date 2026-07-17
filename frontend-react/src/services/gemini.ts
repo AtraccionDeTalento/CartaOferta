@@ -1,11 +1,22 @@
 // Cliente para extracción de datos de candidatos con Gemini.
-// La key vive en VITE_GEMINI_API_KEY (build-time env var). En un sitio 100% estático
-// (GitHub Pages) esta key queda visible en el bundle JS — debe estar restringida por
-// HTTP referrer y con cuota acotada en Google AI Studio / Cloud Console.
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
+// Las keys viven en VITE_GEMINI_API_KEY / VITE_GEMINI_API_KEYS (build-time env vars). En un
+// sitio 100% estático (GitHub Pages) quedan visibles en el bundle JS — deben estar restringidas
+// por HTTP referrer y con cuota acotada en Google AI Studio / Cloud Console.
+const envKey = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
+// VITE_GEMINI_API_KEYS: lista opcional separada por comas para fallback automático si una
+// key se queda sin cuota (429). Nunca hardcodear keys aquí — GitHub bloquea el push si
+// detecta credenciales en el código. Configúralas como variables de entorno (.env.local
+// para desarrollo, secreto de GitHub Actions VITE_GEMINI_API_KEYS para el build público).
+const envKeysList = (import.meta.env.VITE_GEMINI_API_KEYS as string | undefined)?.split(',').map(k => k.trim()).filter(Boolean) || [];
+
+const GEMINI_API_KEYS = Array.from(new Set([
+  ...(envKey ? [envKey] : []),
+  ...envKeysList,
+]));
+
 const MODEL = 'gemini-2.0-flash';
 
-export const isGeminiConfigured = !!GEMINI_API_KEY;
+export const isGeminiConfigured = GEMINI_API_KEYS.length > 0;
 
 export interface ExtractedCandidateData {
   nombres_apellidos?: string;
@@ -40,7 +51,7 @@ export async function extractCandidateData(input: {
   texto: string;
   imagenes?: Array<{ data: string; mimeType: string }>;
 }): Promise<ExtractedCandidateData> {
-  if (!GEMINI_API_KEY) {
+  if (GEMINI_API_KEYS.length === 0) {
     throw new Error('Gemini no está configurado en este entorno (falta VITE_GEMINI_API_KEY).');
   }
 
@@ -49,35 +60,51 @@ export async function extractCandidateData(input: {
     parts.push({ inlineData: { mimeType: img.mimeType, data: img.data } });
   }
 
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GEMINI_API_KEY}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts }],
-        generationConfig: {
-          responseMimeType: 'application/json',
-          responseSchema: RESPONSE_SCHEMA,
-        },
-      }),
+  let lastError: Error | null = null;
+
+  for (const key of GEMINI_API_KEYS) {
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ role: 'user', parts }],
+            generationConfig: {
+              responseMimeType: 'application/json',
+              responseSchema: RESPONSE_SCHEMA,
+            },
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errBody = await response.text();
+        // Cuota agotada o key inválida: intenta con la siguiente key disponible.
+        if (response.status === 429 || response.status === 403) {
+          lastError = new Error(`Gemini respondió con error ${response.status}: ${errBody.slice(0, 200)}`);
+          continue;
+        }
+        throw new Error(`Gemini respondió con error ${response.status}: ${errBody.slice(0, 200)}`);
+      }
+
+      const data = await response.json();
+      const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!rawText) {
+        throw new Error('Gemini no devolvió contenido utilizable.');
+      }
+
+      try {
+        return JSON.parse(rawText);
+      } catch {
+        throw new Error('No se pudo interpretar la respuesta de Gemini.');
+      }
+    } catch (err: any) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      continue;
     }
-  );
-
-  if (!response.ok) {
-    const errBody = await response.text();
-    throw new Error(`Gemini respondió con error ${response.status}: ${errBody.slice(0, 200)}`);
   }
 
-  const data = await response.json();
-  const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!rawText) {
-    throw new Error('Gemini no devolvió contenido utilizable.');
-  }
-
-  try {
-    return JSON.parse(rawText);
-  } catch {
-    throw new Error('No se pudo interpretar la respuesta de Gemini.');
-  }
+  throw lastError || new Error('No se pudo completar la solicitud a Gemini con ninguna key disponible.');
 }

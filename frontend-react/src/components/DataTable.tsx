@@ -51,7 +51,7 @@ export function DataTable<T>({
       {/* Search and Action Bar */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-5">
         <div className="relative w-full sm:max-w-md">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
           <input
             type="text"
             placeholder={searchPlaceholder}
@@ -60,7 +60,7 @@ export function DataTable<T>({
               setSearchTerm(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full pl-10.5 pr-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm placeholder-slate-400 focus:border-usil-blue-500 focus:ring-4 focus:ring-usil-blue-500/10 outline-none transition-all duration-200 text-slate-700"
+            className="w-full pl-11 pr-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm placeholder-slate-400 focus:border-usil-blue-500 focus:ring-4 focus:ring-usil-blue-500/10 outline-none transition-all duration-200 text-slate-700"
           />
         </div>
         

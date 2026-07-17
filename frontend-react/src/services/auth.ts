@@ -48,16 +48,49 @@ export const MOCK_PROFILES: UserProfile[] = [
   }
 ];
 
-// Demo passwords per role (mock auth — no real backend credential store yet)
-export const ROLE_PASSWORDS: Record<string, string> = {
-  bp_1: 'bp2026',
-  debora_1: 'comp2026',
-  nomina_1: 'nomina2026',
-  admin_1: 'admin2026'
+// Password demo temporal — TODOS los roles usan la misma clave para la presentación.
+// Recordar reemplazar por credenciales reales antes de un uso productivo.
+export const TEMP_DEMO_PASSWORD = 'ADMIN';
+
+export const verifyRolePassword = (_profile: UserProfile, password: string): boolean => {
+  return password === TEMP_DEMO_PASSWORD;
 };
 
-export const verifyRolePassword = (profile: UserProfile, password: string): boolean => {
-  return ROLE_PASSWORDS[profile.uid] === password;
+const ROLE_AVATARS: Record<UserRole, string> = {
+  'Business Partner': '👤',
+  'Compensaciones': '👩‍💼',
+  'Nómina': '📊',
+  'Admin': '⚙️',
+};
+
+const REGISTERED_USERS_KEY = 'registered_users';
+
+// Usuarios creados desde "Registrarse" — persisten en este navegador (demo local, sin backend de cuentas).
+export const getRegisteredUsers = (): UserProfile[] => {
+  try {
+    const stored = localStorage.getItem(REGISTERED_USERS_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
+export const getAllProfiles = (): UserProfile[] => {
+  return [...MOCK_PROFILES, ...getRegisteredUsers()];
+};
+
+export const registerNewUser = (input: { displayName: string; email: string; role: UserRole }): UserProfile => {
+  const profile: UserProfile = {
+    uid: `user_${Date.now()}`,
+    email: input.email.trim().toLowerCase(),
+    displayName: input.displayName.trim(),
+    role: input.role,
+    avatar: ROLE_AVATARS[input.role],
+  };
+  const list = getRegisteredUsers();
+  list.push(profile);
+  localStorage.setItem(REGISTERED_USERS_KEY, JSON.stringify(list));
+  return profile;
 };
 
 let currentUser: UserProfile | null = null;
