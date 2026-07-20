@@ -175,20 +175,19 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
 
     try {
       let combinedText = resumenCandidato.trim();
-      const imagenes: Array<{ data: string; mimeType: string }> = [];
+      const archivosInline: Array<{ data: string; mimeType: string }> = [];
       const omitidos: string[] = [];
 
       for (const file of archivosFiles) {
         console.log("Processing file:", file.name, "MIME:", file.type, "Size:", file.size);
         if (file.type === 'application/pdf') {
-          console.log("Extracting text from PDF:", file.name);
-          const text = await extractTextFromPdf(file);
-          console.log("Extracted PDF text length:", text.length);
-          combinedText += `\n\n--- Contenido de ${file.name} ---\n${text}`;
+          console.log("Reading PDF as Base64 for direct Gemini multimodal OCR parsing:", file.name);
+          const base64 = await fileToBase64(file);
+          archivosInline.push({ data: base64, mimeType: file.type });
         } else if (file.type.startsWith('image/')) {
           console.log("Converting image to Base64:", file.name);
           const base64 = await fileToBase64(file);
-          imagenes.push({ data: base64, mimeType: file.type });
+          archivosInline.push({ data: base64, mimeType: file.type });
         } else if (file.type === 'text/plain') {
           console.log("Reading plain text file:", file.name);
           combinedText += `\n\n--- Contenido de ${file.name} ---\n${await file.text()}`;
@@ -198,10 +197,8 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
         }
       }
 
-      // Crop text to prevent TPM (Tokens Per Minute) rate-limit issues on free tier keys
-      const croppedText = combinedText.slice(0, 6000);
-      console.log("Sending candidate extraction request to Gemini (cropped to 6000 chars)...");
-      const extracted = await extractCandidateData({ texto: croppedText, imagenes });
+      console.log("Sending candidate extraction request to Gemini. Inline files count:", archivosInline.length, "Text length:", combinedText.length);
+      const extracted = await extractCandidateData({ texto: combinedText, archivos: archivosInline });
       console.log("Extracted data received from Gemini:", extracted);
 
       if (extracted.nombres_apellidos) setNombres(extracted.nombres_apellidos);

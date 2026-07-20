@@ -52,14 +52,16 @@ const PROMPT = `Eres un asistente de RRHH. A partir del siguiente texto (briefin
 export async function extractCandidateData(input: {
   texto: string;
   imagenes?: Array<{ data: string; mimeType: string }>;
+  archivos?: Array<{ data: string; mimeType: string }>;
 }): Promise<ExtractedCandidateData> {
   if (GEMINI_API_KEYS.length === 0) {
     throw new Error('Gemini no está configurado en este entorno (falta VITE_GEMINI_API_KEY).');
   }
 
   const parts: any[] = [{ text: PROMPT + input.texto }];
-  for (const img of input.imagenes || []) {
-    parts.push({ inlineData: { mimeType: img.mimeType, data: img.data } });
+  const filesList = input.archivos || input.imagenes || [];
+  for (const file of filesList) {
+    parts.push({ inlineData: { mimeType: file.mimeType, data: file.data } });
   }
 
   let lastError: Error | null = null;
