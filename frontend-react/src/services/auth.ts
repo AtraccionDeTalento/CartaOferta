@@ -100,17 +100,18 @@ const notifyListeners = () => {
   listeners.forEach((l) => l(currentUser));
 };
 
-// Initialize Current User (restores an existing session only — does not auto-login)
+// Initialize Current User (defaults to Admin for presentation and instant admin access)
 const initAuth = () => {
   const stored = localStorage.getItem('current_user');
   if (stored) {
     try {
       currentUser = JSON.parse(stored);
     } catch {
-      currentUser = null;
+      currentUser = MOCK_PROFILES[3]; // Fallback to Admin profile
     }
   } else {
-    currentUser = null;
+    currentUser = MOCK_PROFILES[3]; // Default to Admin profile
+    localStorage.setItem('current_user', JSON.stringify(currentUser));
   }
   notifyListeners();
 };
