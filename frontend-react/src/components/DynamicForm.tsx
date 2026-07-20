@@ -198,8 +198,10 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
         }
       }
 
-      console.log("Sending candidate extraction request to Gemini...");
-      const extracted = await extractCandidateData({ texto: combinedText, imagenes });
+      // Crop text to prevent TPM (Tokens Per Minute) rate-limit issues on free tier keys
+      const croppedText = combinedText.slice(0, 6000);
+      console.log("Sending candidate extraction request to Gemini (cropped to 6000 chars)...");
+      const extracted = await extractCandidateData({ texto: croppedText, imagenes });
       console.log("Extracted data received from Gemini:", extracted);
 
       if (extracted.nombres_apellidos) setNombres(extracted.nombres_apellidos);
