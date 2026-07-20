@@ -225,7 +225,11 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     } catch (err: any) {
       console.error("Error in IA candidate organization:", err);
       setIaState('error');
-      setIaMessage(err?.message || 'No se pudo procesar con IA.');
+      const isTimeout = err?.name === 'AbortError' || err?.message?.includes('aborted') || err?.message?.includes('timeout');
+      const errMsg = isTimeout
+        ? 'El servidor de Gemini tardó demasiado en responder (tiempo límite de 6s excedido). Intenta de nuevo o copia la información relevante en el cuadro de texto.'
+        : (err?.message || 'No se pudo procesar con IA.');
+      setIaMessage(errMsg);
     }
   };
 

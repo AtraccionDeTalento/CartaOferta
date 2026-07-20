@@ -68,6 +68,9 @@ export async function extractCandidateData(input: {
 
   for (const key of GEMINI_API_KEYS) {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000); // 6-second timeout per key request
+
       const response = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`,
         {
@@ -80,8 +83,10 @@ export async function extractCandidateData(input: {
               responseSchema: RESPONSE_SCHEMA,
             },
           }),
+          signal: controller.signal
         }
       );
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         const errBody = await response.text();
