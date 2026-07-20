@@ -163,6 +163,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
   };
 
   const handleOrganizarConIA = async () => {
+    console.log("IA Analysis triggered. Text length:", resumenCandidato.trim().length, "Files count:", archivosFiles.length);
     if (!resumenCandidato.trim() && archivosFiles.length === 0) {
       setIaState('error');
       setIaMessage('Pega un resumen o adjunta al menos un archivo (CV en PDF, texto o imagen) para que la IA tenga algo que leer.');
@@ -178,20 +179,28 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       const omitidos: string[] = [];
 
       for (const file of archivosFiles) {
+        console.log("Processing file:", file.name, "MIME:", file.type, "Size:", file.size);
         if (file.type === 'application/pdf') {
+          console.log("Extracting text from PDF:", file.name);
           const text = await extractTextFromPdf(file);
+          console.log("Extracted PDF text length:", text.length);
           combinedText += `\n\n--- Contenido de ${file.name} ---\n${text}`;
         } else if (file.type.startsWith('image/')) {
+          console.log("Converting image to Base64:", file.name);
           const base64 = await fileToBase64(file);
           imagenes.push({ data: base64, mimeType: file.type });
         } else if (file.type === 'text/plain') {
+          console.log("Reading plain text file:", file.name);
           combinedText += `\n\n--- Contenido de ${file.name} ---\n${await file.text()}`;
         } else {
+          console.log("Skipping unsupported file type:", file.name);
           omitidos.push(file.name);
         }
       }
 
+      console.log("Sending candidate extraction request to Gemini...");
       const extracted = await extractCandidateData({ texto: combinedText, imagenes });
+      console.log("Extracted data received from Gemini:", extracted);
 
       if (extracted.nombres_apellidos) setNombres(extracted.nombres_apellidos);
       if (extracted.dni) setDni(extracted.dni);
@@ -215,6 +224,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
           : 'Datos organizados. Revisa los campos autocompletados antes de guardar.'
       );
     } catch (err: any) {
+      console.error("Error in IA candidate organization:", err);
       setIaState('error');
       setIaMessage(err?.message || 'No se pudo procesar con IA.');
     }
