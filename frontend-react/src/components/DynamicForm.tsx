@@ -13,9 +13,11 @@ import {
   Departamento,
   Area,
   Unidad,
-  Puesto
+  Puesto,
+  getFullOrgPaths,
+  OrgPath
 } from '../services/catalogos';
-import { AlertCircle, FileUp, Link2, Save, Sparkles, Loader2, CheckCircle2 } from 'lucide-react';
+import { AlertCircle, FileUp, Link2, Save, Sparkles, Loader2, CheckCircle2, Search } from 'lucide-react';
 import { extractCandidateData, isGeminiConfigured } from '../services/gemini';
 import { extractTextFromPdf, fileToBase64 } from '../services/pdfText';
 
@@ -94,6 +96,12 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
 
   // Validation errors
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Local BM25/TF-IDF positional search engine states
+  const [allPaths, setAllPaths] = useState<OrgPath[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<OrgPath[]>([]);
+  const [pendingPathSelection, setPendingPathSelection] = useState<any | null>(null);
 
   const buildSubmissionData = (isQuickDraft = false) => {
     const sucObj = sucursales.find(s => s.id === selectedSucursal);
@@ -212,6 +220,84 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     }
   };
 
+  // Load full catalog paths for search matching
+  useEffect(() => {
+    const fetchPaths = async () => {
+      try {
+        const paths = await getFullOrgPaths();
+        setAllPaths(paths);
+      } catch (err) {
+        console.error("Error loading full org paths for search assistant:", err);
+      }
+    };
+    fetchPaths();
+  }, []);
+
+  // Run local search query using term weighting (BM25/TF-IDF approximation)
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    const queryTerms = searchQuery
+      .toLowerCase()
+      .split(/[\s,.\-_/()]+/)
+      .filter(t => t.length > 2);
+
+    if (queryTerms.length === 0) {
+      setSearchResults([]);
+      return;
+    }
+
+    const scored = allPaths.map(path => {
+      let score = 0;
+      const termsInPuesto = path.puesto.toLowerCase();
+      const termsInUnidad = path.unidad.toLowerCase();
+      const termsInDept = path.departamento.toLowerCase();
+      const termsInArea = path.area.toLowerCase();
+      const termsInCeco = path.cecoCode.toLowerCase();
+      const termsInCecoDesc = path.cecoDescription.toLowerCase();
+
+      queryTerms.forEach(term => {
+        // Puesto match is highest weight
+        if (termsInPuesto.includes(term)) {
+          score += termsInPuesto === term ? 12 : (termsInPuesto.startsWith(term) ? 8 : 4);
+        }
+        // Unidad match
+        if (termsInUnidad.includes(term)) {
+          score += termsInUnidad === term ? 6 : 3;
+        }
+        // Dept match
+        if (termsInDept.includes(term)) {
+          score += termsInDept === term ? 4 : 2;
+        }
+        // Area match
+        if (termsInArea.includes(term)) {
+          score += termsInArea === term ? 4 : 2;
+        }
+        // CECO code exact match
+        if (termsInCeco === term) {
+          score += 10;
+        }
+        // CECO description match
+        if (termsInCecoDesc.includes(term)) {
+          score += 3;
+        }
+      });
+
+      return { path, score };
+    });
+
+    const sorted = scored
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5)
+      .map(x => x.path);
+
+    setSearchResults(sorted);
+  }, [searchQuery, allPaths]);
+
   // 1. Initial Load of Sucursales
   useEffect(() => {
     const fetchSuc = async () => {
@@ -233,7 +319,9 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       const fetchDept = async () => {
         const list = await getDepartamentos(selectedSucursal);
         setDepartamentos(list);
-        if (initialData?.departamento && !selectedDepartamento) {
+        if (pendingPathSelection) {
+          setSelectedDepartamento(pendingPathSelection.departamentoId);
+        } else if (initialData?.departamento && !selectedDepartamento) {
           const found = list.find(d => d.nombre === initialData.departamento);
           if (found) setSelectedDepartamento(found.id);
         }
@@ -244,9 +332,11 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       setSelectedDepartamento(null);
     }
     // Reset lower dependencies
-    setSelectedArea(null);
-    setSelectedUnidad(null);
-    setSelectedPuesto(null);
+    if (!pendingPathSelection) {
+      setSelectedArea(null);
+      setSelectedUnidad(null);
+      setSelectedPuesto(null);
+    }
   }, [selectedSucursal]);
 
   // 3. Load Áreas on Departamento Change
@@ -255,7 +345,9 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       const fetchAreas = async () => {
         const list = await getAreas(selectedSucursal, selectedDepartamento);
         setAreas(list);
-        if (initialData?.area && !selectedArea) {
+        if (pendingPathSelection) {
+          setSelectedArea(pendingPathSelection.areaId);
+        } else if (initialData?.area && !selectedArea) {
           const found = list.find(a => a.nombre === initialData.area);
           if (found) setSelectedArea(found.id);
         }
@@ -265,8 +357,10 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       setAreas([]);
       setSelectedArea(null);
     }
-    setSelectedUnidad(null);
-    setSelectedPuesto(null);
+    if (!pendingPathSelection) {
+      setSelectedUnidad(null);
+      setSelectedPuesto(null);
+    }
   }, [selectedDepartamento]);
 
   // 4. Load Unidades on Area Selection
@@ -275,7 +369,9 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       const fetchUni = async () => {
         const list = await getUnidades(selectedSucursal, selectedDepartamento, selectedArea);
         setUnidades(list);
-        if (initialData?.unidad && !selectedUnidad) {
+        if (pendingPathSelection) {
+          setSelectedUnidad(pendingPathSelection.unidadId);
+        } else if (initialData?.unidad && !selectedUnidad) {
           const found = list.find(u => u.nombre === initialData.unidad);
           if (found) setSelectedUnidad(found.id);
         }
@@ -285,7 +381,9 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       setUnidades([]);
       setSelectedUnidad(null);
     }
-    setSelectedPuesto(null);
+    if (!pendingPathSelection) {
+      setSelectedPuesto(null);
+    }
   }, [selectedArea, selectedDepartamento]);
 
   // 5. Load Puestos on Unidad Selection
@@ -294,7 +392,11 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       const fetchPuestos = async () => {
         const list = await getPuestos(selectedSucursal, selectedDepartamento, selectedArea, selectedUnidad);
         setPuestos(list);
-        if (initialData?.puesto && !selectedPuesto) {
+        if (pendingPathSelection) {
+          setSelectedPuesto(pendingPathSelection.puestoId);
+          // Auto-selection cascade complete! Clear pending selection.
+          setPendingPathSelection(null);
+        } else if (initialData?.puesto && !selectedPuesto) {
           const found = list.find(p => p.nombre === initialData.puesto);
           if (found) setSelectedPuesto(found.id);
         }
@@ -668,6 +770,75 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
                 className="w-full px-3.5 py-2.5 bg-white border border-amber-200 rounded-lg text-sm focus:border-usil-blue-500 focus:ring-4 focus:ring-usil-blue-500/10 outline-none transition-all duration-200 text-slate-700"
               />
             </div>
+          </div>
+        )}
+      </div>
+
+      {/* 🔍 Asistente de Búsqueda Predictiva de Puestos */}
+      <div className="bg-white p-6 border border-slate-100 rounded-xl shadow-sm space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-50 pb-2 mb-3">
+          <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+            🔍 Asistente de Búsqueda Predictiva de Puestos (Opcional)
+          </h3>
+          <span className="text-[10px] bg-usil-blue-50 text-usil-blue-700 font-bold px-2 py-0.5 rounded border border-usil-blue-100 uppercase tracking-wider">
+            Rankeo Local BM25/TF-IDF
+          </span>
+        </div>
+        <p className="text-xs text-slate-400 font-medium">
+          Escribe palabras clave o el contexto del requerimiento para buscar y auto-seleccionar la estructura organizacional completa y su CECO al instante.
+        </p>
+
+        <div className="relative">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Ej: analista compensaciones y presupuesto lima o escribe el brief del puesto..."
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-usil-blue-500 focus:ring-4 focus:ring-usil-blue-500/10 outline-none transition-all duration-200 text-slate-700 font-medium"
+          />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+        </div>
+
+        {searchResults.length > 0 && (
+          <div className="mt-3 border border-slate-100 rounded-xl overflow-hidden shadow-sm divide-y divide-slate-100 animate-slide-in">
+            <div className="bg-slate-50 px-4 py-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+              Resultados de Búsqueda Predictiva ({searchResults.length})
+            </div>
+            {searchResults.map((res) => (
+              <div key={res.id} className="p-4 hover:bg-slate-50/50 flex flex-col md:flex-row md:items-center md:justify-between gap-4 transition-colors">
+                <div className="space-y-1">
+                  <div className="text-xs font-bold text-usil-blue-900 flex items-center gap-2">
+                    <span>{res.puesto}</span>
+                    <span className="text-[9px] font-bold bg-usil-blue-50 border border-usil-blue-100 text-usil-blue-700 px-2 py-0.5 rounded font-mono">
+                      CECO: {res.cecoCode}
+                    </span>
+                  </div>
+                  <div className="text-[10px] font-medium text-slate-400 leading-normal">
+                    {res.sucursal} · {res.departamento} {res.area ? `· ${res.area}` : ''} · {res.unidad}
+                    {res.cecoDescription && <span className="block text-slate-500 mt-0.5 italic">Descripción CECO: {res.cecoDescription}</span>}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setPendingPathSelection({
+                      sucursalId: res.ids.sucursalId,
+                      departamentoId: res.ids.departamentoId,
+                      areaId: res.ids.areaId,
+                      unidadId: res.ids.unidadId,
+                      puestoId: res.ids.puestoId
+                    });
+                    // Set top-level state to trigger cascade
+                    setSelectedSucursal(res.ids.sucursalId);
+                    // Clear query to reset results
+                    setSearchQuery('');
+                  }}
+                  className="px-3 py-1.5 bg-usil-blue-50 hover:bg-usil-blue-100 text-usil-blue-700 rounded-lg text-xs font-bold transition-all border border-usil-blue-100 self-start md:self-auto"
+                >
+                  Auto-seleccionar
+                </button>
+              </div>
+            ))}
           </div>
         )}
       </div>

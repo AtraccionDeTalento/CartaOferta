@@ -199,3 +199,58 @@ export const getCecoForPuestoSelection = async (
   }
   return null;
 };
+
+export interface OrgPath {
+  id: number;
+  sucursal: string;
+  departamento: string;
+  area: string;
+  unidad: string;
+  puesto: string;
+  cecoCode: string;
+  cecoDescription: string;
+  ids: {
+    sucursalId: number;
+    departamentoId: number;
+    areaId: number | null;
+    unidadId: number;
+    puestoId: number;
+  };
+}
+
+export const getFullOrgPaths = async (): Promise<OrgPath[]> => {
+  await loadOrganizationalCatalog();
+  const sucMap = new Map(sucursales.map(s => [s.id, s.nombre]));
+  const deptMap = new Map(departamentos.map(d => [d.id, d.nombre]));
+  const areaMap = new Map(areas.map(a => [a.id, a.nombre]));
+  const uniMap = new Map(unidades.map(u => [u.id, u.nombre]));
+  const puestoMap = new Map(puestos.map(p => [p.id, p.nombre]));
+
+  return estructura.map((e) => {
+    const sucursal = sucMap.get(e.sucursal_id) || '';
+    const departamento = deptMap.get(e.departamento_id) || '';
+    const area = e.area_id ? (areaMap.get(e.area_id) || '') : '';
+    const unidad = uniMap.get(e.unidad_id) || '';
+    const puesto = puestoMap.get(e.puesto_id) || '';
+    const cecoCode = e.ceco_code || '';
+    const cecoDescription = cecoCode ? (cecos[cecoCode] || '') : '';
+
+    return {
+      id: e.id,
+      sucursal,
+      departamento,
+      area,
+      unidad,
+      puesto,
+      cecoCode,
+      cecoDescription,
+      ids: {
+        sucursalId: e.sucursal_id,
+        departamentoId: e.departamento_id,
+        areaId: e.area_id,
+        unidadId: e.unidad_id,
+        puestoId: e.puesto_id
+      }
+    };
+  });
+};

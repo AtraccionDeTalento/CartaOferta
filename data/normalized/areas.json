@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "nombre": "ADMINISTRATIVO"
+    "nombre": "GERENCIA DE MODO USIL"
   },
   {
     "id": 2,
-    "nombre": "DIRECCION GENERAL ACADEMICA"
+    "nombre": "GERENCIA DE ADMINISTRACION"
   },
   {
     "id": 3,
-    "nombre": "GERENCIA DE ADMINISTRACION"
+    "nombre": "FACULTAD DE CIENCIAS EMPRESARIALES"
   },
   {
     "id": 4,
@@ -17,290 +17,226 @@
   },
   {
     "id": 5,
-    "nombre": "DIRECCION ACADEMICA EPG"
-  },
-  {
-    "id": 6,
-    "nombre": "DIRECCION DE EDUCACION EJECUTIVA"
-  },
-  {
-    "id": 7,
-    "nombre": "DIRECCION DE PROYECTOS EDUCATIVOS"
-  },
-  {
-    "id": 8,
-    "nombre": "DIRECCIÓN DE UNIDAD DE SALUD EPG"
-  },
-  {
-    "id": 9,
-    "nombre": "JEFATURA DE VENTAS INSTITUCIONALES E INHOUSE"
-  },
-  {
-    "id": 10,
-    "nombre": "SUBGERENCIA COMERCIAL EPG"
-  },
-  {
-    "id": 11,
-    "nombre": "SUBGERENCIA DE MARKETING EPG"
-  },
-  {
-    "id": 12,
-    "nombre": "FACULTAD DE CIENCIAS EMPRESARIALES"
-  },
-  {
-    "id": 13,
-    "nombre": "FACULTAD DE EDUCACION"
-  },
-  {
-    "id": 14,
-    "nombre": "INSTITUTO DE EMPRENDEDORES"
-  },
-  {
-    "id": 15,
-    "nombre": "GERENCIA DE VENTAS"
-  },
-  {
-    "id": 16,
-    "nombre": "IE - MARKETING"
-  },
-  {
-    "id": 17,
-    "nombre": "SUBGERENCIA DE EXPERIENCIA ACADEMICA"
-  },
-  {
-    "id": 18,
-    "nombre": "GERENCIA DE MARCA Y PERFORMANCE"
-  },
-  {
-    "id": 19,
-    "nombre": "GERENCIA DE MARKETING PGEX"
-  },
-  {
-    "id": 20,
-    "nombre": "GERENCIA DE MKT Y VTAS PREG."
-  },
-  {
-    "id": 21,
-    "nombre": "GERENCIA DE RELACIONES EDUCATIVAS Y EMPRESARIALES"
-  },
-  {
-    "id": 22,
-    "nombre": "SUBGERENCIA DE CRM Y PLANEAMIENTO COMERCIAL"
-  },
-  {
-    "id": 23,
-    "nombre": "SUBGERENCIA DE VENTAS Y ADMISION"
-  },
-  {
-    "id": 24,
-    "nombre": "INFRAESTRUCTURA"
-  },
-  {
-    "id": 25,
-    "nombre": "ATENCION AL ALUMNO"
-  },
-  {
-    "id": 26,
-    "nombre": "BIENESTAR UNIVERSITARIO"
-  },
-  {
-    "id": 27,
-    "nombre": "CAPELLANIA"
-  },
-  {
-    "id": 28,
-    "nombre": "DEPORTE"
-  },
-  {
-    "id": 29,
-    "nombre": "SUBGERENCIA DE EXPERIENCIA AL ALUMNO"
-  },
-  {
-    "id": 30,
-    "nombre": "ATRACCION DEL TALENTO"
-  },
-  {
-    "id": 31,
-    "nombre": "GESTION DEL TALENTO"
-  },
-  {
-    "id": 32,
-    "nombre": "SUBGERENCIA DE CULTURA Y BENEFICIOS"
-  },
-  {
-    "id": 33,
-    "nombre": "SUBGERENCIA DE GESTION HUMANA"
-  },
-  {
-    "id": 34,
-    "nombre": "SUBGERENCIA DE TALENTO Y CULTURA"
-  },
-  {
-    "id": 35,
-    "nombre": "GERENCIA DE NEGOCIOS DIGITALES"
-  },
-  {
-    "id": 36,
-    "nombre": "GERENCIA DE PROYECTOS ESTRATEGICOS"
-  },
-  {
-    "id": 37,
-    "nombre": "INTELIGENCIA DE NEGOCIOS"
-  },
-  {
-    "id": 38,
-    "nombre": "SUBGERENCIA DE OPERACIONES TI"
-  },
-  {
-    "id": 39,
-    "nombre": "SUBGERENCIA DE SEGURIDAD TI"
-  },
-  {
-    "id": 40,
-    "nombre": "AUDITORIA INTERNA"
-  },
-  {
-    "id": 41,
-    "nombre": "DIRECCION DE SOSTENIBILIDAD"
-  },
-  {
-    "id": 42,
-    "nombre": "GERENCIA DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
-  },
-  {
-    "id": 43,
-    "nombre": "SECRETARIA GENERAL"
-  },
-  {
-    "id": 44,
-    "nombre": "VICEPRESIDENCIA DE EMPRENDIMIENTO"
-  },
-  {
-    "id": 45,
-    "nombre": "VICEPRESIDENCIA DE INTERNACIONALIZACION"
-  },
-  {
-    "id": 46,
-    "nombre": "ASUNTOS CORPORATIVOS"
-  },
-  {
-    "id": 47,
-    "nombre": "JEFATURA DE INNOVACIÓN-HIFLEX"
-  },
-  {
-    "id": 48,
-    "nombre": "JEFATURA DE PRENSA Y ANALISIS DE MEDIOS"
-  },
-  {
-    "id": 49,
-    "nombre": "JEFATURA DE PRODUCCION AUDIOVISUAL"
-  },
-  {
-    "id": 50,
-    "nombre": "JEFATURA DE PRODUCTO DIGITAL"
-  },
-  {
-    "id": 51,
-    "nombre": "SUBGERENCIA DE COMUNICACION CORPORATIVA"
-  },
-  {
-    "id": 52,
-    "nombre": "SUBGERENCIA DE COMUNICACIONES"
-  },
-  {
-    "id": 53,
-    "nombre": "GERENCIA CORPORATIVO DE FACTURACIÓN, CRÉDITOS Y CO"
-  },
-  {
-    "id": 54,
-    "nombre": "GERENCIA DE PLANEAMIENTO FINANCIERO"
-  },
-  {
-    "id": 55,
-    "nombre": "SUBGERENCIA CORPORATIVA DE TESORERIA"
-  },
-  {
-    "id": 56,
-    "nombre": "SUBGERENCIA DE CONTABILIDAD"
-  },
-  {
-    "id": 57,
-    "nombre": "SUBGERENCIA DE LOGISTICA"
-  },
-  {
-    "id": 58,
-    "nombre": "DIRECCION DE ACREDITACION"
-  },
-  {
-    "id": 59,
-    "nombre": "GERENCIA LEGAL"
-  },
-  {
-    "id": 60,
-    "nombre": "LICENCIAMIENTO"
-  },
-  {
-    "id": 61,
-    "nombre": "GERENCIA DE EDUCACION VIRTUAL Y TEC. EDUCATIVA"
-  },
-  {
-    "id": 62,
-    "nombre": "CENTER FOR GLOBAL EDUCATION"
-  },
-  {
-    "id": 63,
-    "nombre": "CENTER FOR LANGUAGE STUDIES"
-  },
-  {
-    "id": 64,
-    "nombre": "DIRECCION DE CALIDAD ACADEMICA, DOCENTE Y CURRICUL"
-  },
-  {
-    "id": 65,
-    "nombre": "DIRECCION DE ESTUDIOS GENERALES"
-  },
-  {
-    "id": 66,
-    "nombre": "DIRECCION DEL FONDO EDITORIAL"
-  },
-  {
-    "id": 67,
     "nombre": "DIRECCION PGEX"
   },
   {
-    "id": 68,
-    "nombre": "FACULTAD ADM HOTELE TURIS Y GASTRO"
+    "id": 6,
+    "nombre": "FACULTAD DE COMUNICACIÓNCIÓN"
   },
   {
-    "id": 69,
-    "nombre": "FACULTAD DE ARQUITECTURA URBANISMO Y TERRITORIO"
+    "id": 7,
+    "nombre": "VICEPRESIDENCIA DE EMPRENDIMIENTO"
   },
   {
-    "id": 70,
-    "nombre": "FACULTAD DE ARTES Y HUMANIDADES"
+    "id": 8,
+    "nombre": "SECRETARIA GENERAL"
   },
   {
-    "id": 71,
-    "nombre": "FACULTAD DE CIENCIAS DE LA SALUD"
+    "id": 9,
+    "nombre": "DIRECCION DE ESTUDIOS GENERALES"
   },
   {
-    "id": 72,
-    "nombre": "FACULTAD DE COMUNICACIÓN"
+    "id": 10,
+    "nombre": "GERENCIA CORPORATIVO DE FACTURACIÓN, CRÉDITOS Y CO"
   },
   {
-    "id": 73,
+    "id": 11,
+    "nombre": "GERENCIA DE PROYECTOS TI"
+  },
+  {
+    "id": 12,
+    "nombre": "DIRECCION DE EDUCACION EJECUTIVA"
+  },
+  {
+    "id": 13,
+    "nombre": "DIRECCION GENERAL ACADEMICA"
+  },
+  {
+    "id": 14,
     "nombre": "FACULTAD DE DERECHO"
   },
   {
-    "id": 74,
+    "id": 15,
+    "nombre": "DIRECCION ACADEMICA EPG"
+  },
+  {
+    "id": 16,
     "nombre": "FACULTAD DE INGENIERIA E INTELIGENCIA ARTIFICIAL"
   },
   {
-    "id": 75,
+    "id": 17,
+    "nombre": "FACULTAD ADM HOTELE TURIS Y GASTRO"
+  },
+  {
+    "id": 18,
+    "nombre": "GERENCIA DE EDUCACION VIRTUAL Y TEC. EDUCATIVA"
+  },
+  {
+    "id": 19,
+    "nombre": "DIRECCION DE ACREDITACION"
+  },
+  {
+    "id": 20,
+    "nombre": "GERENCIA COMERCIAL"
+  },
+  {
+    "id": 21,
+    "nombre": "VICEPRESIDENCIA DE INTERNACIONALIZACION"
+  },
+  {
+    "id": 22,
+    "nombre": "DIRECCION DE PROYECTOS EDUCATIVOS"
+  },
+  {
+    "id": 23,
+    "nombre": "SUBGERENCIA DE GESTION HUMANA"
+  },
+  {
+    "id": 24,
+    "nombre": "FACULTAD DE CIENCIAS DE LA SALUD"
+  },
+  {
+    "id": 25,
+    "nombre": "SUBGERENCIA DE COMUNICACIÓNCION CORPORATIVA"
+  },
+  {
+    "id": 26,
+    "nombre": "FACULTAD DE ARTES Y HUMANIDADES"
+  },
+  {
+    "id": 27,
+    "nombre": "DIRECCION DEL FONDO EDITORIAL"
+  },
+  {
+    "id": 28,
+    "nombre": "CENTER FOR LANGUAGE STUDIES"
+  },
+  {
+    "id": 29,
+    "nombre": "SUBGERENCIA CORPORATIVA DE TESORERIA"
+  },
+  {
+    "id": 30,
+    "nombre": "AUDITORIA INTERNA"
+  },
+  {
+    "id": 31,
+    "nombre": "SUBGERENCIA DE LOGISTICA"
+  },
+  {
+    "id": 32,
+    "nombre": "FACULTAD DE ARQUITECTURA URBANISMO Y TERRITORIO"
+  },
+  {
+    "id": 33,
+    "nombre": "FACULTAD DE EDUCACION"
+  },
+  {
+    "id": 34,
+    "nombre": "ASUNTOS TRIBUTARIOS"
+  },
+  {
+    "id": 35,
+    "nombre": "INSTITUTO DE EMPRENDEDORES"
+  },
+  {
+    "id": 36,
+    "nombre": "JEFATURA DE VENTAS INSTITUCIONALES E INHOUSE"
+  },
+  {
+    "id": 37,
+    "nombre": "GERENCIA DE PLANEAMIENTO FINANCIERO"
+  },
+  {
+    "id": 38,
+    "nombre": "DIRECCION DE CALIDAD ACADEMICA, DOCENTE Y CURRICUL"
+  },
+  {
+    "id": 39,
+    "nombre": "GERENCIA DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
+  },
+  {
+    "id": 40,
+    "nombre": "INFRAESTRUCTURA"
+  },
+  {
+    "id": 41,
+    "nombre": "GERENCIA GENERAL"
+  },
+  {
+    "id": 42,
+    "nombre": "JEFATURA DE PRODUCTO DIGITAL"
+  },
+  {
+    "id": 43,
+    "nombre": "DIRECCION DE SOSTENIBILIDAD"
+  },
+  {
+    "id": 44,
+    "nombre": "SUBGERENCIA COMERCIAL EPG"
+  },
+  {
+    "id": 45,
+    "nombre": "ADMINISTRATIVO"
+  },
+  {
+    "id": 46,
+    "nombre": "SUBGERENCIA DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 47,
+    "nombre": "GESTION DEL TALENTO"
+  },
+  {
+    "id": 48,
+    "nombre": "CONTABILIDAD CORPORATIVA"
+  },
+  {
+    "id": 49,
     "nombre": "DIRECCION GESTION DE LA INVESTIGACION"
   },
   {
-    "id": 76,
+    "id": 50,
+    "nombre": "JEFATURA DE INNOVACIÓN-HIFLEX"
+  },
+  {
+    "id": 51,
+    "nombre": "JEFATURA DE PRENSA Y ANALISIS DE MEDIOS"
+  },
+  {
+    "id": 52,
+    "nombre": "CONVENIOS Y CONTRATOS"
+  },
+  {
+    "id": 53,
     "nombre": "INSTITUTO DE CIENCIAS DE LOS ALIMENTOS Y NUTRICION"
+  },
+  {
+    "id": 54,
+    "nombre": "SUBGERENCIA DE MARKETING EPG"
+  },
+  {
+    "id": 55,
+    "nombre": "SUBGERENCIA DE COMUNICACIÓNCIONES"
+  },
+  {
+    "id": 56,
+    "nombre": "LICENCIAMIENTO"
+  },
+  {
+    "id": 57,
+    "nombre": "SUBGERENCIA DE CULTURA Y BENEFICIOS"
+  },
+  {
+    "id": 58,
+    "nombre": "ATRACCION DEL TALENTO"
+  },
+  {
+    "id": 59,
+    "nombre": "ASUNTOS CORPORATIVOS"
+  },
+  {
+    "id": 60,
+    "nombre": "DIRECCIÓN DE UNIDAD DE SALUD EPG"
   }
 ]

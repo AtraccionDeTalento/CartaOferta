@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "nombre": "CSIR"
+    "nombre": "UNIVERSIDAD"
   },
   {
     "id": 2,
-    "nombre": "ESCUELA DE POSGRADO"
+    "nombre": "CSIR"
   },
   {
     "id": 3,
-    "nombre": "INSTITUTO EMPRENDEDORES"
+    "nombre": "ESCUELA DE POSGRADO"
   },
   {
     "id": 4,
-    "nombre": "UNIVERSIDAD"
+    "nombre": "INSTITUTO EMPRENDEDORES"
   }
 ]

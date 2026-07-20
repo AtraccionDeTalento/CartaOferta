@@ -1,79 +1,79 @@
 [
   {
     "id": 1,
-    "nombre": "DIRECCION GENERAL DEL CSIR"
+    "nombre": "VICERRECTORADO ACADEMICO"
   },
   {
     "id": 2,
-    "nombre": "ADMINISTRATIVO"
+    "nombre": "PRESIDENCIA EJECUTIVA"
   },
   {
     "id": 3,
-    "nombre": "SIR - ADMISION"
+    "nombre": "SUBGERENCIA DE EXPERIENCIA ACADEMICA"
   },
   {
     "id": 4,
-    "nombre": "SIR - CREDITOS Y COBRANZAS"
+    "nombre": "SERVICIOS GENERALES - PUBLICACIONES"
   },
   {
     "id": 5,
-    "nombre": "SIR - MARKETING"
-  },
-  {
-    "id": 6,
-    "nombre": "COLORING DREAMS"
-  },
-  {
-    "id": 7,
-    "nombre": "DEPARTAMENTO DE DEPORTES"
-  },
-  {
-    "id": 8,
-    "nombre": "DEPARTAMENTO DE PSICOLOGIA"
-  },
-  {
-    "id": 9,
-    "nombre": "EDUCACION PRIMARIA"
-  },
-  {
-    "id": 10,
-    "nombre": "EDUCACION SECUNDARIA"
-  },
-  {
-    "id": 11,
-    "nombre": "SECRETARIA ACADEMICA"
-  },
-  {
-    "id": 12,
-    "nombre": "SIR - ADMINISTRACION"
-  },
-  {
-    "id": 13,
-    "nombre": "TALLERES EXTRACURRICULARES"
-  },
-  {
-    "id": 14,
     "nombre": "SERVICIOS GENERALES - LOCALES"
   },
   {
-    "id": 15,
+    "id": 6,
+    "nombre": "FACULTAD DE CIENCIAS EMPRESARIALES"
+  },
+  {
+    "id": 7,
+    "nombre": "SEGURIDAD SEDES"
+  },
+  {
+    "id": 8,
     "nombre": "SIR - SERVICIOS GENERALES"
   },
   {
+    "id": 9,
+    "nombre": "DIRECCION PGEX"
+  },
+  {
+    "id": 10,
+    "nombre": "RECTORADO"
+  },
+  {
+    "id": 11,
+    "nombre": "CARRERA DE COMUNICACIÓNCIONES"
+  },
+  {
+    "id": 12,
+    "nombre": "VICEPRESIDENCIA DE EMPRENDIMIENTO"
+  },
+  {
+    "id": 13,
+    "nombre": "GRADOS Y TITULOS"
+  },
+  {
+    "id": 14,
+    "nombre": "DIRECCION DE ESTUDIOS GENERALES"
+  },
+  {
+    "id": 15,
+    "nombre": "GERENCIA CORPORATIVO DE FACTURACIÓN, CRÉDITOS Y CO"
+  },
+  {
     "id": 16,
-    "nombre": "SIR - TRANSPORTE"
+    "nombre": "DESARROLLO"
   },
   {
     "id": 17,
-    "nombre": "SIR - SEGURIDAD"
+    "nombre": "DIRECCION DE EDUCACION EJECUTIVA"
   },
   {
     "id": 18,
-    "nombre": "SUBGERENCIA DE SEGURIDAD"
+    "nombre": "EDUCACION SECUNDARIA"
   },
   {
     "id": 19,
-    "nombre": "ESCUELA DE POSGRADO"
+    "nombre": "FACULTAD DE DERECHO"
   },
   {
     "id": 20,
@@ -81,531 +81,531 @@
   },
   {
     "id": 21,
-    "nombre": "EPG- PROYECTOS"
-  },
-  {
-    "id": 22,
-    "nombre": "PROGRAMAS DE MAESTRIAS Y DOCTORADOS"
-  },
-  {
-    "id": 23,
-    "nombre": "DIRECCION DE EDUCACION EJECUTIVA"
-  },
-  {
-    "id": 24,
-    "nombre": "DIRECCION DE PROYECTOS EDUCATIVOS"
-  },
-  {
-    "id": 25,
-    "nombre": "DIRECCIÓN DE UNIDAD DE SALUD EPG"
-  },
-  {
-    "id": 26,
-    "nombre": "JEFATURA DE VENTAS INSTITUCIONALES E INHOUSE"
-  },
-  {
-    "id": 27,
-    "nombre": "EPG - ADMISION"
-  },
-  {
-    "id": 28,
-    "nombre": "EPG - COMERCIAL"
-  },
-  {
-    "id": 29,
-    "nombre": "EPG - SERVICIOS AL ALUMNO"
-  },
-  {
-    "id": 30,
-    "nombre": "SUBGERENCIA COMERCIAL EPG"
-  },
-  {
-    "id": 31,
-    "nombre": "SUBGERENCIA DE MARKETING EPG"
-  },
-  {
-    "id": 32,
-    "nombre": "CARRERA DE ECONOMIA"
-  },
-  {
-    "id": 33,
     "nombre": "CARRERA DE MARKETING"
   },
   {
-    "id": 34,
-    "nombre": "FACULTAD DE EDUCACION"
+    "id": 22,
+    "nombre": "FACULTAD DE INGENIERIA E INTELIGENCIA ARTIFICIAL"
   },
   {
-    "id": 35,
-    "nombre": "DIRECCION GENERAL DE SEDES DESCENTRALIZADAS"
+    "id": 23,
+    "nombre": "PGEX CARRERA NEG. INTERNAC."
   },
   {
-    "id": 36,
-    "nombre": "IE - ACADEMICO"
+    "id": 24,
+    "nombre": "PGEX CARRERA CONTABILIDAD"
   },
   {
-    "id": 37,
-    "nombre": "IE - BIBLIOTECA"
+    "id": 25,
+    "nombre": "CARRERA DE ECONOMIA"
   },
   {
-    "id": 38,
-    "nombre": "IE - TUTORIA"
+    "id": 26,
+    "nombre": "SUBGERENCIA DE SEGURIDAD"
   },
   {
-    "id": 39,
-    "nombre": "INSTITUTO DE EMPRENDEDORES"
+    "id": 27,
+    "nombre": "FACULTAD ADM HOTELE TURIS Y GASTRO"
   },
   {
-    "id": 40,
-    "nombre": "ADMISION CONTACT CENTER COMERCIAL"
+    "id": 28,
+    "nombre": "ESCUELA DE POSGRADO"
   },
   {
-    "id": 41,
-    "nombre": "IE - ADMISION"
+    "id": 29,
+    "nombre": "PGEX CARRERA ADM EMP"
   },
   {
-    "id": 42,
-    "nombre": "IE - MARKETING"
-  },
-  {
-    "id": 43,
-    "nombre": "SEGURIDAD SEDES"
-  },
-  {
-    "id": 44,
-    "nombre": "JEFATURA DE OPERACIONES ACADEMICAS"
-  },
-  {
-    "id": 45,
-    "nombre": "GERENCIA COMERCIAL"
-  },
-  {
-    "id": 46,
-    "nombre": "GERENCIA DE MARCA Y PERFORMANCE"
-  },
-  {
-    "id": 47,
-    "nombre": "GERENCIA DE MARKETING PGEX"
-  },
-  {
-    "id": 48,
-    "nombre": "GERENCIA DE MKT Y VTAS PREG."
-  },
-  {
-    "id": 49,
-    "nombre": "GERENCIA DE RELACIONES EDUCATIVAS Y EMPRESARIALES"
-  },
-  {
-    "id": 50,
-    "nombre": "CAPACITACION COMERCIAL"
-  },
-  {
-    "id": 51,
-    "nombre": "DOBLE GRADO - ADMISION"
-  },
-  {
-    "id": 52,
-    "nombre": "GERENCIA DE VENTAS"
-  },
-  {
-    "id": 53,
-    "nombre": "SOPORTE OPERATIVO COMERCIAL"
-  },
-  {
-    "id": 54,
-    "nombre": "USIL - ADMISION"
-  },
-  {
-    "id": 55,
-    "nombre": "SUBGERENCIA DE CRM Y PLANEAMIENTO COMERCIAL"
-  },
-  {
-    "id": 56,
-    "nombre": "SUBGERENCIA DE VENTAS Y ADMISION"
-  },
-  {
-    "id": 57,
-    "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
-  },
-  {
-    "id": 58,
-    "nombre": "GERENCIA DE ADMINISTRACION"
-  },
-  {
-    "id": 59,
-    "nombre": "SERVICIOS GENERALES - INGENIERIA ELECTROMECANICO"
-  },
-  {
-    "id": 60,
-    "nombre": "SERVICIOS GENERALES - PUBLICACIONES"
-  },
-  {
-    "id": 61,
-    "nombre": "TRANSPORTE"
-  },
-  {
-    "id": 62,
-    "nombre": "INFRAESTRUCTURA"
-  },
-  {
-    "id": 63,
-    "nombre": "SEGURIDAD ELECTRONICA"
-  },
-  {
-    "id": 64,
-    "nombre": "SEGURIDAD ESCOLTA"
-  },
-  {
-    "id": 65,
+    "id": 30,
     "nombre": "GERENCIA DE MODO USIL"
   },
   {
-    "id": 66,
-    "nombre": "ATENCION AL ALUMNO"
+    "id": 31,
+    "nombre": "CARRERA DE ADMINISTRACION Y EMPRENDIMIENTO"
   },
   {
-    "id": 67,
-    "nombre": "BIENESTAR UNIVERSITARIO"
+    "id": 32,
+    "nombre": "CARRERA DE ADMINISTRACION Y FINANZAS CORP"
   },
   {
-    "id": 68,
-    "nombre": "CAPELLANIA"
+    "id": 33,
+    "nombre": "SIR - SEGURIDAD"
   },
   {
-    "id": 69,
-    "nombre": "DEPORTE"
+    "id": 34,
+    "nombre": "SUBDIRECCION DE DISEÑO INSTRUC. Y DESARR. DE CONTE"
   },
   {
-    "id": 70,
-    "nombre": "FIDELIZACION Y RETENCION"
-  },
-  {
-    "id": 71,
-    "nombre": "JEFATURA DE BIBLIOTECA"
-  },
-  {
-    "id": 72,
-    "nombre": "JEFATURA DE REGISTROS ACADEMICOS"
-  },
-  {
-    "id": 73,
-    "nombre": "PLANIF. Y PROG. ACADEMICA"
-  },
-  {
-    "id": 74,
-    "nombre": "SERVICIOS ACADEMICOS"
-  },
-  {
-    "id": 75,
-    "nombre": "SUBGERENCIA DE EXPERIENCIA ACADEMICA"
-  },
-  {
-    "id": 76,
-    "nombre": "SUBGERENCIA DE EXPERIENCIA AL ALUMNO"
-  },
-  {
-    "id": 77,
-    "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
-  },
-  {
-    "id": 78,
-    "nombre": "GERENCIA DE TALENTO Y CULTURA"
-  },
-  {
-    "id": 79,
-    "nombre": "ATRACCION DEL TALENTO"
-  },
-  {
-    "id": 80,
-    "nombre": "GESTION DEL TALENTO"
-  },
-  {
-    "id": 81,
-    "nombre": "BIENESTAR SOCIAL"
-  },
-  {
-    "id": 82,
-    "nombre": "CULTURA Y CLIMA"
-  },
-  {
-    "id": 83,
-    "nombre": "SEGURIDAD Y SALUD OCUPACIONAL"
-  },
-  {
-    "id": 84,
-    "nombre": "ACREDITACION Y LICENCIAMIENTO"
-  },
-  {
-    "id": 85,
-    "nombre": "COMPENSACIONES Y PRESUPUESTO"
-  },
-  {
-    "id": 86,
-    "nombre": "REMUNERACIONES Y ADM DE PERSONAL"
-  },
-  {
-    "id": 87,
-    "nombre": "SUBGERENCIA DE GESTION HUMANA"
-  },
-  {
-    "id": 88,
-    "nombre": "SUBGERENCIA DE TALENTO Y CULTURA"
-  },
-  {
-    "id": 89,
-    "nombre": "GERENCIA DE TECNOLOGIA DE INFORMACION"
-  },
-  {
-    "id": 90,
-    "nombre": "GERENCIA DE NEGOCIOS DIGITALES"
-  },
-  {
-    "id": 91,
-    "nombre": "DESARROLLO"
-  },
-  {
-    "id": 92,
-    "nombre": "GERENCIA DE PROYECTOS ESTRATEGICOS"
-  },
-  {
-    "id": 93,
-    "nombre": "PROYECTO SAP"
-  },
-  {
-    "id": 94,
-    "nombre": "PROYECTOS CUSTOMER EXPERIENCE"
-  },
-  {
-    "id": 95,
-    "nombre": "INTELIGENCIA DE NEGOCIOS"
-  },
-  {
-    "id": 96,
-    "nombre": "SERVICIOS TI"
-  },
-  {
-    "id": 97,
-    "nombre": "SUBGERENCIA DE OPERACIONES TI"
-  },
-  {
-    "id": 98,
-    "nombre": "SUBGERENCIA DE SEGURIDAD TI"
-  },
-  {
-    "id": 99,
-    "nombre": "GERENCIA GENERAL"
-  },
-  {
-    "id": 100,
-    "nombre": "AUDITORIA INTERNA"
-  },
-  {
-    "id": 101,
-    "nombre": "PRESIDENCIA EJECUTIVA"
-  },
-  {
-    "id": 102,
-    "nombre": "RECTORADO"
-  },
-  {
-    "id": 103,
-    "nombre": "DIRECCION DE SOSTENIBILIDAD"
-  },
-  {
-    "id": 104,
-    "nombre": "GESTION AMBIENTAL"
-  },
-  {
-    "id": 105,
-    "nombre": "PROGRAMAS Y PROYECTOS"
-  },
-  {
-    "id": 106,
-    "nombre": "GERENCIA DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
-  },
-  {
-    "id": 107,
-    "nombre": "GRADOS Y TITULOS"
-  },
-  {
-    "id": 108,
-    "nombre": "SECRETARIA GENERAL"
-  },
-  {
-    "id": 109,
-    "nombre": "GERENCIA DE PROYECTOS"
-  },
-  {
-    "id": 110,
-    "nombre": "VICEPRESIDENCIA DE EMPRENDIMIENTO"
-  },
-  {
-    "id": 111,
-    "nombre": "DIRECCION DE RELACIONES INTERNACIONALES"
-  },
-  {
-    "id": 112,
-    "nombre": "GRADO AMERICANO"
-  },
-  {
-    "id": 113,
-    "nombre": "VICEPRESIDENCIA DE INTERNACIONALIZACION"
-  },
-  {
-    "id": 114,
-    "nombre": "VICEPRESIDENCIA DE ASUNTOS CORPORATIVOS"
-  },
-  {
-    "id": 115,
-    "nombre": "ASUNTOS CORPORATIVOS"
-  },
-  {
-    "id": 116,
-    "nombre": "VICEPRESIDENCIA DE COMUNICACIONES E INNOVACION DIG"
-  },
-  {
-    "id": 117,
-    "nombre": "JEFATURA DE INNOVACIÓN-HIFLEX"
-  },
-  {
-    "id": 118,
-    "nombre": "JEFATURA DE PRENSA Y ANALISIS DE MEDIOS"
-  },
-  {
-    "id": 119,
-    "nombre": "CREATIVO"
-  },
-  {
-    "id": 120,
-    "nombre": "DISEÑO"
-  },
-  {
-    "id": 121,
-    "nombre": "EVENTOS"
-  },
-  {
-    "id": 122,
-    "nombre": "FOTOGRAFIA"
-  },
-  {
-    "id": 123,
-    "nombre": "JEFATURA DE PRODUCCION AUDIOVISUAL"
-  },
-  {
-    "id": 124,
-    "nombre": "PRODUCCION DE CAMPO"
-  },
-  {
-    "id": 125,
-    "nombre": "SERVICIOS AUDIVISUALES"
-  },
-  {
-    "id": 126,
-    "nombre": "JEFATURA DE PRODUCTO DIGITAL"
-  },
-  {
-    "id": 127,
-    "nombre": "SUBGERENCIA DE COMUNICACION CORPORATIVA"
-  },
-  {
-    "id": 128,
-    "nombre": "SUBGERENCIA DE COMUNICACIONES"
-  },
-  {
-    "id": 129,
-    "nombre": "VICEPRESIDENCIA DE FINANZAS"
-  },
-  {
-    "id": 130,
-    "nombre": "BENEFICIOS ESTUDIANTILES"
-  },
-  {
-    "id": 131,
-    "nombre": "CREDITOS Y COBRANZAS"
-  },
-  {
-    "id": 132,
-    "nombre": "GERENCIA CORPORATIVO DE FACTURACIÓN, CRÉDITOS Y CO"
-  },
-  {
-    "id": 133,
-    "nombre": "ANALISIS Y PLAN FINANCIERO"
-  },
-  {
-    "id": 134,
-    "nombre": "COSTOS Y PRESUPUESTOS"
-  },
-  {
-    "id": 135,
-    "nombre": "GERENCIA DE PLANEAMIENTO FINANCIERO"
-  },
-  {
-    "id": 136,
-    "nombre": "SUBGERENCIA CORPORATIVA DE TESORERIA"
-  },
-  {
-    "id": 137,
-    "nombre": "ACTIVOS FIJOS Y CONTROL PATRIMONIAL"
-  },
-  {
-    "id": 138,
-    "nombre": "IMPUESTOS"
-  },
-  {
-    "id": 139,
-    "nombre": "SUBGERENCIA DE CONTABILIDAD"
-  },
-  {
-    "id": 140,
-    "nombre": "ALMACEN"
-  },
-  {
-    "id": 141,
-    "nombre": "COMPRAS"
-  },
-  {
-    "id": 142,
-    "nombre": "LOGISTICA"
-  },
-  {
-    "id": 143,
-    "nombre": "SUBGERENCIA DE LOGISTICA"
-  },
-  {
-    "id": 144,
-    "nombre": "VICEPRESIDENCIA LEGAL"
-  },
-  {
-    "id": 145,
+    "id": 35,
     "nombre": "DIRECCION DE ACREDITACION"
   },
   {
-    "id": 146,
-    "nombre": "ASUNTOS TRIBUTARIOS"
+    "id": 36,
+    "nombre": "GERENCIA DE MARKETING PREGRADO"
   },
   {
-    "id": 147,
-    "nombre": "CONVENIOS Y CONTRATOS"
+    "id": 37,
+    "nombre": "CENTER FOR GLOBAL EDUCATION"
   },
   {
-    "id": 148,
-    "nombre": "GERENCIA LEGAL"
+    "id": 38,
+    "nombre": "DIRECCION DE PROYECTOS EDUCATIVOS"
   },
   {
-    "id": 149,
-    "nombre": "LICENCIAMIENTO"
+    "id": 39,
+    "nombre": "SUBGERENCIA DE OPERACIONES TI"
   },
   {
-    "id": 150,
+    "id": 40,
+    "nombre": "REMUNERACIONES Y ADM DE PERSONAL"
+  },
+  {
+    "id": 41,
+    "nombre": "CARRERA DE NUTRICION"
+  },
+  {
+    "id": 42,
+    "nombre": "CARRERA DE ADMINISTRACION"
+  },
+  {
+    "id": 43,
+    "nombre": "TRANSPORTE"
+  },
+  {
+    "id": 44,
+    "nombre": "PGEX CARRERA DE COMUNICACIÓNCION Y PUBLICIDAD"
+  },
+  {
+    "id": 45,
+    "nombre": "SUBGERENCIA DE COMUNICACIÓNCION CORPORATIVA"
+  },
+  {
+    "id": 46,
+    "nombre": "VICEPRESIDENCIA DE INTERNACIONALIZACION"
+  },
+  {
+    "id": 47,
+    "nombre": "CARRERA DE ING. CIVIL"
+  },
+  {
+    "id": 48,
+    "nombre": "GERENCIA DE ADMINISTRACION"
+  },
+  {
+    "id": 49,
+    "nombre": "CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 50,
+    "nombre": "VICEPRESIDENCIA DE ASUNTOS CORPORATIVOS"
+  },
+  {
+    "id": 51,
+    "nombre": "FACULTAD DE ARTES Y HUMANIDADES"
+  },
+  {
+    "id": 52,
+    "nombre": "CARRERA DE ADM TURISMO"
+  },
+  {
+    "id": 53,
+    "nombre": "BIENESTAR UNIVERSITARIO"
+  },
+  {
+    "id": 54,
+    "nombre": "DIRECCION DEL FONDO EDITORIAL"
+  },
+  {
+    "id": 55,
     "nombre": "VICEPRESIDENCIA SENIOR"
   },
   {
+    "id": 56,
+    "nombre": "GERENCIA LEGAL"
+  },
+  {
+    "id": 57,
+    "nombre": "GERENCIA DE PROYECTOS TI"
+  },
+  {
+    "id": 58,
+    "nombre": "DEPORTE"
+  },
+  {
+    "id": 59,
+    "nombre": "CARRERA DE ARTE Y DISEÑO GRAFICO"
+  },
+  {
+    "id": 60,
+    "nombre": "FACULTAD DE COMUNICACIÓNCIÓN"
+  },
+  {
+    "id": 61,
+    "nombre": "CENTER FOR LANGUAGE STUDIES"
+  },
+  {
+    "id": 62,
+    "nombre": "SUBGERENCIA CORPORATIVA DE TESORERIA"
+  },
+  {
+    "id": 63,
+    "nombre": "FACULTAD DE CIENCIAS DE LA SALUD"
+  },
+  {
+    "id": 64,
+    "nombre": "CARRERA DE GASTRO Y GESTION REST"
+  },
+  {
+    "id": 65,
+    "nombre": "AUDITORIA INTERNA"
+  },
+  {
+    "id": 66,
+    "nombre": "GERENCIA GENERAL"
+  },
+  {
+    "id": 67,
+    "nombre": "GERENCIA DE RELACIONES EDUCATIVAS"
+  },
+  {
+    "id": 68,
+    "nombre": "FOTOGRAFIA"
+  },
+  {
+    "id": 69,
+    "nombre": "ALMACEN"
+  },
+  {
+    "id": 70,
+    "nombre": "FACULTAD DE ARQUITECTURA URBANISMO Y TERRITORIO"
+  },
+  {
+    "id": 71,
+    "nombre": "CARRERA DE EDUCACION SECUNDARIA"
+  },
+  {
+    "id": 72,
+    "nombre": "CARRERA DE NEGOCIOS INTERNACIONALES"
+  },
+  {
+    "id": 73,
+    "nombre": "GERENCIA COMERCIAL"
+  },
+  {
+    "id": 74,
+    "nombre": "ASUNTOS TRIBUTARIOS"
+  },
+  {
+    "id": 75,
+    "nombre": "CARRERA DE CIENCIAS DE DATOS"
+  },
+  {
+    "id": 76,
+    "nombre": "CARRERA DE ARTE CULINARIO"
+  },
+  {
+    "id": 77,
+    "nombre": "DPTO ACADEMICO DE CIENCIAS E INGENIERIA"
+  },
+  {
+    "id": 78,
+    "nombre": "PGEX CARRERA ING. EMP Y SIST."
+  },
+  {
+    "id": 79,
+    "nombre": "INSTITUTO DE EMPRENDEDORES"
+  },
+  {
+    "id": 80,
+    "nombre": "EVENTOS Y PROTOCOLO"
+  },
+  {
+    "id": 81,
+    "nombre": "FACULTAD DE EDUCACION"
+  },
+  {
+    "id": 82,
+    "nombre": "CARRERA DE ING. AMBIENTAL"
+  },
+  {
+    "id": 83,
+    "nombre": "CARRERA DE RELACIONES INTERNACIONALES"
+  },
+  {
+    "id": 84,
+    "nombre": "JEFATURA DE VENTAS INSTITUCIONALES E INHOUSE"
+  },
+  {
+    "id": 85,
+    "nombre": "SEGURIDAD ELECTRONICA"
+  },
+  {
+    "id": 86,
+    "nombre": "COSTOS Y PRESUPUESTOS"
+  },
+  {
+    "id": 87,
+    "nombre": "DIRECCION DE RELACIONES INTERNACIONALES"
+  },
+  {
+    "id": 88,
+    "nombre": "IE - ACADEMICO"
+  },
+  {
+    "id": 89,
+    "nombre": "BENEFICIOS ESTUDIANTILES"
+  },
+  {
+    "id": 90,
+    "nombre": "CARRERA DE HOTELERIA"
+  },
+  {
+    "id": 91,
+    "nombre": "SUB DIRECCION DE DESARROLLO Y DESEMPEÑO DOCENTE"
+  },
+  {
+    "id": 92,
+    "nombre": "SUB DIRECCION DE GESTION CURRICULAR Y MEJORA DE PR"
+  },
+  {
+    "id": 93,
+    "nombre": "CARRERA DE ING. INDUST. Y COMERC."
+  },
+  {
+    "id": 94,
+    "nombre": "GERENCIA DE EMPLEABILIDAD E INNOVACION EDUCATIVA"
+  },
+  {
+    "id": 95,
+    "nombre": "PGEX CARRERA DE ING IND."
+  },
+  {
+    "id": 96,
+    "nombre": "SIR - TRANSPORTE"
+  },
+  {
+    "id": 97,
+    "nombre": "EPG- PROYECTOS"
+  },
+  {
+    "id": 98,
+    "nombre": "CARRERA DE INGENIERIA DE SISTEMAS DE INFORMACION"
+  },
+  {
+    "id": 99,
+    "nombre": "PGEX CARRERA DE MKT Y GEST"
+  },
+  {
+    "id": 100,
+    "nombre": "PGEX CARRERA ADM Y FINANZ."
+  },
+  {
+    "id": 101,
+    "nombre": "LABORATORIO DE INVESTIGACION QUIMICA DE ALIMENTOS"
+  },
+  {
+    "id": 102,
+    "nombre": "CAPELLANIA"
+  },
+  {
+    "id": 103,
+    "nombre": "INFRAESTRUCTURA"
+  },
+  {
+    "id": 104,
+    "nombre": "VICEPRESIDENCIA DE COMUNICACIÓNCIONES E INNOVACION DIG"
+  },
+  {
+    "id": 105,
+    "nombre": "JEFATURA DE PRODUCTO DIGITAL"
+  },
+  {
+    "id": 106,
+    "nombre": "CARRERA DE ARQUITECTURA"
+  },
+  {
+    "id": 107,
+    "nombre": "ACREDITACION Y LICENCIAMIENTO"
+  },
+  {
+    "id": 108,
+    "nombre": "CARRERA PSICOLOGIA"
+  },
+  {
+    "id": 109,
+    "nombre": "CARRERA DE MEDICINA HUMANA"
+  },
+  {
+    "id": 110,
+    "nombre": "CARRERA DE DERECHO"
+  },
+  {
+    "id": 111,
+    "nombre": "PROGRAMAS Y PROYECTOS"
+  },
+  {
+    "id": 112,
+    "nombre": "CARRERA DE INGENIERIA EMPRESARIAL"
+  },
+  {
+    "id": 113,
+    "nombre": "SUBGERENCIA DE VENTAS Y ADMISION"
+  },
+  {
+    "id": 114,
+    "nombre": "PROGRAMAS DE MAESTRIAS Y DOCTORADOS"
+  },
+  {
+    "id": 115,
+    "nombre": "EPG - COMERCIAL"
+  },
+  {
+    "id": 116,
+    "nombre": "SIR - ADMISION"
+  },
+  {
+    "id": 117,
+    "nombre": "SUBGERENCIA DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 118,
+    "nombre": "ATENCION AL ALUMNO"
+  },
+  {
+    "id": 119,
+    "nombre": "COMPRAS"
+  },
+  {
+    "id": 120,
+    "nombre": "GESTION DEL TALENTO"
+  },
+  {
+    "id": 121,
+    "nombre": "SECRETARIA ACADEMICA"
+  },
+  {
+    "id": 122,
+    "nombre": "LABORATORIO INGENIERIA CIVIL"
+  },
+  {
+    "id": 123,
+    "nombre": "SUBGERENCIA DE MKT Y VENTAS INTERNACIONALES"
+  },
+  {
+    "id": 124,
+    "nombre": "CARRERA DE GESTION AMBIENTE Y DES"
+  },
+  {
+    "id": 125,
+    "nombre": "EDUCACION PRIMARIA"
+  },
+  {
+    "id": 126,
+    "nombre": "SECRETARIA GENERAL"
+  },
+  {
+    "id": 127,
+    "nombre": "VICERRECTORADO DE INVESTIGACION"
+  },
+  {
+    "id": 128,
+    "nombre": "CARRERA DE INGENIERIA AGROINDUST."
+  },
+  {
+    "id": 129,
+    "nombre": "NEGOCIOS DIGITALES"
+  },
+  {
+    "id": 130,
+    "nombre": "CARRERA DE EDUCACION INICIAL"
+  },
+  {
+    "id": 131,
+    "nombre": "ACTIVOS FIJOS Y CONTROL PATRIMONIAL"
+  },
+  {
+    "id": 132,
+    "nombre": "PROCESOS COMERCIALES"
+  },
+  {
+    "id": 133,
+    "nombre": "SUBGERENCIA DE CONTABILIDAD"
+  },
+  {
+    "id": 134,
+    "nombre": "SIR - MARKETING"
+  },
+  {
+    "id": 135,
+    "nombre": "DIRECCION GESTION DE LA INVESTIGACION"
+  },
+  {
+    "id": 136,
+    "nombre": "CARRERA DE CIENCIAS DE LA ACTIVIDAD FISICA"
+  },
+  {
+    "id": 137,
+    "nombre": "DIRECCION DE SOSTENIBILIDAD"
+  },
+  {
+    "id": 138,
+    "nombre": "GERENCIA DE PROYECTOS"
+  },
+  {
+    "id": 139,
+    "nombre": "JEFATURA DE INNOVACIÓN-HIFLEX"
+  },
+  {
+    "id": 140,
+    "nombre": "JEFATURA DE PRENSA Y ANALISIS DE MEDIOS"
+  },
+  {
+    "id": 141,
+    "nombre": "ANALISIS Y PLAN FINANCIERO"
+  },
+  {
+    "id": 142,
+    "nombre": "IE - BIBLIOTECA"
+  },
+  {
+    "id": 143,
+    "nombre": "BRANDING Y CONTENIDOS"
+  },
+  {
+    "id": 144,
+    "nombre": "SERVICIOS GENERALES - INGENIERIA ELECTROMECANICO"
+  },
+  {
+    "id": 145,
+    "nombre": "SUBGERENCIA COMERCIAL EPG"
+  },
+  {
+    "id": 146,
+    "nombre": "CONVENIOS Y CONTRATOS"
+  },
+  {
+    "id": 147,
+    "nombre": "CONTABILIDAD CORPORATIVA"
+  },
+  {
+    "id": 148,
+    "nombre": "GRADO AMERICANO"
+  },
+  {
+    "id": 149,
+    "nombre": "CARRERA DE MUSICA"
+  },
+  {
+    "id": 150,
+    "nombre": "INSTITUTO DE CIENCIAS DE LOS ALIMENTOS Y NUTRICION"
+  },
+  {
     "id": 151,
-    "nombre": "GERENCIA DE EDUCACION VIRTUAL Y TEC. EDUCATIVA"
+    "nombre": "SUBGERENCIA DE MARKETING EPG"
   },
   {
     "id": 152,
-    "nombre": "SUBDIRECCION DE DISEÑO INSTRUC. Y DESARR. DE CONTE"
+    "nombre": "SUBGERENCIA DE COMUNICACIÓNCIONES"
   },
   {
     "id": 153,
@@ -613,278 +613,198 @@
   },
   {
     "id": 154,
-    "nombre": "VICERRECTORADO ACADEMICO"
+    "nombre": "EPG - SERVICIOS AL ALUMNO"
   },
   {
     "id": 155,
-    "nombre": "CENTER FOR GLOBAL EDUCATION"
+    "nombre": "COMERCIAL BACK OFFICE"
   },
   {
     "id": 156,
-    "nombre": "CENTER FOR LANGUAGE STUDIES"
+    "nombre": "LICENCIAMIENTO"
   },
   {
     "id": 157,
-    "nombre": "DIRECCION DE CALIDAD ACADEMICA, DOCENTE Y CURRICUL"
+    "nombre": "LOGISTICA"
   },
   {
     "id": 158,
-    "nombre": "SUB DIRECCION DE DESARROLLO Y DESEMPEÑO DOCENTE"
+    "nombre": "SEGURIDAD Y SALUD OCUPACIONAL"
   },
   {
     "id": 159,
-    "nombre": "SUB DIRECCION DE GESTION CURRICULAR Y MEJORA DE PR"
+    "nombre": "SEGURIDAD ESCOLTA"
   },
   {
     "id": 160,
-    "nombre": "SUB DIRECCION DE GESTION DE CALIDAD ACADEMICA"
+    "nombre": "DATA STRATEGIST"
   },
   {
     "id": 161,
-    "nombre": "DIRECCION DE ESTUDIOS GENERALES"
+    "nombre": "DIRECCION DE CALIDAD ACADEMICA, DOCENTE Y CURRICUL"
   },
   {
     "id": 162,
-    "nombre": "DIRECCION DEL FONDO EDITORIAL"
+    "nombre": "SUB DIRECCION DE GESTION DE CALIDAD ACADEMICA"
   },
   {
     "id": 163,
-    "nombre": "DIRECCION PGEX"
-  },
-  {
-    "id": 164,
-    "nombre": "PGEX CARRERA ADM EMP"
-  },
-  {
-    "id": 165,
-    "nombre": "PGEX CARRERA ADM Y FINANZ."
-  },
-  {
-    "id": 166,
-    "nombre": "PGEX CARRERA CONTABILIDAD"
-  },
-  {
-    "id": 167,
-    "nombre": "PGEX CARRERA DE COMUNICACION Y PUBLICIDAD"
-  },
-  {
-    "id": 168,
-    "nombre": "PGEX CARRERA DE ING IND."
-  },
-  {
-    "id": 169,
-    "nombre": "PGEX CARRERA DE MKT Y GEST"
-  },
-  {
-    "id": 170,
-    "nombre": "PGEX CARRERA ING. EMP Y SIST."
-  },
-  {
-    "id": 171,
-    "nombre": "PGEX CARRERA NEG. INTERNAC."
-  },
-  {
-    "id": 172,
-    "nombre": "CARRERA DE ADM TURISMO"
-  },
-  {
-    "id": 173,
-    "nombre": "CARRERA DE ARTE CULINARIO"
-  },
-  {
-    "id": 174,
-    "nombre": "CARRERA DE GASTRO Y GESTION REST"
-  },
-  {
-    "id": 175,
-    "nombre": "CARRERA DE HOTELERIA"
-  },
-  {
-    "id": 176,
-    "nombre": "FACULTAD ADM HOTELE TURIS Y GASTRO"
-  },
-  {
-    "id": 177,
-    "nombre": "PAUL BOCUSE"
-  },
-  {
-    "id": 178,
-    "nombre": "CARRERA DE ARQUITECTURA"
-  },
-  {
-    "id": 179,
-    "nombre": "FACULTAD DE ARQUITECTURA URBANISMO Y TERRITORIO"
-  },
-  {
-    "id": 180,
-    "nombre": "CARRERA DE ARTE Y DISEÑO GRAFICO"
-  },
-  {
-    "id": 181,
-    "nombre": "CARRERA DE MUSICA"
-  },
-  {
-    "id": 182,
-    "nombre": "FACULTAD DE ARTES Y HUMANIDADES"
-  },
-  {
-    "id": 183,
-    "nombre": "CARRERA ADMINISTRACION DE SALUD"
-  },
-  {
-    "id": 184,
-    "nombre": "CARRERA DE CIENCIAS DE LA ACTIVIDAD FISICA"
-  },
-  {
-    "id": 185,
-    "nombre": "CARRERA DE ENFERMERIA"
-  },
-  {
-    "id": 186,
-    "nombre": "CARRERA DE MEDICINA HUMANA"
-  },
-  {
-    "id": 187,
-    "nombre": "CARRERA DE NUTRICION"
-  },
-  {
-    "id": 188,
-    "nombre": "CARRERA PSICOLOGIA"
-  },
-  {
-    "id": 189,
-    "nombre": "FACULTAD DE CIENCIAS DE LA SALUD"
-  },
-  {
-    "id": 190,
-    "nombre": "CARRERA DE ADMINISTRACION"
-  },
-  {
-    "id": 191,
-    "nombre": "CARRERA DE ADMINISTRACION Y EMPRENDIMIENTO"
-  },
-  {
-    "id": 192,
-    "nombre": "CARRERA DE ADMINISTRACION Y FINANZAS CORP"
-  },
-  {
-    "id": 193,
-    "nombre": "CARRERA DE DIGITAL BUSINESS MANAGEMENT"
-  },
-  {
-    "id": 194,
-    "nombre": "CARRERA DE GESTION AMBIENTE Y DES"
-  },
-  {
-    "id": 195,
-    "nombre": "CARRERA DE NEGOCIOS INTERNACIONALES"
-  },
-  {
-    "id": 196,
-    "nombre": "FACULTAD DE CIENCIAS EMPRESARIALES"
-  },
-  {
-    "id": 197,
-    "nombre": "CARRERA DE COMUNICACIONES"
-  },
-  {
-    "id": 198,
-    "nombre": "FACULTAD DE COMUNICACIÓN"
-  },
-  {
-    "id": 199,
-    "nombre": "CARRERA DE DERECHO"
-  },
-  {
-    "id": 200,
-    "nombre": "CARRERA DE RELACIONES INTERNACIONALES"
-  },
-  {
-    "id": 201,
-    "nombre": "FACULTAD DE DERECHO"
-  },
-  {
-    "id": 202,
-    "nombre": "CARRERA DE EDUCACION INICIAL"
-  },
-  {
-    "id": 203,
-    "nombre": "CARRERA DE EDUCACION SECUNDARIA"
-  },
-  {
-    "id": 204,
-    "nombre": "CARRERA DE CIENCIAS DE DATOS"
-  },
-  {
-    "id": 205,
-    "nombre": "CARRERA DE ING DE SOFTWARE"
-  },
-  {
-    "id": 206,
-    "nombre": "CARRERA DE ING. AMBIENTAL"
-  },
-  {
-    "id": 207,
-    "nombre": "CARRERA DE ING. CIVIL"
-  },
-  {
-    "id": 208,
-    "nombre": "CARRERA DE ING. INDUST. Y COMERC."
-  },
-  {
-    "id": 209,
-    "nombre": "CARRERA DE ING. INDUSTRIAS ALIMENTARIAS"
-  },
-  {
-    "id": 210,
     "nombre": "CARRERA DE ING. MECATRÓNICA"
   },
   {
-    "id": 211,
-    "nombre": "CARRERA DE INGENIERIA AGROINDUST."
+    "id": 164,
+    "nombre": "COMPENSACIONES Y PRESUPUESTO"
   },
   {
-    "id": 212,
-    "nombre": "CARRERA DE INGENIERIA BIOMEDICA"
+    "id": 165,
+    "nombre": "ATRACCION DEL TALENTO"
   },
   {
-    "id": 213,
-    "nombre": "CARRERA DE INGENIERIA DE SISTEMAS DE INFORMACION"
+    "id": 166,
+    "nombre": "ASUNTOS CORPORATIVOS"
   },
   {
-    "id": 214,
-    "nombre": "CARRERA DE INGENIERIA EMPRESARIAL"
-  },
-  {
-    "id": 215,
+    "id": 167,
     "nombre": "CARRERA DE INGENIERIA EN CIBERSEGURIDAD"
   },
   {
-    "id": 216,
-    "nombre": "FACULTAD DE INGENIERIA E INTELIGENCIA ARTIFICIAL"
+    "id": 168,
+    "nombre": "CARRERA DE ENFERMERIA"
   },
   {
-    "id": 217,
-    "nombre": "LABORATORIO DE INVESTIGACION QUIMICA DE ALIMENTOS"
+    "id": 169,
+    "nombre": "IMPUESTOS"
   },
   {
-    "id": 218,
-    "nombre": "LABORATORIO INGENIERIA CIVIL"
+    "id": 170,
+    "nombre": "GESTION AMBIENTAL"
   },
   {
-    "id": 219,
-    "nombre": "VICERRECTORADO DE INVESTIGACION"
+    "id": 171,
+    "nombre": "CARRERA DE ING. INDUSTRIAS ALIMENTARIAS"
   },
   {
-    "id": 220,
+    "id": 172,
+    "nombre": "CARRERA DE ING DE SOFTWARE"
+  },
+  {
+    "id": 173,
+    "nombre": "GERENCIA DE EDUCACION VIRTUAL Y TEC. EDUCATIVA"
+  },
+  {
+    "id": 174,
+    "nombre": "SUBGERENCIA DE SEGURIDAD TI"
+  },
+  {
+    "id": 175,
+    "nombre": "PROYECTO SAP"
+  },
+  {
+    "id": 176,
+    "nombre": "PLANEAMIENTO COMERCIAL"
+  },
+  {
+    "id": 177,
+    "nombre": "CARRERA ADMINISTRACION DE SALUD"
+  },
+  {
+    "id": 178,
+    "nombre": "PROYECTOS CUSTOMER EXPERIENCE"
+  },
+  {
+    "id": 179,
+    "nombre": "COLORING DREAMS"
+  },
+  {
+    "id": 180,
+    "nombre": "SIR - CREDITOS Y COBRANZAS"
+  },
+  {
+    "id": 181,
+    "nombre": "ADMINISTRATIVO"
+  },
+  {
+    "id": 182,
+    "nombre": "DEPARTAMENTO DE DEPORTES"
+  },
+  {
+    "id": 183,
+    "nombre": "SIR - ADMINISTRACION"
+  },
+  {
+    "id": 184,
+    "nombre": "DEPARTAMENTO DE PSICOLOGIA"
+  },
+  {
+    "id": 185,
+    "nombre": "TALLERES EXTRACURRICULARES"
+  },
+  {
+    "id": 186,
+    "nombre": "DIRECCION GENERAL DEL CSIR"
+  },
+  {
+    "id": 187,
     "nombre": "CENTRO DE INVESTIGACION"
   },
   {
-    "id": 221,
-    "nombre": "DIRECCION GESTION DE LA INVESTIGACION"
+    "id": 188,
+    "nombre": "GERENCIA SENIOR DE FINANZAS"
   },
   {
-    "id": 222,
-    "nombre": "INSTITUTO DE CIENCIAS DE LOS ALIMENTOS Y NUTRICION"
+    "id": 189,
+    "nombre": "REPUTACION DIGITAL"
+  },
+  {
+    "id": 190,
+    "nombre": "GERENCIA DE PLANEAMIENTO FINANCIERO"
+  },
+  {
+    "id": 191,
+    "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
+  },
+  {
+    "id": 192,
+    "nombre": "CARRERA DE INGENIERIA BIOMEDICA"
+  },
+  {
+    "id": 193,
+    "nombre": "BIENESTAR SOCIAL"
+  },
+  {
+    "id": 194,
+    "nombre": "IE - TUTORIA"
+  },
+  {
+    "id": 195,
+    "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
+  },
+  {
+    "id": 196,
+    "nombre": "CULTURA Y CLIMA"
+  },
+  {
+    "id": 197,
+    "nombre": "PROCESOS"
+  },
+  {
+    "id": 198,
+    "nombre": "DIRECCIÓN DE UNIDAD DE SALUD EPG"
+  },
+  {
+    "id": 199,
+    "nombre": "CARRERA DE DIGITAL BUSINESS MANAGEMENT"
+  },
+  {
+    "id": 200,
+    "nombre": "DIRECCION GENERAL DE SEDES DESCENTRALIZADAS"
+  },
+  {
+    "id": 201,
+    "nombre": "SUBGERENCIA DE GESTION HUMANA"
+  },
+  {
+    "id": 202,
+    "nombre": "GERENCIA DE TALENTO Y CULTURA"
   }
 ]

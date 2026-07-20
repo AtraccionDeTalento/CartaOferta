@@ -1,78 +1,66 @@
 [
   {
     "id": 1,
-    "nombre": "DIRECCION GENERAL DEL CSIR"
-  },
-  {
-    "id": 2,
-    "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
-  },
-  {
-    "id": 3,
-    "nombre": "ESCUELA DE POSGRADO"
-  },
-  {
-    "id": 4,
     "nombre": "VICERRECTORADO ACADEMICO"
   },
   {
-    "id": 5,
-    "nombre": "DIRECCION GENERAL DE SEDES DESCENTRALIZADAS"
-  },
-  {
-    "id": 6,
-    "nombre": "GERENCIA COMERCIAL"
-  },
-  {
-    "id": 7,
-    "nombre": "GERENCIA DE MODO USIL"
-  },
-  {
-    "id": 8,
-    "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
-  },
-  {
-    "id": 9,
-    "nombre": "GERENCIA DE TALENTO Y CULTURA"
-  },
-  {
-    "id": 10,
-    "nombre": "GERENCIA DE TECNOLOGIA DE INFORMACION"
-  },
-  {
-    "id": 11,
-    "nombre": "GERENCIA GENERAL"
-  },
-  {
-    "id": 12,
+    "id": 2,
     "nombre": "PRESIDENCIA EJECUTIVA"
   },
   {
-    "id": 13,
+    "id": 3,
     "nombre": "RECTORADO"
   },
   {
-    "id": 14,
-    "nombre": "VICEPRESIDENCIA DE ASUNTOS CORPORATIVOS"
+    "id": 4,
+    "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
   },
   {
-    "id": 15,
-    "nombre": "VICEPRESIDENCIA DE COMUNICACIONES E INNOVACION DIG"
+    "id": 5,
+    "nombre": "GERENCIA SENIOR DE FINANZAS"
   },
   {
-    "id": 16,
-    "nombre": "VICEPRESIDENCIA DE FINANZAS"
-  },
-  {
-    "id": 17,
-    "nombre": "VICEPRESIDENCIA LEGAL"
-  },
-  {
-    "id": 18,
+    "id": 6,
     "nombre": "VICEPRESIDENCIA SENIOR"
   },
   {
-    "id": 19,
+    "id": 7,
+    "nombre": "ESCUELA DE POSGRADO"
+  },
+  {
+    "id": 8,
+    "nombre": "DIRECCION GENERAL DEL CSIR"
+  },
+  {
+    "id": 9,
+    "nombre": "GERENCIA LEGAL"
+  },
+  {
+    "id": 10,
+    "nombre": "GERENCIA DE TALENTO Y CULTURA"
+  },
+  {
+    "id": 11,
+    "nombre": "VICEPRESIDENCIA DE COMUNICACIÓNCIONES E INNOVACION DIG"
+  },
+  {
+    "id": 12,
+    "nombre": "VICEPRESIDENCIA DE ASUNTOS CORPORATIVOS"
+  },
+  {
+    "id": 13,
+    "nombre": "GERENCIA GENERAL"
+  },
+  {
+    "id": 14,
+    "nombre": "DIRECCION GENERAL DE SEDES DESCENTRALIZADAS"
+  },
+  {
+    "id": 15,
     "nombre": "VICERRECTORADO DE INVESTIGACION"
+  },
+  {
+    "id": 16,
+    "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
   }
 ]
