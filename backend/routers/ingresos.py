@@ -270,3 +270,189 @@ def eliminar_ingreso(ingreso_id: int, db: Session = Depends(get_db)):
     db.delete(s)
     db.commit()
     return {"ok": True}
+
+
+# --- EXTRACTOR DE CANDIDATOS (PRO) ---
+from fastapi import File, UploadFile, Form
+import io
+import pypdf
+import urllib.request
+import urllib.error
+import json
+import re
+import os
+
+def get_gemini_keys():
+    try:
+        # Read from frontend-react/.env.local
+        env_path = os.path.join(os.path.dirname(__file__), "..", "..", "frontend-react", ".env.local")
+        if os.path.exists(env_path):
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.startswith("VITE_GEMINI_API_KEYS="):
+                        keys = line.split("=")[1].strip()
+                        return [k.strip() for k in keys.split(",") if k.strip()]
+    except Exception as e:
+        print("Error reading .env.local in backend:", str(e))
+    
+    # Fallbacks
+    keys = os.environ.get("VITE_GEMINI_API_KEYS", "")
+    if keys:
+        return [k.strip() for k in keys.split(",") if k.strip()]
+    single_key = os.environ.get("VITE_GEMINI_API_KEY", "")
+    return [single_key] if single_key else []
+
+def call_gemini_api(text_content: str) -> dict:
+    keys = get_gemini_keys()
+    if not keys:
+        raise Exception("No se configuraron llaves de API de Gemini en .env.local.")
+
+    prompt = (
+        "Analiza el texto de un candidato de atracción de talento (resumen de entrevista, briefing o CV) "
+        "y extrae los siguientes datos en formato JSON estructurado.\n\n"
+        "Campos requeridos:\n"
+        "- nombres_apellidos: Nombre completo del candidato (en mayúsculas).\n"
+        "- dni: DNI del candidato (8 dígitos consecutivos) o Carnet de Extranjería (CEX, de 9 a 12 dígitos).\n"
+        "- salario: Salario bruto mensual ofrecido (número entero).\n"
+        "- modalidad: 'FULL TIME' o 'PART TIME' o 'PRACTICANTE'.\n"
+        "- tiempo_contrato: Tiempo del contrato en meses (ej: '03 meses', '06 meses') si se menciona, o null.\n"
+        "- nombre_jefe_directo: Nombre completo del jefe directo o reportante (en mayúsculas), o null.\n"
+        "- fecha_tentativa_ingreso: Fecha aproximada de ingreso en formato YYYY-MM-DD, o null.\n"
+        "- puesto_sugerido: Puesto al que postula o se sugiere, o null.\n"
+        "- observaciones: Breve nota aclaratoria si hay condiciones especiales.\n\n"
+        "Importante: Devuelve SOLAMENTE el objeto JSON sin markdown ni bloques de código."
+    )
+
+    body_data = {
+        "contents": [{
+            "parts": [
+                {"text": prompt + "\n\nTexto a analizar:\n" + text_content}
+            ]
+        }],
+        "generationConfig": {
+            "responseMimeType": "application/json"
+        }
+    }
+
+    last_err = None
+    # Crop content to avoid exceeding token limit (max 8000 characters)
+    cropped_text = text_content[:8000]
+    
+    for key in keys:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key={key}"
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(body_data).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=8) as response:
+                resp_data = json.loads(response.read().decode("utf-8"))
+                text = resp_data["candidates"][0]["content"]["parts"][0]["text"]
+                return json.loads(text)
+        except urllib.error.HTTPError as e:
+            err_content = e.read().decode("utf-8")
+            print(f"Error calling Gemini in backend (Key {key[:10]}...): {e.code} - {err_content}")
+            last_err = Exception(f"Gemini API returned error status {e.code}")
+            if e.code in [429, 403, 500, 503]:
+                continue
+            raise last_err
+        except Exception as e:
+            print(f"Error calling Gemini in backend: {str(e)}")
+            last_err = e
+            continue
+            
+    raise last_err or Exception("Todas las llaves de API de Gemini fallaron.")
+
+def parse_locally(text: str) -> dict:
+    result = {}
+    clean_text = text.replace('\r', '')
+
+    # DNI (8 digits)
+    dni_match = re.search(r'\b\d{8}\b', clean_text)
+    if dni_match:
+        result["dni"] = dni_match.group(0)
+
+    # Names (All caps lines)
+    lines = [line.strip() for line in clean_text.split('\n') if len(line.strip()) > 5]
+    for line in lines:
+        if re.match(r'^[A-ZÁÉÍÓÚÑ\s,]+$', line) and 2 <= len(line.split()) <= 4:
+            if not any(word in line for word in ["CURRICULUM", "HOJA", "RESUMEN", "PERFIL"]):
+                result["nombres_apellidos"] = line.replace(',', '').strip()
+                break
+
+    # Salary
+    sal_match = re.search(r'(?:S/\.?\s*|Soles\s*|S/\s*|sueldo\s*[:=]?\s*|salario\s*[:=]?\s*)(\d{3,5}(?:[.,]\d{2})?)', clean_text, re.IGNORECASE)
+    if sal_match:
+        try:
+            val = float(sal_match.group(1).replace(',', ''))
+            if val > 500:
+                result["salario"] = int(val)
+        except ValueError:
+            pass
+
+    # Jefe Directo
+    jefe_match = re.search(r'(?:jefe|supervisor|reporta a|jefe directo)\s*[:=]?\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]+)', clean_text, re.IGNORECASE)
+    if jefe_match:
+        raw_jefe = jefe_match.group(1).strip()
+        first_line = raw_jefe.split('\n')[0].split(',')[0].strip()
+        if 5 < len(first_line) and 2 <= len(first_line.split()) <= 4:
+            result["nombre_jefe_directo"] = first_line.upper()
+
+    # Date
+    date_match = re.search(r'(\d{2})[-/](\d{2})[-/](\d{4})', clean_text) or re.search(r'(\d{4})[-/](\d{2})[-/](\d{2})', clean_text)
+    if date_match:
+        raw_date = date_match.group(0)
+        if '/' in raw_date:
+            parts = raw_date.split('/')
+            if len(parts[0]) == 2:
+                result["fecha_tentativa_ingreso"] = f"{parts[2]}-{parts[1]}-{parts[0]}"
+            else:
+                result["fecha_tentativa_ingreso"] = raw_date.replace('/', '-')
+        else:
+            result["fecha_tentativa_ingreso"] = raw_date
+
+    # Modalidad
+    if "part time" in clean_text.lower() or "medio tiempo" in clean_text.lower():
+        result["modalidad"] = "PART TIME"
+    else:
+        result["modalidad"] = "FULL TIME"
+
+    return result
+
+@router.post("/extract")
+async def extract_candidate_info(
+    resumen: str = Form(None),
+    file: UploadFile = File(None)
+):
+    combined_text = resumen.strip() if resumen else ""
+    
+    if file:
+        if not file.filename.endswith(".pdf"):
+            raise HTTPException(status_code=400, detail="Solo se permiten archivos PDF.")
+        try:
+            contents = await file.read()
+            pdf_reader = pypdf.PdfReader(io.BytesIO(contents))
+            pdf_text = ""
+            # Extract up to 5 pages
+            for i in range(min(5, len(pdf_reader.pages))):
+                pdf_text += pdf_reader.pages[i].extract_text() or ""
+            
+            if pdf_text.strip():
+                combined_text += f"\n\n{pdf_text}"
+        except Exception as e:
+            print(f"Error parsing PDF: {str(e)}")
+
+    if not combined_text.strip():
+        raise HTTPException(status_code=400, detail="No se proporcionó texto ni se pudo extraer texto legible del PDF.")
+
+    try:
+        result = call_gemini_api(combined_text)
+        result["local_fallback"] = False
+        return result
+    except Exception as e:
+        print(f"Gemini API error in backend: {str(e)}. Running local parser.")
+        fallback_result = parse_locally(combined_text)
+        fallback_result["local_fallback"] = True
+        return fallback_result

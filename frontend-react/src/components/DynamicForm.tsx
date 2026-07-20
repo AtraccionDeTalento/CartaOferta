@@ -235,38 +235,36 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     setIaState('loading');
     setIaMessage('');
 
-    let combinedText = resumenCandidato.trim();
-    const archivosInline: Array<{ data: string; mimeType: string }> = [];
-    const omitidos: string[] = [];
-
     try {
-      for (const file of archivosFiles) {
-        console.log("Processing file:", file.name, "MIME:", file.type, "Size:", file.size);
-        if (file.type === 'application/pdf') {
-          console.log("Extracting text from PDF locally first (safe mode):", file.name);
-          const text = await extractTextFromPdf(file);
-          console.log("Extracted text length:", text.length);
-          combinedText += `\n\n--- Contenido de ${file.name} ---\n${text}`;
-          
-          console.log("Reading PDF as Base64 for Gemini multimodal OCR fallback:", file.name);
-          const base64 = await fileToBase64(file);
-          archivosInline.push({ data: base64, mimeType: file.type });
-        } else if (file.type.startsWith('image/')) {
-          console.log("Converting image to Base64:", file.name);
-          const base64 = await fileToBase64(file);
-          archivosInline.push({ data: base64, mimeType: file.type });
-        } else if (file.type === 'text/plain') {
-          console.log("Reading plain text file:", file.name);
-          combinedText += `\n\n--- Contenido de ${file.name} ---\n${await file.text()}`;
-        } else {
-          console.log("Skipping unsupported file type:", file.name);
-          omitidos.push(file.name);
+      const formData = new FormData();
+      if (resumenCandidato.trim()) {
+        formData.append("resumen", resumenCandidato.trim());
+      }
+      
+      const pdfFile = archivosFiles.find(f => f.type === 'application/pdf');
+      if (pdfFile) {
+        formData.append("file", pdfFile);
+      } else {
+        const txtFile = archivosFiles.find(f => f.type === 'text/plain');
+        if (txtFile) {
+          const txt = await txtFile.text();
+          formData.append("resumen", (resumenCandidato + "\n\n" + txt).trim());
         }
       }
 
-      console.log("Sending candidate extraction request to Gemini. Inline files count:", archivosInline.length, "Text length:", combinedText.length);
-      const extracted = await extractCandidateData({ texto: combinedText, archivos: archivosInline });
-      console.log("Extracted data received from Gemini:", extracted);
+      console.log("Sending extraction request to local backend endpoint /api/ingresos/extract...");
+      const response = await fetch('/api/ingresos/extract', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(errText || `Error del servidor backend: ${response.status}`);
+      }
+
+      const extracted = await response.json();
+      console.log("Extracted data received from backend:", extracted);
 
       if (extracted.nombres_apellidos) setNombres(extracted.nombres_apellidos);
       if (extracted.dni) setDni(extracted.dni);
@@ -275,6 +273,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
       if (extracted.tiempo_contrato) setTiempoContrato(extracted.tiempo_contrato);
       if (extracted.nombre_jefe_directo) setNombreJefe(extracted.nombre_jefe_directo);
       if (extracted.fecha_tentativa_ingreso) setFechaTentativa(extracted.fecha_tentativa_ingreso);
+      
       if (extracted.puesto_sugerido || extracted.observaciones) {
         const nota = [
           extracted.puesto_sugerido ? `Puesto sugerido por IA: ${extracted.puesto_sugerido}` : '',
@@ -283,37 +282,17 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
         if (nota) setResumenCandidato((prev: string) => (prev ? `${prev}\n\n${nota}` : nota));
       }
 
-      setIaState('success');
-      setIaMessage(
-        omitidos.length > 0
-          ? `Datos organizados. No se pudieron leer estos archivos (formato no soportado): ${omitidos.join(', ')}.`
-          : 'Datos organizados. Revisa los campos autocompletados antes de guardar.'
-      );
-    } catch (err: any) {
-      console.error("Error in IA candidate organization. Attempting local extraction fallback:", err);
-      // Run local fallback parser on the combined text
-      const localExtracted = parseLocally(combinedText);
-      console.log("Locally extracted fallback data:", localExtracted);
-
-      let populatedCount = 0;
-      if (localExtracted.nombres_apellidos) { setNombres(localExtracted.nombres_apellidos); populatedCount++; }
-      if (localExtracted.dni) { setDni(localExtracted.dni); populatedCount++; }
-      if (localExtracted.salario) { setSalario(localExtracted.salario); populatedCount++; }
-      if (localExtracted.modalidad) { setModalidad(localExtracted.modalidad); populatedCount++; }
-      if (localExtracted.nombre_jefe_directo) { setNombreJefe(localExtracted.nombre_jefe_directo); populatedCount++; }
-      if (localExtracted.fecha_tentativa_ingreso) { setFechaTentativa(localExtracted.fecha_tentativa_ingreso); populatedCount++; }
-
-      if (populatedCount > 0) {
+      if (extracted.local_fallback) {
         setIaState('success');
-        setIaMessage(`Extracción local completada (${populatedCount} campos auto-rellenados). Modo de contingencia activado por cuota de API excedida.`);
+        setIaMessage('Extracción local completada (Modo de contingencia activado por cuota de API excedida). Revisa los campos antes de guardar.');
       } else {
-        setIaState('error');
-        const isTimeout = err?.name === 'AbortError' || err?.message?.includes('aborted') || err?.message?.includes('timeout');
-        const errMsg = isTimeout
-          ? 'El servidor de Gemini tardó demasiado (6s) y no se encontraron datos válidos en el documento para extracción local.'
-          : 'No se pudo conectar con Gemini y no se detectó texto legible en el archivo para auto-completado local.';
-        setIaMessage(errMsg);
+        setIaState('success');
+        setIaMessage('Datos organizados con éxito por la IA. Revisa los campos antes de guardar.');
       }
+    } catch (err: any) {
+      console.error("Error in IA candidate organization:", err);
+      setIaState('error');
+      setIaMessage(err?.message || 'No se pudo procesar la extracción del candidato.');
     }
   };
 
