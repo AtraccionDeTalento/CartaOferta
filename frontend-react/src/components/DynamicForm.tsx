@@ -317,6 +317,36 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     }
   };
 
+  const handleAutocompletarDemo = () => {
+    setNombres("JOSHUA LOPEZ PORTILLA");
+    setDni("72839482");
+    setSalario(4800);
+    setFechaTentativa(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)); // 7 days from now
+    
+    // Auto-select a position (e.g. Analista de Sistemas)
+    if (allPaths.length > 0) {
+      const targetPath = allPaths.find(p => p.puesto.includes("ANALISTA DE SISTEMAS") || p.puesto.includes("SISTEMAS")) || allPaths[0];
+      if (targetPath) {
+        setPendingPathSelection({
+          sucursalId: targetPath.ids.sucursalId,
+          departamentoId: targetPath.ids.departamentoId,
+          areaId: targetPath.ids.areaId,
+          unidadId: targetPath.ids.unidadId,
+          puestoId: targetPath.ids.puestoId
+        });
+        setSelectedSucursal(targetPath.ids.sucursalId);
+        if (targetPath.supervisor) {
+          setNombreJefe(targetPath.supervisor);
+        }
+      }
+    } else {
+      setNombreJefe("LUIS CARLOS SANCHEZ");
+    }
+
+    setIaState('success');
+    setIaMessage('Formulario autocompletado al instante con datos de prueba reales (Modo Demo Directo).');
+  };
+
   // Load full catalog paths for search matching
   useEffect(() => {
     const fetchPaths = async () => {
@@ -763,6 +793,14 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
                 Auto-organización con IA no disponible en este entorno (falta configurar la key de Gemini).
               </p>
             )}
+
+            <button
+              type="button"
+              onClick={handleAutocompletarDemo}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 px-4 py-3 text-sm font-bold shadow-sm transition-all duration-200 active:scale-[0.99]"
+            >
+              <span>⚡ Autocompletar Demo Instante (Sin API)</span>
+            </button>
 
             {iaState === 'success' && (
               <div className="flex items-start gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3.5 py-2.5 text-xs font-medium text-emerald-700">
