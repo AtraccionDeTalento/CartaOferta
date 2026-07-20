@@ -1,8 +1,7 @@
 import * as pdfjsLib from 'pdfjs-dist';
-// @ts-ignore - Vite resolves this to a hashed asset URL at build time
-import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+// Use a secure CDN worker to bypass local MIME-type and module loading issues on Windows/FastAPI
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
 
 // Extrae el texto de un PDF completamente en el navegador (no se sube a ningún servidor).
 export async function extractTextFromPdf(file: File): Promise<string> {

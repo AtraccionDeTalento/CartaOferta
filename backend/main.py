@@ -3,6 +3,10 @@ HR Operations Management System — FastAPI Entry Point.
 Sirve el backend API + frontend estático.
 """
 import os
+import mimetypes
+mimetypes.add_type("application/javascript", ".mjs")
+mimetypes.add_type("application/javascript", ".js")
+
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
