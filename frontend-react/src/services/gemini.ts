@@ -90,8 +90,8 @@ export async function extractCandidateData(input: {
 
       if (!response.ok) {
         const errBody = await response.text();
-        // Cuota agotada o key inválida: intenta con la siguiente key disponible.
-        if (response.status === 429 || response.status === 403) {
+        // Cuota agotada (429), key inválida (403), servidor saturado (503) o error interno (500): intenta con la siguiente key.
+        if (response.status === 429 || response.status === 403 || response.status === 503 || response.status === 500) {
           lastError = new Error(`Gemini respondió con error ${response.status}: ${errBody.slice(0, 200)}`);
           continue;
         }
