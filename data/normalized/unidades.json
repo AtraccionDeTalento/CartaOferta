@@ -605,27 +605,27 @@
   },
   {
     "id": 152,
-    "nombre": "SUBGERENCIA DE COMUNICACIÓNCIONES"
-  },
-  {
-    "id": 153,
     "nombre": "SUBDIRECCION DE TECNOLOGIA EDUCATIVA"
   },
   {
-    "id": 154,
+    "id": 153,
     "nombre": "EPG - SERVICIOS AL ALUMNO"
   },
   {
-    "id": 155,
+    "id": 154,
     "nombre": "COMERCIAL BACK OFFICE"
   },
   {
-    "id": 156,
+    "id": 155,
     "nombre": "LICENCIAMIENTO"
   },
   {
-    "id": 157,
+    "id": 156,
     "nombre": "LOGISTICA"
+  },
+  {
+    "id": 157,
+    "nombre": "SUBGERENCIA DE COMUNICACIÓNCIONES"
   },
   {
     "id": 158,
@@ -673,123 +673,123 @@
   },
   {
     "id": 169,
-    "nombre": "IMPUESTOS"
-  },
-  {
-    "id": 170,
     "nombre": "GESTION AMBIENTAL"
   },
   {
-    "id": 171,
+    "id": 170,
     "nombre": "CARRERA DE ING. INDUSTRIAS ALIMENTARIAS"
   },
   {
-    "id": 172,
+    "id": 171,
     "nombre": "CARRERA DE ING DE SOFTWARE"
   },
   {
-    "id": 173,
+    "id": 172,
     "nombre": "GERENCIA DE EDUCACION VIRTUAL Y TEC. EDUCATIVA"
   },
   {
-    "id": 174,
+    "id": 173,
     "nombre": "SUBGERENCIA DE SEGURIDAD TI"
   },
   {
-    "id": 175,
+    "id": 174,
     "nombre": "PROYECTO SAP"
   },
   {
-    "id": 176,
+    "id": 175,
     "nombre": "PLANEAMIENTO COMERCIAL"
   },
   {
-    "id": 177,
+    "id": 176,
     "nombre": "CARRERA ADMINISTRACION DE SALUD"
   },
   {
-    "id": 178,
+    "id": 177,
     "nombre": "PROYECTOS CUSTOMER EXPERIENCE"
   },
   {
-    "id": 179,
+    "id": 178,
     "nombre": "COLORING DREAMS"
   },
   {
-    "id": 180,
+    "id": 179,
     "nombre": "SIR - CREDITOS Y COBRANZAS"
   },
   {
-    "id": 181,
+    "id": 180,
     "nombre": "ADMINISTRATIVO"
   },
   {
-    "id": 182,
+    "id": 181,
     "nombre": "DEPARTAMENTO DE DEPORTES"
   },
   {
-    "id": 183,
+    "id": 182,
     "nombre": "SIR - ADMINISTRACION"
   },
   {
-    "id": 184,
+    "id": 183,
     "nombre": "DEPARTAMENTO DE PSICOLOGIA"
   },
   {
-    "id": 185,
+    "id": 184,
     "nombre": "TALLERES EXTRACURRICULARES"
   },
   {
-    "id": 186,
+    "id": 185,
     "nombre": "DIRECCION GENERAL DEL CSIR"
   },
   {
-    "id": 187,
+    "id": 186,
     "nombre": "CENTRO DE INVESTIGACION"
   },
   {
-    "id": 188,
+    "id": 187,
     "nombre": "GERENCIA SENIOR DE FINANZAS"
   },
   {
-    "id": 189,
+    "id": 188,
     "nombre": "REPUTACION DIGITAL"
   },
   {
-    "id": 190,
+    "id": 189,
     "nombre": "GERENCIA DE PLANEAMIENTO FINANCIERO"
   },
   {
-    "id": 191,
+    "id": 190,
     "nombre": "GERENCIA DE PROYECTOS - SEDE PERU"
   },
   {
-    "id": 192,
+    "id": 191,
     "nombre": "CARRERA DE INGENIERIA BIOMEDICA"
   },
   {
-    "id": 193,
+    "id": 192,
     "nombre": "BIENESTAR SOCIAL"
   },
   {
-    "id": 194,
+    "id": 193,
     "nombre": "IE - TUTORIA"
   },
   {
-    "id": 195,
+    "id": 194,
     "nombre": "GERENCIA DE ADMINISTRACION Y SEGURIDAD"
   },
   {
-    "id": 196,
+    "id": 195,
     "nombre": "CULTURA Y CLIMA"
   },
   {
-    "id": 197,
+    "id": 196,
     "nombre": "PROCESOS"
   },
   {
-    "id": 198,
+    "id": 197,
     "nombre": "DIRECCIÓN DE UNIDAD DE SALUD EPG"
+  },
+  {
+    "id": 198,
+    "nombre": "IMPUESTOS"
   },
   {
     "id": 199,

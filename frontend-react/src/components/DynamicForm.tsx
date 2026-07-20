@@ -826,6 +826,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
                   <div className="text-[10px] font-medium text-slate-400 leading-normal">
                     {res.sucursal} · {res.departamento} {res.area ? `· ${res.area}` : ''} · {res.unidad}
                     {res.cecoDescription && <span className="block text-slate-500 mt-0.5 italic">Descripción CECO: {res.cecoDescription}</span>}
+                    {res.supervisor && <span className="block text-usil-blue-700 mt-0.5 font-semibold">Jefe Directo: {res.supervisor}</span>}
                   </div>
                 </div>
                 <button
@@ -838,6 +839,10 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
                       unidadId: res.ids.unidadId,
                       puestoId: res.ids.puestoId
                     });
+                    // Auto-fill supervisor name
+                    if (res.supervisor) {
+                      setNombreJefe(res.supervisor);
+                    }
                     // Set top-level state to trigger cascade
                     setSelectedSucursal(res.ids.sucursalId);
                     // Clear query to reset results

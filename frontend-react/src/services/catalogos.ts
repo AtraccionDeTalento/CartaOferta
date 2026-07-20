@@ -37,6 +37,7 @@ export interface Estructura {
   unidad_id: number;
   puesto_id: number;
   ceco_code: string | null;
+  supervisor?: string | null;
 }
 
 import { buildAssetUrl } from './paths';
@@ -209,6 +210,7 @@ export interface OrgPath {
   puesto: string;
   cecoCode: string;
   cecoDescription: string;
+  supervisor: string;
   ids: {
     sucursalId: number;
     departamentoId: number;
@@ -234,6 +236,7 @@ export const getFullOrgPaths = async (): Promise<OrgPath[]> => {
     const puesto = puestoMap.get(e.puesto_id) || '';
     const cecoCode = e.ceco_code || '';
     const cecoDescription = cecoCode ? (cecos[cecoCode] || '') : '';
+    const supervisor = e.supervisor || '';
 
     return {
       id: e.id,
@@ -244,6 +247,7 @@ export const getFullOrgPaths = async (): Promise<OrgPath[]> => {
       puesto,
       cecoCode,
       cecoDescription,
+      supervisor,
       ids: {
         sucursalId: e.sucursal_id,
         departamentoId: e.departamento_id,
