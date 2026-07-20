@@ -162,6 +162,68 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     setIaMessage('');
   };
 
+  const parseLocally = (text: string) => {
+    const result: any = {};
+    const cleanText = text.replace(/\r/g, '');
+
+    // 1. DNI (8 digits)
+    const dniMatch = cleanText.match(/\b\d{8}\b/);
+    if (dniMatch) result.dni = dniMatch[0];
+
+    // 2. Names (Look for all-caps lines, typically the candidate name on page 1)
+    const lines = cleanText.split('\n').map(l => l.trim()).filter(l => l.length > 5);
+    for (const line of lines) {
+      if (/^[A-ZÁÉÍÓÚÑ\s,]+$/.test(line) && line.split(/\s+/).length >= 2 && line.split(/\s+/).length <= 4) {
+        if (!line.includes("CURRICULUM") && !line.includes("HOJA") && !line.includes("RESUMEN") && !line.includes("PERFIL")) {
+          result.nombres_apellidos = line.replace(/,/g, '').trim();
+          break;
+        }
+      }
+    }
+
+    // 3. Salary (look for S/ or Soles or sueldo)
+    const salaryMatch = cleanText.match(/(?:S\/\.?\s*|Soles\s*|S\/\s*|sueldo\s*[:=]?\s*|salario\s*[:=]?\s*)(\d{3,5}(?:[.,]\d{2})?)/i);
+    if (salaryMatch) {
+      const val = parseFloat(salaryMatch[1].replace(/,/g, ''));
+      if (!isNaN(val) && val > 500) result.salario = val;
+    }
+
+    // 4. Jefe Directo (look for jefe or supervisor or reporta a)
+    const jefeMatch = cleanText.match(/(?:jefe|supervisor|reporta a|jefe directo)\s*[:=]?\s*([A-ZÁÉÍÓÚÑa-záéíóúñ\s]+)/i);
+    if (jefeMatch) {
+      const rawJefe = jefeMatch[1].trim();
+      const firstLine = rawJefe.split('\n')[0].split(',')[0].trim();
+      if (firstLine.length > 5 && firstLine.split(/\s+/).length >= 2 && firstLine.split(/\s+/).length <= 4) {
+        result.nombre_jefe_directo = firstLine.toUpperCase();
+      }
+    }
+
+    // 5. Date (look for tentative date)
+    const dateMatch = cleanText.match(/(\d{2})[-/](\d{2})[-/](\d{4})/) || cleanText.match(/(\d{4})[-/](\d{2})[-/](\d{2})/);
+    if (dateMatch) {
+      const rawDate = dateMatch[0];
+      if (rawDate.includes('/')) {
+        const parts = rawDate.split('/');
+        if (parts[0].length === 2) {
+          result.fecha_tentativa_ingreso = `${parts[2]}-${parts[1]}-${parts[0]}`;
+        } else {
+          result.fecha_tentativa_ingreso = rawDate.replace(/\//g, '-');
+        }
+      } else {
+        result.fecha_tentativa_ingreso = rawDate;
+      }
+    }
+
+    // 6. Modalidad
+    if (cleanText.toLowerCase().includes("part time") || cleanText.toLowerCase().includes("medio tiempo")) {
+      result.modalidad = "PART TIME";
+    } else {
+      result.modalidad = "FULL TIME";
+    }
+
+    return result;
+  };
+
   const handleOrganizarConIA = async () => {
     console.log("IA Analysis triggered. Text length:", resumenCandidato.trim().length, "Files count:", archivosFiles.length);
     if (!resumenCandidato.trim() && archivosFiles.length === 0) {
@@ -173,15 +235,20 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
     setIaState('loading');
     setIaMessage('');
 
-    try {
-      let combinedText = resumenCandidato.trim();
-      const archivosInline: Array<{ data: string; mimeType: string }> = [];
-      const omitidos: string[] = [];
+    let combinedText = resumenCandidato.trim();
+    const archivosInline: Array<{ data: string; mimeType: string }> = [];
+    const omitidos: string[] = [];
 
+    try {
       for (const file of archivosFiles) {
         console.log("Processing file:", file.name, "MIME:", file.type, "Size:", file.size);
         if (file.type === 'application/pdf') {
-          console.log("Reading PDF as Base64 for direct Gemini multimodal OCR parsing:", file.name);
+          console.log("Extracting text from PDF locally first (safe mode):", file.name);
+          const text = await extractTextFromPdf(file);
+          console.log("Extracted text length:", text.length);
+          combinedText += `\n\n--- Contenido de ${file.name} ---\n${text}`;
+          
+          console.log("Reading PDF as Base64 for Gemini multimodal OCR fallback:", file.name);
           const base64 = await fileToBase64(file);
           archivosInline.push({ data: base64, mimeType: file.type });
         } else if (file.type.startsWith('image/')) {
@@ -223,13 +290,30 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({
           : 'Datos organizados. Revisa los campos autocompletados antes de guardar.'
       );
     } catch (err: any) {
-      console.error("Error in IA candidate organization:", err);
-      setIaState('error');
-      const isTimeout = err?.name === 'AbortError' || err?.message?.includes('aborted') || err?.message?.includes('timeout');
-      const errMsg = isTimeout
-        ? 'El servidor de Gemini tardó demasiado en responder (tiempo límite de 6s excedido). Intenta de nuevo o copia la información relevante en el cuadro de texto.'
-        : (err?.message || 'No se pudo procesar con IA.');
-      setIaMessage(errMsg);
+      console.error("Error in IA candidate organization. Attempting local extraction fallback:", err);
+      // Run local fallback parser on the combined text
+      const localExtracted = parseLocally(combinedText);
+      console.log("Locally extracted fallback data:", localExtracted);
+
+      let populatedCount = 0;
+      if (localExtracted.nombres_apellidos) { setNombres(localExtracted.nombres_apellidos); populatedCount++; }
+      if (localExtracted.dni) { setDni(localExtracted.dni); populatedCount++; }
+      if (localExtracted.salario) { setSalario(localExtracted.salario); populatedCount++; }
+      if (localExtracted.modalidad) { setModalidad(localExtracted.modalidad); populatedCount++; }
+      if (localExtracted.nombre_jefe_directo) { setNombreJefe(localExtracted.nombre_jefe_directo); populatedCount++; }
+      if (localExtracted.fecha_tentativa_ingreso) { setFechaTentativa(localExtracted.fecha_tentativa_ingreso); populatedCount++; }
+
+      if (populatedCount > 0) {
+        setIaState('success');
+        setIaMessage(`Extracción local completada (${populatedCount} campos auto-rellenados). Modo de contingencia activado por cuota de API excedida.`);
+      } else {
+        setIaState('error');
+        const isTimeout = err?.name === 'AbortError' || err?.message?.includes('aborted') || err?.message?.includes('timeout');
+        const errMsg = isTimeout
+          ? 'El servidor de Gemini tardó demasiado (6s) y no se encontraron datos válidos en el documento para extracción local.'
+          : 'No se pudo conectar con Gemini y no se detectó texto legible en el archivo para auto-completado local.';
+        setIaMessage(errMsg);
+      }
     }
   };
 
